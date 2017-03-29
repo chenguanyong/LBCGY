@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改支付密码</title>
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<script  type="text/javascript"  src="../js/usercenter/fixpay.js" ></script>
+
+<link href="../css/usercenter/fixpaypower.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body >
+
+<div class="main" >
+
+<div id="dbody" class="result" >jkjk</div>
+
+<div id="input_"  class="input_" >
+<div class="txt_title" >修改支付密码</div>
+<div  class="input_div"  >
+<form  onsubmit="return false;" class="denglu_from" id="login_id"   method="post" action="j.php" >
+<div class="item">
+<br />
+<font class="input_username" >旧支付密码:</font>
+<input  class="input_name" name="username" onblur="javascript:check_pwer1('kk5','oldpower');" maxlength="10" id="oldpower" type="password" /> 
+<font class="yanzhen_font" id="user_yangzheng" ><label id="kk5" class="lable_username" >ff</label></font>
+
+<br />
+<br />
+<hr />
+<font class="input_username" >支付密码:</font>
+<input  class="input_name" name="username" onblur="javascript:check_pwer1('kk','power1');" maxlength="10" id="power1" type="password" /> 
+<font class="yanzhen_font" id="user_yangzheng" ><label id="kk" class="lable_username" >ff</label></font>
+</div>
+
+<div class="item">
+
+<font  class=" miam_font" >重复密码:</font>
+<input onblur="javascript:check_pwer1('kk1','newpower');" name="power" maxlength="10" id="power2"  type="password" style="padding:0px; margin:0; width:150px"/> 
+<font  id="user_yangzheng" ><label id="kk1" style="visibility:hidden "></label></font>
+
+</div>
+
+<div class="item"  >
+
+
+
+<font class=" miam_font"  >验证码:</font>
+<input  class="yanzhengma" maxlength="4" id="check_ma" name="yazhen" type="text"  />  
+<a href="javascript:jpg();"><img  class="yazheng" id="yazhengma" align="top"  /></a>
+
+
+
+
+
+</div>
+
+<div style="; padding:10px ; ">
+
+<button  class="button_su"  id="login_button"   onclick="sure14()" >保存修改</button>
+<a id="sure_q"></a>
+</div>
+
+
+
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>

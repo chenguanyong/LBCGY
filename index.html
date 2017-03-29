@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>林北网</title>
+<script type="text/javascript"  src="js/common/common.js"></script>
+<script type="text/javascript" src="js/index_show.js"></script>
+<script type="text/javascript" src="js/p.js"></script>
+<script type="text/javascript" src="js/jstool.js"></script>
+<script type="text/javascript" src="js/index/index.js"></script>
+
+<link href="css/common/common.css" type="text/css"  rel="stylesheet" />
+<style type="text/css">
+a{
+	text-decoration:none}
+</style>
+</head>
+
+<body class="kuang"  onload="updatedata();">
+
+<div class="userlogin" id="userlogin" > 
+<div class="difang" id="top_login_p" >
+  
+  <div class="top_login_id" id="top_login_id" >
+  
+  <a class="myuserfont"   href="lo/Login.html" id="login_id_a1">登录</a>
+<a class="myuserfont" id="reg_login" href="javascript:Sign_out(&#39;#reg_login&#39;);">注册</a>
+  
+  </div>
+  
+  
+  
+  
+  <div class="loction" >
+  <div onclick="pd_c();" id="weizhi" class="weizhi" >位置：林州</div>
+  
+  <div id="prive" > 
+  
+  <div id="henan" class="location_list" name="pro" onclick="province(&#39;#henan&#39;,&#39;#henan_&#39;)" >河南</div>
+   <div name="pro" id="shandong" onclick="province(&#39;#shandong&#39;,&#39;#shandong_&#39;)" class="location_list">山东</div>
+  <div class="location_list">河南</div>
+   <div class="location_list">河南</div>
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+ 
+ 
+  <div class="kuang" style=" float:left; height:25px; width: 100px;"><div style=" height:25px; width: 100px; "></div>
+  
+  <div id="city" class="citylist" > 
+  <div name="city" id="henan_" class="cityltems" >
+  <div onclick="city(&#39;#anyang&#39;)" num="12" id="anyang" class="cityitem" > 安阳</div>
+  <div class="cityitem"> 安阳</div>
+  <div class="cityitem"> 安阳</div>
+  </div>
+  
+  <div name="city" id="shandong_" class="cityltems">
+  <div class="cityitem"> 临阳</div>
+  <div class="cityitem"> 临阳</div>
+  <div class="cityitem"> 临阳</div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  </div>
+  
+ 
+  
+  
+  
+ 
+  
+  
+<div class="useroption" >
+
+
+
+<div class="myuser" id="uer_select1" onmouseout="mouseout('ds','#uer_select1');" >
+
+<div id="ff" class="user_conter"  onmouseover="mousein('ds','#uer_select1');"> 
+<a href="javascript:jump_w(&#39;0&#39;)"  class="myuserfont">我的林北</a></div>
+<div class="userconter_data" id="ds" onmouseover="mousein('ds','#uer_select1');" > 
+
+<div class=" userconter_data_1" id="userconter_data_1" >
+<a href="javascript:jump_w(15)" class="myuserfont">我的订单</a>
+</div>
+<div class=" userconter_data_1"><a href="javascript:jump_w(9)" class="myuserfont">我的推广</a></div>
+<div class=" userconter_data_1"><a href="javascript:jump_w(10)" class="myuserfont">我的财富</a></div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="mytesk" onmouseout="mouseout('ds1','#mytesk'); " class="myuser">
+<div id="ff1" class="user_conter"  onmouseover="javascript:mousein('ds1','#mytesk');"> 
+<a href="javascript:jump_c(&#39;&#39;);" class="myuserfont">我的任务</a></div>
+<div class="userconter_data" id="ds1" onmouseover="javascript:mousein('ds1','#mytesk');"  >
+
+<div class=" userconter_data_1" id="userconter_data_1"  >
+<a href="javascript:jump_c(&#39;&#39;);" class="myuserfont">我的信息</a>
+</div>
+<div class=" userconter_data_1"><a href="javascript:jump_c(&#39;&#39;);" class="myuserfont">我的订单</a></div>
+
+
+
+</div>
+</div>
+
+
+
+<div id="clictserver" class="myuser" onmouseout=" javascript:mouseout('ds2','#clictserver');" >
+<div id="ff" class="user_conter"  onmouseover="javascript:mousein('ds2','#clictserver');"> 
+<a href="javascript:jump_k(&#39;kehu&#39;);" id="kehu" target="_blank" class="myuserfont">客户服务</a></div>
+<div class="userconter_data" id="ds2" onmouseover="javascript:mousein('ds2','#clictserver');"  >
+
+<div class=" userconter_data_1" id="userconter_data_1" >
+<a href="javascript:jump_k(&#39;my&#39;);" id="my" class="myuserfont">我的信息</a>
+</div>
+<div class=" userconter_data_1"><a href="javascript:jump_k(&#39;dd&#39;);" id="dd" class="myuserfont">我的订单</a></div>
+
+
+
+
+</div>
+</div>
+
+
+ 
+ 
+ 
+ 
+
+<div id="sitedh" class="myuser" onmouseout=" javascript:mouseout('ds3','#sitedh');" >
+<div id="ff" class="user_conter"  onmouseover="javascript:mousein('ds3','#sitedh');"> 
+<a href="javascript:jump_s(&#39;&#39;);" class="myuserfont">网站导航</a></div>
+<div class="userconter_data" id="ds3" onmouseover="javascript:mousein('ds3','#sitedh');" style="border: 0px dotted rgb(0, 51, 255); visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" >
+<a href="javascript:jump_s(&#39;&#39;);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的信息</a>
+</div>
+<div class=" userconter_data_1"><a href="javascript:jump_s(&#39;&#39;);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的订单</a></div>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="  padding:0px; margin-bottom:4px; top:0px; z-index:80; width:99%; height:20px">
+
+
+</div>
+
+
+
+
+
+<div class="main" id="main_id" >
+<div class="loginimg" >
+
+<div class="logo_div" id="logo_id" >
+<div style="padding-top:40px; width:19%">
+ <a  target="_blank" href="javascript:h();" >
+<img   id="logo_img_id" class="logo_img" src="image/user_image/logo.png">
+</a>
+</div>
+<div style="width:100% ; padding-top:20px;  "  >
+<div style="background-image:url(file:///G|/t/r/htdocsj/jj/bg.png); width:340px; height:32px; margin:0 auto">
+  <input class="serch_keyword1" id="serch_keyword" name="keyword"  type="text"    />
+  <button class="serch_button1" id="serch_button_in"   onclick="serch();">搜索</button>
+<input type="button"  class="shuru" name="ww" id="hiden"  value="ff"  />
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="daohang" id="dahang_id" >
+<table class="daohang_table" id="daohang_table_id" onmousemove="on_show()"  onmouseout="on_hide()" >
+<tr class="one_select_tr" id="one_select_tr_id">
+<td class="shouye"  nu="0" onMouseOver="on_over(this)" id="home"><a class="daohang_a" href="daohang/index.html">首页</a></td>
+<td class="shouye"  onMouseOver="on_over(this)"  nu="1" id="shoping"><a class="daohang_a" href="home/s_shop/index.html">商城</a></td>
+<td class="shouye"  onMouseOver="on_over(this)" nu="2" id="serch"><a class="daohang_a" href="serch/index.html">寻找</a></td>
+<td class="shouye"  onMouseOver="on_over(this)" nu="3" id="news"><a class="daohang_a" href="home/s_home/index.html">快报</a></td>
+<td class="shouye"  onMouseOver="on_over(this)" nu="4" id="client"><a class="daohang_a" href="client/client.html">客户</a></td>
+</tr>
+
+</table>
+
+</div>
+
+<div  onmousemove="on_show()" style="height:2px; clear:both; width:100%"></div>
+
+
+
+<div class="daohanglist"  id="fd" onmouseover="on_show1()" onmouseout="on_hide()" >
+
+<div class="daohanglistmain" num="0" onMouseOver="on_over(this)" >
+<ul class="ullist"  >
+
+
+<li class="lilist" ><a class = "lilista" href="daohang/game/index.html" >游戏</a></li>
+<li class="lilist" ><a class = "lilista_right" href="daohang/novel/index.html">小说</a></li>
+<li class="lilist" ><a class = "lilista"  href="daohang/new/index.html">新闻</a></li>
+<li class="lilist" ><a class = "lilista_right" href="daohang/shoping/index.html" >商城</a></li>
+<li class="lilist" ><a class = "lilista" href="daohang/Life/index.html" >生活</a></li>
+<li class="lilist" ><a class = "lilista_right" href="daohang/tour/index.html" >旅游</a></li>
+<li class="lilist" ><a class = "lilista" href="daohang/mail/index.html" >军事</a></li>
+<li class="lilist" ><a class = "lilista_right" href="daohang/car/index.html" >汽车</a></li>
+
+</ul>
+
+
+
+</div>
+
+<div class="daohanglistmain" num="1" onMouseOver="on_over(this)" >
+<ul class="ullist" >
+<li class="lilist" ><a class = "lilista" href="home/s_shop/clothes/men.html" >男装</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/s_shop/clothes/girl.html" >女装</a></li>
+<li class="lilist" ><a class = "lilista" href="home/s_shop/book/index.html" >图书</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/s_shop/toy/index.html" >玩具</a></li>
+<li class="lilist" ><a class = "lilista" href="home/s_shop/jiadian/index.html" >家电</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/s_shop/mobile/index.html" >手机</a></li>
+</ul>
+
+
+</div>
+
+<div class="daohanglistmain" num="2"  onMouseOver="on_over(this)" >
+
+<ul class="ullist">
+<li class="lilist" ><a class = "lilista" >常见任务</a></li>
+<li class="lilist" ><a class = "lilista_right" >商城</a></li>
+
+</ul>
+
+</div>
+<div class="daohanglistmain" num="3"  onMouseOver="on_over(this)"  >
+
+<ul class="ullist">
+<li class="lilist" ><a class = "lilista" href="home/army/index.html" >军事</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/house/index.html" >房产</a></li>
+<li class="lilist" ><a class = "lilista" href="home/sport/index.html" >体育</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/disport/index.html" >娱乐</a></li>
+<li class="lilist" ><a class = "lilista" href="home/car/index.html" >汽车</a></li>
+<li class="lilist" ><a class = "lilista_right" href="home/history/index.html" >历史</a></li>
+</ul>
+
+</div>
+<div class="daohanglistmain"  num="4" onMouseOver="on_over(this)"  >
+
+<ul class="ullist">
+<li class="lilist" ><a class = "lilista" >售后客服</a></li>
+<li class="lilist" ><a class = "lilista_right" >售前客服</a></li>
+<li class="lilist" ><a class = "lilista" >人工客服</a></li>
+<li class="lilist" ><a class = "lilista_right" >在线客服</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="main_login" id="show_1" >
+
+<div class="user_login" id="user_login_id" >
+
+<span>
+<h2 class="denglu" id="denglu_h1" >登录</h2>
+
+<form onsubmit="javascript:return false;" class="denglu_from" id="login_id"  method="post" action="login/userlogin.php">
+<div class="userlogin_" >
+
+
+<font class=" miam_font" >用户名:</font>
+<input class="input_name" name="username" onblur="javascript:check_text(&#39;kk&#39;,&#39;username&#39;);" maxlength="10" id="username" type="text" > 
+<font class="yanzhen_font" id="user_yangzheng" ><label id="kk" class="lable_username" style=" visibility:hidden">ff</label></font>
+</div>
+
+<div  style=" width:100%; padding:2px; text-align:left">
+
+<font class=" miam_font" >密码:</font>
+<input onblur="javascript:check_pwer1(&#39;kk1&#39;,&#39;mima_id&#39;);" name="power" maxlength="10" id="mima_id" type="password" style="padding:0px; margin:0; width:150px"> 
+<font class="yanzhen_font"><label id="kk1" style=" visibility:hidden">ghg</label></font>
+
+</div>
+
+<div style=" width:100%; padding:2px; ">
+
+
+
+
+<font class=" miam_font" >验证码:</font>
+<input class="yanzhengma" maxlength="4" id="check_ma" name="yazhen" type="text" style="width:50px">  
+<a><img class="yanzheng" id="yazhengma" align="top" ></a>
+
+<a onclick="javascript:jpg();" class="shuaxin">刷新一下</a>
+
+
+
+
+</div>
+<hr style="margin:0; padding: 0px;">
+<div style="border:solid #9F3 0px; padding:2px; text-align:center">
+<a id="error_a" style="visibility:hidden;  color:#F00; font-size:10px;"></a>
+<input class="button_su" checked="checked" id="login_button" style="margin-left:50px; width:30%" onclick="submit00()" type="submit" value="登录">
+<a href="lo/forge_power.html" class="shuaxin">忘记密码了？</a>
+<hr style=" margin:0; padding:0px;">
+</div>
+
+
+
+</form>
+<h2 class="h2" >注册</h2>
+<form class="from_h2_class" onsubmit="return false" id="reg_id_form"  method="post" action="login/user_reg.php">
+
+<div style=" width:100%; text-align:left">
+
+<font class="from_h2_user" >用户名:</font>
+<input class="from_h2 user_in" name="username" onblur="javascript:check_text('kk2','re_username');" maxlength="10" id="re_username" type="text" style=" height:15px; width:150px; padding:0px; margin:0;"> 
+<font class="yanzhen_font"><label class="from_h2" id="kk2" style=" visibility:hidden"></label></font>
+</div>
+
+
+<div style=" width:100%; text-align:left">
+
+<font class="from_h2_user">密码:</font>
+<input class="from_h2_mima_in" name="userpower" onblur="javascript:check_pwer1(&#39;kk3&#39;,&#39;re_mima&#39;);" maxlength="10" id="re_mima" type="password" style="height:15px; width:150px;     padding:0px; margin:0;">
+<font class="yanzhen_font"><label class="from_h2" id="kk3" style=" visibility:hidden"></label></font>
+</div>
+
+
+<div style=" width:100%; text-align:left">
+
+<font class="from_h2_user">手机号:</font>
+<input class="from_h2_power" name="userphone" onblur="javascript:check_phone1(&#39;kk4&#39;,&#39;re_phone&#39;);" maxlength="11" id="re_phone" type="text" style="height:15px; width:150px; padding:0px; margin:0;">
+<font class="yanzhen_font"><label class="from_h2_la " id="kk4" style=" visibility:hidden"></label></font>
+</div>
+<div style=" width:100%; text-align:left">
+
+<font class="from_h2_user">邮箱:</font>
+<input class="from_h2_mail_in" name="usermail" onblur="javascript:check_mail1(&#39;kk5&#39;,&#39;re_mail&#39;);" maxlength="30" id="re_mail" type="text" style="height:15px; width:150px; padding:0px; margin:0;"> 
+<font class="yanzhen_font"><label class="from_h2_0" id="kk5" style=" visibility:hidden"></label></font>
+
+</div>
+<hr style=" margin: 2px;">
+
+<div style=" width:100%; margin-left:40px;">
+<label>男:</label>
+<input type="checkbox" name="sex_nan" value="1" checked="true" onclick="huchi(&#39;sex_nan&#39;,&#39;sex_nv&#39;)" id="sex_nan">
+
+<label>女:</label>
+<input type="checkbox" name="sex_nv" value="0" onclick="huchi(&#39;sex_nv&#39;,&#39;sex_nan&#39;)" id="sex_nv">
+
+
+</div>
+<hr style=" margin: 2px;">
+<div style=" width:100%;  margin-left:40px; padding:2px;"><input type="checkbox" name="yinsi" value="1" id="yinsi">  <label>隐私协议</label></div>
+<div class="from_h2_div_ya" style=" padding:0px; margin-top:2px;">
+
+
+
+<font class="from_h2_user">验证码:</font>
+<input class="yazhengma_in" maxlength="4" id="re_yan" name="yazhen" type="text" style="width:50px;">
+<a style="padding:0px; margin:0px;"><img align="top" class="yanzheng" id="yazhen2" ></a>
+
+
+<a onclick="javascript:jpg2();" class="shuaxin">刷新一下</a>
+
+
+
+
+
+</div>
+<div class="re_gest_div" style=" border:solid #9F3 0px;text-align:center">
+<a id="error_q" style="visibility:hidden; color:#F00; font-size:10px;"></a>
+
+<input class="re_regest" id="re_regest" onclick="checkw()" style="width:50%" type="submit" value="注册">
+
+</div>
+</form>
+
+
+</span>
+
+</div>
+</div>
+
+<div class="zhongxiabu" style="background-color:#009900; clear:both" >
+
+<div style="margin:3em auto; height:17em; width:80%;  border:0px #0000FF solid ">
+
+<div style=" float:left; margin-top:2em">
+<a style="font-size:2em; margin-left:3em; color:#FFF; font-family:'微软雅黑'">导航</a>
+
+<p style=" margin-left:1em; width:300px; height:200px; font-size:14px; font-family:'微软雅黑'; color:#fff; font-weight:500">中国共产党中央纪律检查委员会（简称中共中央纪委、中央纪委或中纪委）为中国共产党中央委员会的检查监督机关</p>
+</div>
+<div style="float:right; margin-top:3em; margin-right:8em; border:solid 0px #fff;">
+<style type="text/css">
+
+.win_a a{
+	display:block; padding:3px 10px; color:#000; background-color:#FFF; font-family:"微软雅黑"; font-size:0.9em}
+</style>
+<table>
+<tr>
+<td class="win_a"><a href="daohang/science/index.html">科技</a></td>
+<td class="win_a"><a href="daohang/culture/index.html">文化</a></td>
+<td class="win_a"><a href="daohang/game/index.html">游戏</a></td>
+<td class="win_a"><a href="daohang/language/index.html">语言</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="daohang/IT/index.html">IT</a></td>
+<td class="win_a"><a href="daohang/bank/index.html">银行</a></td>
+<td class="win_a"><a href="daohang/Sociology/index.html">社会</a></td>
+<td class="win_a"><a href="daohang/gam/index.html">社交</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="daohang/tour/index.html">旅游</a></td>
+<td class="win_a"><a href="daohang/new/index.html">新闻</a></td>
+<td class="win_a"><a href="daohang/map/index.html">地图</a></td>
+<td class="win_a"><a href="daohang/love/index.html">婚恋</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="daohang/literature/index.html">文学</a></td>
+<td class="win_a"><a href="daohang/history/index.html">历史</a></td>
+<td class="win_a"><a href="daohang/novel/index.html">小说</a></td>
+<td class="win_a"><a href="daohang/school/index.html">学校</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="daohang/software/index.html">软件</a></td>
+<td class="win_a"><a href="daohang/shoping/index.html">商城</a></td>
+<td class="win_a"><a href="daohang/video/index.html">视频</a></td>
+<td class="win_a"><a href="daohang/magazine/index.html">杂志</a></td>
+</tr>
+</table>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="zhongxiabu" style="background-color:#568e7d ; clear:both" >
+
+<div style="margin:3em auto; height:17em; width:80%;  border:0px #0000FF solid ">
+
+<div style=" float:left; margin-top:3em; margin-left:1em">
+<table>
+<tr>
+<td class="win_a"><a href="home/s_shop/book/index.html">图书</a></td>
+<td class="win_a"><a href="home/s_shop/clothes/men.html">男装</a></td>
+<td class="win_a"><a href="home/s_shop/clothes/girl.html">女装</a></td>
+<td class="win_a"><a href="home/s_shop/jiadian/index.html">家电</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/s_shop/mobile/index.html">手机</a></td>
+<td class="win_a"><a href="home/s_shop/peijian/index.html">配件</a></td>
+<td class="win_a"><a href="home/s_shop/Qcoin/index.html">Q币</a></td>
+<td class="win_a"><a href="home/s_shop/shuma/index.html">数码</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/s_shop/toy/index.html">玩具</a></td>
+<td class="win_a"><a href="home/s_shop/virtual/index.html">虚拟</a></td>
+<td class="win_a"><a>地图</a></td>
+<td class="win_a"><a>婚恋</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>文学</a></td>
+<td class="win_a"><a>历史</a></td>
+<td class="win_a"><a>小说</a></td>
+<td class="win_a"><a>学校</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>软件</a></td>
+<td class="win_a"><a>商城</a></td>
+<td class="win_a"><a>视频</a></td>
+<td class="win_a"><a>杂志</a></td>
+</tr>
+</table>
+</div>
+<div style="float:right; margin-top:3em; margin-right:7em; border:solid 0px #fff;">
+
+
+<a style="font-size:2em; margin-left:3em; color:#FFF; font-family:'微软雅黑'">商城</a>
+
+<p style=" margin-left:1em; width:300px; height:200px; font-size:14px; font-family:'微软雅黑'; color:#fff; font-weight:500">中国共产党中央纪律检查委员会（简称中共中央纪委、中央纪委或中纪委）为中国共产党中央委员会的检查监督机关</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+<div class="zhongxiabu" style="background-color:#eeb924; clear:both" >
+
+<div style="margin:3em auto; height:17em; width:80%;  border:0px #0000FF solid ">
+
+<div style=" float:left; margin-top:2em">
+<a style="font-size:2em; margin-left:3em; color:#FFF; font-family:'微软雅黑'">任务</a>
+
+<p style=" margin-left:1em; width:300px; height:200px; font-size:14px; font-family:'微软雅黑'; color:#fff; font-weight:500">中国共产党中央纪律检查委员会（简称中共中央纪委、中央纪委或中纪委）为中国共产党中央委员会的检查监督机关</p>
+</div>
+<div style="float:right; margin-top:3em; margin-right:8em; border:solid 0px #fff;">
+<style type="text/css">
+
+.win_a a{
+	display:block; padding:3px 10px; text-decoration:none; color:#000; background-color:#FFF; font-family:"微软雅黑"; font-size:0.9em}
+</style>
+<table>
+<tr>
+<td class="win_a"><a>科技</a></td>
+<td class="win_a"><a>文化</a></td>
+<td class="win_a"><a>游戏</a></td>
+<td class="win_a"><a>语言</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>IT</a></td>
+<td class="win_a"><a>银行</a></td>
+<td class="win_a"><a>社会</a></td>
+<td class="win_a"><a>社交</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>旅游</a></td>
+<td class="win_a"><a>新闻</a></td>
+<td class="win_a"><a>地图</a></td>
+<td class="win_a"><a>婚恋</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>文学</a></td>
+<td class="win_a"><a>历史</a></td>
+<td class="win_a"><a>小说</a></td>
+<td class="win_a"><a>学校</a></td>
+</tr>
+<tr>
+<td class="win_a"><a>软件</a></td>
+<td class="win_a"><a>商城</a></td>
+<td class="win_a"><a>视频</a></td>
+<td class="win_a"><a>杂志</a></td>
+</tr>
+</table>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+<div class="zhongxiabu" style="background-color:#488bad" >
+
+
+<div style="margin:3em auto; height:17em; width:80%;  border:0px #0000FF solid ">
+
+<div style=" float:left; margin-top:3em; margin-left:1em">
+<table>
+<tr>
+<td class="win_a"><a href="home/science/index.html">科技</a></td>
+<td class="win_a"><a href="home/culture/index.html">文化</a></td>
+<td class="win_a"><a href="home/game/index.html">游戏</a></td>
+<td class="win_a"><a href="home/car/index.html">汽车</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/IT/index.html">IT</a></td>
+<td class="win_a"><a href="home/bank/index.html">银行</a></td>
+<td class="win_a"><a href="home/disport/index.html">娱乐</a></td>
+<td class="win_a"><a href="home/sport/index.html">体育</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/tour/index.html">旅游</a></td>
+<td class="win_a"><a href="home/new/index.html">新闻</a></td>
+<td class="win_a"><a href="home/map/index.html">地图</a></td>
+<td class="win_a"><a href="home/army/index.html">军事</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/Life/index.html">生活</a></td>
+<td class="win_a"><a href="home/house/index.html">房产</a></td>
+<td class="win_a"><a href="home/novel/index.html">小说</a></td>
+<td class="win_a"><a href="home/fashion/index.html" >时尚</a></td>
+</tr>
+<tr>
+<td class="win_a"><a href="home/finance/index.html">财经</a></td>
+<td class="win_a"><a href="home/banking/index.html">金融</a></td>
+<td class="win_a"><a href="home/shares/index.html">股票</a></td>
+<td class="win_a"><a href="home/history/index.html">历史</a></td>
+</tr>
+</table>
+</div>
+<div style="float:right; margin-top:3em; margin-right:7em; border:solid 0px #fff;">
+
+
+<a style="font-size:2em; margin-left:3em; color:#FFF; font-family:'微软雅黑'">快报</a>
+
+<p style=" margin-left:1em; width:300px; height:200px; font-size:14px; font-family:'微软雅黑'; color:#fff; font-weight:500">中国共产党中央纪律检查委员会（简称中共中央纪委、中央纪委或中纪委）为中国共产党中央委员会的检查监督机关</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dibu" >
+
+<table class="difang_tabl" >
+<td class="difangpingdao_td" ><em class="difangfont_em" >地方频道:</em></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/yu/index.html">河南</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/ji/index.html">河北</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/lu/index.html">山东</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/e/index.html">湖北 </a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/xiang/index.html">湖南</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/gan/index.html">江西</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/zhe/index.html">浙江</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/shen/index.html">上海</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/jing/index.html">北京</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/tjin/index.html">天津</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/yue/index.html">广东</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/gui/index.html">广西</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/su/index.html">江苏</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/ming/index.html">福建</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/jin/index.html">山西</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/qun/index.html">海南</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/hei/index.html">黑龙江</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/jilin/index.html">吉林</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/liao/index.html">辽宁</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/nei/index.html">内蒙古</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/long/index.html">甘肃</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/qing/index.html">青海</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/zang/index.html">西藏</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/chuan/index.html">四川</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/dian/index.html">云南</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/ba/index.html">重庆</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/qin/index.html">陕西</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/qian/index.html">贵州</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/wan/index.html">安徽</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/xin/index.html">新疆</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/ning/index.html">宁夏</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/ao/index.html">澳门</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/gang/index.html">香港</a></td>
+<td class="difangpingdao_td" ><a class="difangfont" href="pd/tai/index.html">台湾</a></td>
+</table>
+
+</div>
+
+<div class="footer_list" >
+<div  style="margin:0 auto; padding:0px;  margin-top:2px;width:100%">
+<ul class="f">
+
+
+<li class="li" style="float:left">
+<ul class="d">
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=1">关于注册</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=2">新手入门</a></li>
+
+</ul>
+
+
+</li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=4">地区加盟</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=3">校园代理</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=5">成为供应商</a></li>
+
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=6">免责声明</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=7">隐私政策</a></li>
+
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=9">关于链接</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=8">关于支付</a></li>
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=10">关于商品</a></li>
+</ul>   </li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=12">PC端</a></li>
+
+<li class="lii"><a class="dibu_a" href="footer/index.html?id=11">手机版APP</a></li>
+</ul>   </li>
+
+</ul>
+</div>
+
+</div>
+<div class="zuidibu" >
+<div class="zuidibu_div" ><a class="yuicp" style="font-family:'Microsoft YaHei UI' ; font-size:0.8em ; color:#FFF">豫ICP备案12345</a></div>
+<table class="zuidibu_table" >
+<tr><td class="zuidibu_table_td" ><a class="difangfont" href="j/aboutus.html">公司简介</a></td>
+<td class="zuidibu_table_td" ><a class="difangfont" href="j/AD.html">广告服务</a></td>
+<td class="zuidibu_table_td" ><a class="difangfont" href="j/contactus.html">联系我们</a></td>
+<td   ><a class="difangfont" href="j/career.html">招聘精英</a></td>
+</tr></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body></html>

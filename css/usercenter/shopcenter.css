@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main_header{  margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:100px; background-color:#fff}
+.main_option{ clear:both;width:350px; height:25px; margin-top:20px; margin-left:10px; background-color:#f5f5f5; text-align:center}
+.daifukuan{display:inline-block ; width:60px; margin-left:10px; margin-right:5px;}
+.font_option{font-family:'寰蒋闆呴粦'; font-size:12px;}
+
+.weifu{display:inline-block ; width:60px; margin-left:5px; margin-right:5px;}
+
+.weipin{display:inline-block ; width:60px;margin-left:5px; margin-right:5px;}
+
+.daipin{display:inline-block ; width:60px;margin-left:5px; margin-right:5px;}
+
+.order_list{  margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:auto; background-color:#fff}
+.order_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:16px}
+.more{float:right; display:inline-block; font-family:'Microsoft YaHei UI'; padding:5px; margin-right:20px; font-size:14px}
+.order_table{width:98%; background-color:#f5f5f5; margin-left:10px; margin-top:20px;  text-align:center; border-collapse:collapse}
+.th_name{width:20%;  border:1px solid  #d4d4d4;}
+.th_man{width:20%;   border:1px solid  #d4d4d4;}
+.th_cash{width:20%;  border:1px solid  #d4d4d4;}
+.th_state{width:20%; border:1px solid  #d4d4d4;}
+.table_value{width:98%;  margin-left:10px; margin-top:20px; margin-bottom:20px;  text-align:center; border-collapse:collapse}
+.td_name{width:20%; border:1px solid  #d4d4d4;  }
+.td_man{width:20%;  border:1px solid  #d4d4d4;}
+.td_cash{width:20%;  border:1px solid  #d4d4d4;}
+.td_state{width:20%;  border:1px solid  #d4d4d4;}
+

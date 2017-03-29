@@ -1,0 +1,2 @@
+<?php
+//genxing链接

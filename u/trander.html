@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>转账记录</title>
+
+<script type="text/javascript" src="../js/jstool.js"></script>
+<script type="text/javascript" src="../js/p.js"></script>
+
+<script type="text/javascript">
+
+function initdata2(){
+		
+	function setw(dt){
+		
+		alert(dt);
+	//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		//alert(obj.hand.yeshu);
+		if(obj.hand.yeshu!="a"){
+			var dd=parseInt(obj.hand.yeshu);
+		//	alert(dd);
+			createys(dd);
+			
+			}
+		for(var i=0;obj.hand.size;i++){
+		var oj=eval("obj.un"+i);
+			cretetabl1e([oj.mincheng,oj.integral,oj.balance,oj.integral]);
+			
+			
+			}
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/userconter/transfers.php",{"id":f,"pici":"2151","page":"0"},setw,"text");
+		
+		
+		
+		}
+function cretetabl1e(fd){
+	//alert("s");
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<4;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+<body style="background-color:#f5f5f5" onload="initdata2()">
+<div class="kuang"  style="  margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:auto; background-color:#fff">
+
+<div style=" padding:10px; font-family:Microsoft YaHei UI; font-size:16px">账单</div>
+
+<a style="float:right; display:inline-block; font-family:'Microsoft YaHei UI'; padding:5px; margin-right:20px; font-size:14px">>>更多</a>
+<table id="mtable2" style="width:98%; background-color:#f5f5f5; margin-left:10px; margin-top:20px;  text-align:center; border-collapse:collapse">
+<tr style="">
+
+<th style="width:20%;  border:1px solid  #d4d4d4;">时间</th>
+<th style="width:20%;   border:1px solid  #d4d4d4;">支出 </th>
+<th style="width:20%;  border:1px solid  #d4d4d4;">收入 </th>
+<th style="width:20%; border:1px solid  #d4d4d4;">余额</th>
+</tr>
+</table>
+
+<table id="mtable" style="width:98%;  margin-left:10px; margin-top:20px; margin-bottom:20px;  text-align:center; border-collapse:collapse">
+
+<tr style="">
+
+<td style="width:20%; border:1px solid  #d4d4d4;  ">ddd</td>
+<td style="width:20%;  border:1px solid  #d4d4d4;">ddd </td>
+<td style="width:20%;  border:1px solid  #d4d4d4;">ddd </td>
+<td style="width:20%;  border:1px solid  #d4d4d4;">ddd </td>
+</tr>
+</table>
+
+
+
+
+</div>
+<div  style="border:1px solid #C90; text-align:center  ">
+<a d="f" id="shang" style=" border:1px solid #999; display: inline-block; width:60px; padding-top:3px; padding-bottom:2px; font-family:Arial, Verdana, 宋体" href="javascript:y_click(this)">上一页</a>
+<div id="yeshu" style="border:0px solid #999; display: inline-block " ><a style="border:1px solid #999; font-family:Arial, Verdana, 宋体 ; display: inline-block; width:20px; padding-top:3px; padding-bottom:2px " href="javascript:y_click(this)">1</a>
+<a  d="f" style="border:1px solid #999; display: inline-block ; width:20px; padding-top:3px; padding-bottom:2px ;font-family:Arial, Verdana, 宋体 " href="javascript:y_click(this)">2</a>
+<a  d="f" style="border:1px solid #999; display: inline-block; width:20px; padding-top:3px; padding-bottom:2px; font-family:Arial, Verdana, 宋体 " href="javascript:y_click(this)">2</a>
+</div>
+<a  d="f" style="border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px" href="javascript:y_click(this)">下一页</a>
+</div>
+
+
+<script type="text/javascript">
+//createys(6);
+	function createys(c){
+	var	 g=document.getElementById('yeshu');
+	for(var i=0;i<c;i++){
+	var a_1=document .createElement('a');
+	a_1.setAttribute('id',"dd"+i);
+	a_1.setAttribute('style'," float:left;");
+	a_1.setAttribute('href',"javascript:y_click(this)");
+	a_1.setAttribute('d',"f");
+	a_1.setAttribute('ww',"0");
+	a_1.innerHTML=i+1;
+	g.appendChild(a_1);
+	}
+	
+	
+	
+	
+	
+	}
+function y_click(g){
+	alert("dd");
+	$("[d=f]").css("background","#fff");
+	if($(g).text()!="1"){
+		
+		$("#shang").css("visibility","visible");
+		
+		}
+		
+	if($(g).text()==$("#ee").text()){
+		
+		$("#shang").css("visibility","hidden");
+		
+		}
+		if($(g).text()=="上一页"){
+		var d=	 $("[ww=1]").text();
+		$("[ww=1]").css("background","#f1f2f2");
+		$("[d=f]").attr("ww","0");
+		$("[ww=1]").attr("ww","1");
+	tj(d+"s");
+	
+	}
+	else if($(g).text()=="下一页"){
+		var d=	 $("[ww=1]").text();
+	tj(d+"x");
+		$("[ww=1]").css("background","#f1f2f2");
+		$("[d=f]").attr("ww","0");
+		$("[ww=1]").attr("ww","1");
+		}
+		else{
+			
+			tj($(g).text());
+			$(g).css("background","#f1f2f2");
+			$("[d=f]").attr("ww","0");
+		$(g).attr("ww","1");
+			}
+	
+	}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

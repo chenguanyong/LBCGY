@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color: #f5f5f5}
+.main_option{  margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:150px; background-color:#fff}
+.main_option_left{float:left;  width:200px; border:1px solid #FFF; height:100px;}
+.main_title{margin-left:5px;}
+.main_option_list{margin-left:5px;}
+.font_yu{font-family:'寰蒋闆呴粦'; font-size:14px}
+.font_cash{ color:#F00}
+.font_dw{font-family:'寰蒋闆呴粦'; font-size:14px}
+.label_ji{padding-left:20px; font-family:'寰蒋闆呴粦'; font-size:14px }
+.main_option_2{margin-left:5px; font-family:'寰蒋闆呴粦'; font-size:14px}
+.font_dh{ dpadding-left:20px;}
+.shuxian{ float:left; margin-top:20px;  margin-right:30px; width:1px; height:130px;  height:100px; background-color:#9a9696}
+.main_reight{ float:left;  margin-bottom:20px; margin-top:20px; width:200px; height:100px; background-color:#d4d4d4}
+.mypay_option{line-height:28px; margin:5; margin-left:4px; padding:0px; list-style:none;}
+.main_option_item{ margin-left:4px; margin-right:4px; display:inline-block; width:75px; font-size:10px; font-family: '寰蒋闆呴粦' }
+.main_option_item{ margin-left:4px; margin-right:4px; display:inline-block; width:75px; font-size:10px; font-family: '寰蒋闆呴粦'  }
+.main_option_item{ margin-left:4px; margin-right:4px; display:inline-block; width:75px; font-size:10px; font-family: '寰蒋闆呴粦'  }
+.main_option_item{ margin-left:4px; margin-right:4px; display:inline-block; width:75px; font-size:10px; font-family: '寰蒋闆呴粦'  }
+.main_table{  margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:auto; background-color:#fff}
+.model_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:16px}
+.more{float:right; display:inline-block; font-family:'Microsoft YaHei UI'; padding:5px; margin-right:20px; font-size:14px}
+.table_main{width:98%; background-color:#f5f5f5; margin-left:10px; margin-top:20px;  text-align:center; border-collapse:collapse}
+.th_time{width:20%;  border:1px solid  #d4d4d4;}
+.th_zhichu{width:20%;   border:1px solid  #d4d4d4;}
+.th_shouru{width:20%;  border:1px solid  #d4d4d4;}
+.th_yue{width:20%; border:1px solid  #d4d4d4;}
+.table_body{width:98%;  margin-left:10px; margin-top:20px; margin-bottom:20px;  text-align:center; border-collapse:collapse}
+.td_time{width:20%; border:1px solid  #d4d4d4;  }
+.td_zhichu{width:20%;  border:1px solid  #d4d4d4;}
+.td_shouru{width:20%;  border:1px solid  #d4d4d4;}
+.td_yue{width:20%;  border:1px solid  #d4d4d4;}
+
+
+
+
+.main_chon{position:absolute; display:none;  width:100%;  top:50px; height:500px; border:solid 1px #000000; background-color:rgba(1, 1, 1, 0.43)}
+.chong_pant{width:450px; height:400px;   margin:0 auto; background-color:#f5f5f5;  border:solid 1px #0066FF}
+.chong_font{ margin-bottom:10px; float:left; font-size:14px; font-family:'Microsoft YaHei UI'}
+.main_close{ margin-bottom:10px; float:right; display:block}
+.zhuan{width:100%; margin-top:10px; height:50px; clear:both;  background-color:#FFF; margin-bottom:5px;}
+.chong_type_{width:100%; clear:both }
+.chong_type{ width:120px; display:inline-block; text-align:right}
+.chong_power{width:100%; clear:both; margin-top:10px; line-height:28px; background-color:#FFF; height:180px; margin-bottom:5px;}
+.cp_title{ margin-bottom:10px; padding-top:10px;  font-size:14px; font-family:'Microsoft YaHei UI'}
+.power_title{ margin-left:20px;font-size:12px; float:left  }
+.power1{width:70px;   height:30px; float:left}
+
+.sure_button{width:100%; margin-top:10px;  background-color:#fff; height:55px; }
+.small{margin-left:130px; visibility:visible}
+
+
+
+.main_duihuan{position:absolute; display:none;  width:100%;  top:50px; height:500px; border:solid 1px #000000; background-color:rgba(1, 1, 1, 0.43)}
+.chong_pant{width:450px; height:400px;   background-color:#f5f5f5;  border:solid 1px #0066FF}
+.duihuan{ margin-bottom:10px; float:left; font-size:14px; font-family:'Microsoft YaHei UI'}
+.main_close{ margin-bottom:10px; float:right; display:block}
+.duihuan_div{width:100%; clear:both }
+
+.duihuan_pant{width:100%; clear:both; margin-top:10px; line-height:28px; background-color:#FFF; height:180px; margin-bottom:5px;}
+.duihuan_font{ margin-bottom:10px;  font-size:14px; font-family:'Microsoft YaHei UI'}
+.duihuan_input{width:100%;  height:50px;}
+.duihuanjifen{ width:129px; display:inline-block; text-align:right}
+
+.duihuanpower{ width:129px;  display:inline-block; text-align:right}
+
+.sure_button_{width:100%; margin-top:10px;  background-color:#fff; height:55px; }
+.sure_div{margin-left:130px;}
+
+.main_zhuan_1{width:450px; height:400px;    margin:0 auto; background-color:#f5f5f5;   border:solid 1px #0066FF}
+.main_zhuan_pant{width:450px; height:400px;   background-color:#f5f5f5;  border:solid 1px #0066FF}
+.main_zhuan_font{ margin-bottom:10px; float:left; font-size:14px; font-family:'Microsoft YaHei UI'}
+.main_zhuan_input{ margin-bottom:10px; float:right; display:block}
+.zhuan{width:100%; margin-top:10px; clear:both;  background-color:#FFF; margin-bottom:5px;}
+.main_zhuan_type{width:100%; clear:both }
+.zhanghu_title{ width:120px; display:inline-block; text-align:right}
+.input_cash{width:100%; clear:both; margin-top:10px;  background-color:#FFF; height:100px; margin-bottom:5px;}
+.input_main{width:100%; border:solid 0px #000000; padding-top:25px;  height:50px;}
+.cash_font{ width:129px; display:inline-block; text-align:right}
+
+.main_waring{width:100%; margin-top:10px; clear:both; height:80px; background-color:#FFF; margin-bottom:5px;}
+.sur_button_zhuan{width:100%; margin-top:10px;  background-color:#fff; height:55px; }
+.zhuan_button{margin-left:130px;}
+.error{ visibility:hidden}
+
+
+
+
+.main_zhuan_2{width:450px; height:400px; display:none;   margin:0 auto; background-color:#f5f5f5;  border:solid 1px #0066FF}
+.main_zhuan_div{width: 450px; height: 400px;  background-color: #f5f5f5; border: solid 1px #0066FF; }
+.main_zhuan_font1{ margin-bottom:10px; float:left; font-size:14px; font-family:'Microsoft YaHei UI'}
+.main_close{ margin-bottom:10px; float:right; display:block}
+
+.zhuanhu_data_main{width:100%; }
+.input_cash{width:100%; margin-top:10px;  background-color:#fff; height:55px; }
+.input_main_div{width:100%; height:50px;}
+.input_font{ width:129px;  display:inline-block; text-align:right}
+
+.zhuan_two_button{width:100%; margin-top:10px;  background-color:#fff; height:55px; }
+.button_before{margin-left:50px; float:left}
+.error_{margin-left:50px; float:left; visibility:visible}
+.zhuanhu_data{width:100%; margin-top:10px; clear:both;  background-color:#FFF; margin-bottom:5px;}
+.sure_button_m{margin-left:50px; float:left;}
+
+.main_zhuanzhang{position:absolute; width:100%; display:none;   top:50px; height:500px; border:solid 1px #000000; background-color:rgba(1, 1, 1, 0.43)}
+

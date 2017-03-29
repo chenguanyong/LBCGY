@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的推广</title>
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+
+<script type="text/javascript">
+
+function initdata(){
+		
+	function setw(dt){
+		
+		alert(dt);
+		//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		/*if(obj.bordy1.name=="image"){
+		//$("#yazhengma").attr("src",obj.bordy1.data);
+		
+		}*/
+		
+		
+		for(var i=2;i<parseInt(obj.un1.size)+2;i++){
+			var f=eval("obj.un"+i);
+			
+			cretetab1e([f.name,f.links,f.dian,f.sure,f.time]);
+			
+			}
+			var c=[];
+			c[0]=parseInt(obj.un1.leng);
+			for(var i=1;i<c[0]+1;i++){
+				var f=eval("obj.un1.linkw"+i);
+				c[i]=f;
+				}
+		creatdaohang(c);
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		//alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/userconter/tuiguang.php",{"id1":f},setw,"text");
+		
+		
+		
+		}
+//页数
+function creatdaohang(c){
+	var	 g=document.getElementById('yeshu');
+	for(var i=0;i<c[0];i++){
+	var a_1=document .createElement('a');
+	a_1.setAttribute('id',"dd"+i);
+	a_1.setAttribute('style'," float:left;");
+	a_1.setAttribute('href',c[i+1]);
+	a_1.innerHTML=i+1;
+	g.appendChild(a_1);
+	
+	}
+	
+	
+	}
+
+
+function cretetable(fd){
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<5;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+</script>
+
+
+
+
+<style type="text/css">
+table
+  {
+  border-collapse:collapse;
+  }
+
+table, td, th
+  {
+  border:1px solid  #00F;
+  font-family:Arial, Helvetica, sans-serif;
+  }
+</style>
+
+</head>
+
+<body>
+<div>
+<div style="width:100%; height:30px; border:solid 1px #000"><a style="display:inline-block; width:60px; height:30px; border:solid 0px #000; background-color:#00C; font-size:16px; text-align:center">本周</a><a style="display:inline-block">今天</a><a style="display:inline-block">上周</a></div>
+<table id="mtable" style="width:100%; margin-top:20px; border:solid 0px #00C ; text-align:center; border-collapse:collapse">
+<tr style="">
+
+<th style="width:20%; border:solid 1px #00F">名称</th>
+<th style="width:40%;  border:solid 1px #00F">链接 </th>
+<th style="width:20%; border:solid 1px #00F">点击量 </th>
+<th style="width:20%;border:solid 1px #00F">折现</th>
+</tr>
+<tr style="">
+
+<td style="width:20%;  border-bottom:solid 1px #00F">ddd</td>
+<td style="width:40%;">ddd </td>
+<td style="width:20%;">ddd </td>
+<td style="width:20%;">ddd </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<div style="border:0px solid #C30; margin:0 auto; padding-top:20px; width:70%; clear:both; text-align:center ">
+<div  style="border:0px solid #C90; margin:0 auto; width:40%; height:25px">
+<a style=" float:left " href="模板/ll">&lt;上一页&gt;</a>
+<div id="yeshu"><a style=" float:left " href="模板/ll">1</a>
+<a style=" float:left " href="模板/ll">2</a>
+<a style=" float:left " href="模板/ll">2</a>
+</div>
+<a style=" float:left " href="模板/ll">&lt;下一页&gt;</a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+<script type="text/javascript">
+function cretetable(fd){
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<4;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+for (var i=0;i<4;i++){
+cretetable([1,2,3,4]);
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

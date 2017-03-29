@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.title_header{  background-color:#fff; width:100%; height:80px;}
+.title_font{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+.table_class{width:99%; margin-left:10px; margin-top:10px; background-color:#f5f5f5; height:30px; padding-bottom:0px; border:solid 0px #00C ; text-align:center; border-collapse:collapse}
+.th_name{width:15%; border:solid 1px #9a9a9a}
+.th_link{width:30%;  border:solid 1px #9a9a9a}
+.th_dianji{width:20%; border:solid 1px #9a9a9a}
+.th_soure{width:15%;border:solid 1px #9a9a9a}
+.th_date{width:20%;border:solid 1px #9a9a9a}
+.main_value{width:99%; margin-left:10px; margin-top:10px;  background-color:#fff; width:99%; height:auto}
+.table_value{width:100%;  border:solid 0px #00C ; text-align:center; border-collapse:collapse}
+.td_name{width:15%; border:solid 1px #9a9a9a}
+.td_link{width:30%; border:solid 1px #9a9a9a}
+.td_dianjji{width:20%; border:solid 1px #9a9a9a}
+.td_soure{width:15%; border:solid 1px #9a9a9a}
+.td_date{width:20%; border:solid 1px #9a9a9a}
+.page_div{border:0px solid #C30; margin:0 auto; padding-top:20px; width:70%; clear:both; text-align:center }
+.pages{border:0px solid #C90; text-align:center  }
+.before{border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px}
+.yeshu{border:0px solid #999; display: inline-block }
+.next{border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px}
+.button_shua{visibility:hidden visible}
+
+

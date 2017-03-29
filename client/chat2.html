@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title id="title" >无标题文档</title>
+<script type="text/jscript" src="../js/jstool.js"></script>
+<script type="text/javascript" src="../js/p.js"></script>
+<style>
+textarea {
+    font-family: monospace;
+    border-color: rgb(169, 169, 169);
+}
+user agent stylesheettextarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    flex-direction: column;
+    resize: auto;
+    cursor: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid;
+    padding: 2px;
+}
+user agent stylesheetinput, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+user agent stylesheetinput, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; }
+
+</style>
+
+</head>
+
+<body class="kuang"  style="min-width:800px;">
+<div name="zhuanz"  id="jifen" style="position:absolute; display:none; width:100%;  height:500px; border:solid 1px #000000; background-color:rgba(1, 1, 1, 0.43)">
+  
+  <p ></p>
+ 
+
+
+<!--11-->
+
+<div style="width:450px; height:200px;   margin:0 auto; background-color:#f5f5f5;  border:solid 1px #0066FF">
+<div style="width:450px; height:200px;   background-color:#f5f5f5;  border:solid 1px #0066FF" >
+<div style=" margin-bottom:10px; float:left; font-size:14px; font-family:'Microsoft YaHei UI'" >兑换积分</div>
+<div style=" margin-bottom:10px; float:right; display:block">
+  <input type="button" onclick="jifen_close()" value="guanbi" />
+  </div>
+  
+ 
+
+<div style="width:100%; margin-top:10px;  background-color:#fff; height:55px; " >
+
+
+<div style="margin-left:130px;"><input type="button"  value="确认"/></div>
+
+
+</div>
+
+<script type="text/javascript">
+//
+function sure_(){
+	
+	var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("bordy");
+	
+	
+	var x=document.getElementById("my");
+ var d1= x.selectedIndex;
+  	xml.startelement("un1")
+	xml.element("name1","dfzh");
+	xml.element("data1",d1);
+	xml.element("type1","3");
+	xml.endelement("un1");
+	
+	xml.startelement("un2")
+	xml.element("name2","cash");
+	xml.element("data2",document.getElementById('cash').value);
+	xml.element("type2","3");
+	xml.endelement("un2");
+	
+	xml.startelement("un3")
+	xml.element("name3","power");
+	xml.element("data3",document.getElementById('paypower').value);
+	xml.element("type3","3");
+	xml.endelement("un3");
+	
+	xml.endelement("bordy");
+	xml.endelement("root");
+	var d=xml.savexml();//
+	//alert(d);
+	
+	function callback(d){
+	//alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		if(obj.handle1.name=="username"){
+			document.getElementById('kk').innerHTML="鐢ㄦ埛鍚嶉敊璇";
+			
+			}else if(obj.handle1.name=="power" ){
+				
+				document.getElementById('kk').innerHTML="瀵嗙爜閿欒";
+				
+				
+				}else if(obj.handle1.name=="yazhen"){
+					
+					document.getElementById('yazheng2').innerHTML="验证码错误";
+					$("#yazheng2").css("visibility","visible");
+					}else if(obj.bordy1.data!=""){
+						
+						//return false;
+						alert("dsdsd222");
+						window.location.href=obj.bordy1.data;
+
+						
+						}
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/userconter/finance/integral.php',{"xml":d},callback,"text");
+	
+	
+	
+	
+	
+	}
+	function jifen_close(){
+		
+		
+		$("#jifen").css("display","none");
+		
+		
+		}
+
+</script>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+<div class="kuang" id="main" style="border:1px; margin:0 auto; width:60% ; height: 500px; border-style:solid">
+<div  class="cebian kuang" id="w3s"  style="margin:0; padding:0; float:right; width:29.5%; height:99%"><div class="cebian_top_div "id="cebian_top_div" style="padding:5px"><img class="cebian_img" id="cebian_img"  style="width:100%; height:50%" src="../../../My Documents/未命名站点 4/t5.jpg"/></div>
+
+<div class="cebian_div kuang" id="cebian_div">
+<div style=" width:100%; padding:0; margin:0; height:25px; border-bottom:solid 1px #000">
+  <div  class="xing"  onclick="javascript:dianji2();" id="xian" style="float:left ; margin:0; background-color:#03F; margin-right:3px; font-family: 微软雅黑; font-size:16px">相关推荐</div>
+  <div  class="ben" id="re" onclick="javascript:dianji();" style="float:left; font-family: 微软雅黑; margin:0; font-size:16px;">本周热点</div>
+<div style="float:right; margin:0;font-family: 微软雅黑; font-size:16px">&gt;&gt;更多</div></div>
+<div style="width:100%">
+<div class="benzhou" id="benzhour" style="width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px; font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+
+</div>
+<div class="xiangguan kuang" id="xiangguan" style=" width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年ffffffffffff河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+<div  class="chat_top_div kuang" id="chat_top_div" style="border:1px; margin:0; padding:0;border-style:solid; width:70%;float:left; height:20px"><font class="top_font" id="top_font">与王庆眼聊天中</font></div>
+<div id="duihua" class="kuang"    style="border:1px;border-style:solid;float:left; width:70%; height:73%; overflow:auto">
+
+
+
+<!--/*<font style="font-size:16px></font>*/-->
+
+
+
+</div>
+
+<div id="hengtiao"  class="hengtiao kuang" style="width:70%; height:4% ;float:left; border:1px; border-style:solid">
+
+<div><a href="javascript:colse()">结束对话</a></div>
+
+
+
+
+</div>
+
+<script type="text/javascript">
+function colse(){
+	
+	$("#jifen").css("display","block");
+	
+	
+	
+	
+	}
+
+
+
+
+
+</script>
+<div class="main_input kuang" id="main_input"  style="border:1px;border-style:solid;float:left; width:70%; height:17%"><textarea  id="text1"  rows="2" cols="30" style=" padding:0; margin:0;  width:88% ; height:99% ; overflow:auto"></textarea>
+<div class="main_button" id="main_button" onclick="javascript:doclik();"style="border:1px;border-style:solid;float:right; width:9%; height:100%; text-align:center"><font class="button_text" id="button_text">发送</font></div>
+</div>
+
+</div>
+<script type="text/javascript">
+
+
+//创建节点
+function createnode( d,f){
+	//alert(d+"n"+f);
+	var div_1=document.createElement('div');
+	var div_2=document .createElement('div');
+	var font_1=document.createElement("font");
+	var font_2=document.createElement("font");
+	var a_1;
+	//alert("s");
+	switch(d){
+		case 1:{ a_1=document.createElement("a");
+		a_1.setAttribute("id","a");
+		//a_1.setAttribute("style","");
+		alert("dssdsddddddddddddddddddddddddddddddd");
+		a_1.setAttribute("href","http://www.w3school.com.cn");break;
+		
+		}
+		case 2:{ a_1=document.createElement("img");		
+			a_1.setAttribute("id","a");
+		//a_1.setAttribute("style","width:30px;");
+		a_1.setAttribute("src","f.jpg");break;
+			}
+		
+		case 3:a_1=null;break;
+		
+		}
+		//alert("s");
+		var fg="right";
+		if(f[2]==0){
+			fg="left";
+			}
+	
+	div_1.setAttribute("id","div_1");
+	div_1.setAttribute("style","width:80%; margin-top:4px; padding:2px; border:0px; border-style:solid ; text-align:"+fg);
+		//a_1.setAttribute("src","a");
+	
+	div_2.setAttribute("id","div_21");
+	div_2.setAttribute("style","width:80%; margin:2px; padding:2px; border:0px; border-style:solid ; text-align:"+fg);
+	
+	font_1.setAttribute("id","font_11");
+	font_1.setAttribute("style","color:#06F;font-size:10px");
+	font_1.innerHTML=f[0];
+	
+	font_2.setAttribute("id","font_21");
+	font_2.setAttribute("style","color:#06F");
+	font_2.innerHTML=f[1];
+	if(a_1==null){
+	div_1.appendChild(font_1);
+	var g=document.getElementById('duihua');
+	g.appendChild(div_1);
+	div_2.appendChild(font_2);
+	g.appendChild(div_2);
+	//alert("sdddddddddddd");
+	}else{
+		div_1.appendChild(font_1);
+	var g=document.getElementById('duihua');
+	g.appendChild(div_1);
+	a_1.appendChild(font_2);
+	div_2.appendChild(a_1);
+	g.appendChild(div_2);
+		
+	}
+		
+		}
+
+
+//createnode(3,[2,1,0]);
+function doclik(){
+	var r=document.getElementById("text1");
+	//var username=getcooik("d");
+	var d=new Date();
+	var year=d.getFullYear();
+	var mouth=d.getMonth();
+	var day=d.getDate();
+	var h=d.getHours();
+	var f=d.getMinutes();
+	var m=d.getSeconds();
+	var f=" 我十点十分  "+year+"年"+mouth+"月"+day+"日"+h+":"+f+":"+m;
+	//alert(f);
+	createnode(3,[f,r.value,0]);
+	var xml=new writexml();
+	xml.startelement("root");
+	xml.startelement("handle");
+	xml.element("name",1);
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("bordy");
+	xml.element("nmae","dd");
+	xml.element('data',r.value);
+	xml.element("type",1);
+	xml.element("time",f);
+	xml.endelement("bordy");
+	xml.endelement("root");
+	r.value="";
+	var fd=xml.savexml();
+	alert(fd);
+	ajax("kefu.php","data",fd,dobacke,"json");
+	
+	
+	}
+
+function dobacke(df){
+	alert(df);
+	
+	
+	
+	
+	}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

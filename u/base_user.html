@@ -1,0 +1,534 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/usercenter/baseu.css"  type="text/css"  rel="stylesheet" />
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<script  type="text/javascript"   >
+
+
+function initdata(){
+		
+	function setw(dt){
+		
+		//alert(dt);
+		//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		document.getElementById("gexing").innerHTML=obj.brody.gexing;
+		//alert(obj.brody.nickname+"-"+obj.brody.headp+"-"+obj.brody.rank_);
+		$('#nicheng').text(obj.brody.nickname);
+		$('#headp').attr("src",obj.brody.headp);
+		$('#rank_').text(obj.brody.rank_);
+		
+		
+		
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		
+	var pi=$("#username").attr("pici");
+		//alert(pi);
+		$.post("/jj/userconter/base_user.php",{"id":f,"pi":pi},setw,"text");
+		
+		
+		
+		}
+
+
+
+//initdata();
+
+function cretetabl1e(fd){
+	//alert("s");
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<4;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+</script>
+<!---初始化我的链接-->
+
+<script type="text/javascript">
+function initwork(){
+		
+	function setw(dt){
+		
+		alert(dt);
+	//document.write(dt);
+	$("#mtable_valie").empty();
+		var obj=eval ("(" + dt + ")");
+		$("#syy").attr("max",obj.hand.yeshu);
+		$("#main_data").attr("pici",obj.hand.pici);
+		
+		var dds=parseInt(obj.hand.yeshu);
+		for(var i=0;i<dds;i++){
+			
+			 createys([i+1,i+1]);
+			}
+		
+		
+	var dp=	parseInt(obj.hand.size)+10;
+		for(var i=10,a=0;i<dp;i++,a++){
+			
+			var oj=eval("obj.un"+i);
+			createtable([oj.si_linknum],[a+1,oj.si_name,oj.si_www,oj.si_acunt,oj.si_riqi,oj.si_renzheng]);
+			}
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		alert(f);
+	
+		
+		$.post("/jj/userconter/mywork/link/link_init.php",{"id":f,"pici":$("#main_data").attr("pici"),"page":$("#xyy").attr("num")},setw,"text");
+		
+		
+		
+		}
+//createtable(["dd","dd"],["1","林北","www.lnbei.com","zhaohan","2016","sh"]);
+function createtable(s,f){
+	var table=document.getElementById("mtable_valie");
+	var tr=document.createElement("tr");
+	//tr.setAttribute();
+//tr.setAttribute(
+	
+	var tdw=document.createElement("td");
+	
+	tdw.setAttribute("style","width:10%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	tdw.innerHTML=f[0];
+	//tdw.appendChild(a);
+	
+	
+	var td2=document.createElement("td");
+	td2.setAttribute("style","width:15%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	td2.setAttribute("onclick","yu_click(this)");
+	td2.setAttribute("num",s[0])
+	td2.innerHTML=f[1];
+	
+	var td3=document.createElement("td");
+	td3.setAttribute("style","width:20%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	td3.setAttribute("onclick","yu_click(this)");
+	td3.setAttribute("num",s[0])
+	td3.innerHTML=f[2];
+	
+	var td4=document.createElement("td");
+	td4.setAttribute("style","width:20%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	td4.innerHTML=f[3];
+	
+	var td5=document.createElement("td");
+	td5.setAttribute("style","width:20%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	td5.innerHTML=f[4];
+	
+	var td6=document.createElement("td");
+	td6.setAttribute("style","width:15%; height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a");
+	
+	td6.innerHTML=f[5];
+	
+	tr.appendChild(tdw);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	tr.appendChild(td4);
+	tr.appendChild(td5);
+	tr.appendChild(td6);
+	table.appendChild(tr);
+	
+	
+	}
+
+function yu_click(f){
+	
+	window.location=http+"site/"+$(f).attr("num")+".html";
+	}
+
+</script>
+
+<!---------------->
+
+<!---------------->
+
+<script type="text/javascript">
+
+function initdata2(){
+		
+	function setw(dt){
+		
+		alert(dt);
+	//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		for(var i=0;obj.hand.size;i++){
+		var oj=eval("obj.un"+i);
+			cretetabl1e([oj.mincheng,oj.integral,oj.balance,oj.integral]);
+			
+			
+			}
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/userconter/finance/zhandan.php",{"id":f,"pici":"a"},setw,"text");
+		
+		
+		
+		}
+
+
+//initdata();
+
+function cretetabl1e(fd){
+	//alert("s");
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<4;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	}
+
+
+</script>
+
+<!--------------我的财富------------------->
+
+
+<title>基本信息</title>
+<style type="text/css">
+table
+  {
+  border-collapse:collapse;
+  }
+
+table, td, th
+  {
+   border:solid 1px #9a9a9a;
+  font-family: "微软雅黑"
+  }
+  .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+</style>
+
+
+
+</head>
+
+<body onload="initdata()"  class="body1">
+<div class="image_upload" id="tx1" >
+  
+  <p ></p>
+<div class="touxiang" >
+<div class="touxiang_close" >
+  <input onclick="button_close()" type="button" value="guanbi" />
+  </div>
+  
+  <script type="text/javascript">
+  function button_close(){
+	  
+	  $('#tx1').css("visibility","hidden");
+	  
+	  }
+  
+  
+  
+  
+  </script>
+  
+  
+  
+<div class="tx_for"  >
+<form enctype="multipart/form-data" action="../userconter/upfile/file.php" method="post" >
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+    <!-- Name of input element determines name in $_FILES array -->
+    <input name="un" type="file" accept="image/jpeg  image/png"  style=""/>
+    <input type="submit" value="Send File" />
+</form>
+
+
+<iframe id= 'f' name="fggf" style="display:none"></iframe>
+</div>
+
+
+<a class=" zc" > 支持jJPG,PNG</a>
+<div class="image"   >
+
+<img  src="file:///G|/t/r/htdocsj/jj/xinxi.gif" class="img_xinxi"  />
+
+
+
+</div>
+<p></p>
+<div class="image_list"  >
+
+<a class="tx_item_a" name="touxiang" onclick=" xuan('#tou1')" ic='0' xuan="off"   id="tou1"><img class="tx_item_img"   src="file:///G|/t/r/htdocsj/jj/7.jpg" /></a>
+<a class="tx_item_a" name="touxiang" onclick=" xuan('#tou2')"  ic='1' xuan="off"    id="tou2"><img class="tx_item_img"   src="file:///G|/t/r/htdocsj/jj/7.jpg" /></a>
+
+
+</div>
+
+<div class="save " ><button>保存</button></div>
+<script type="text/javascript">
+function xuan(id){
+	var fr=$(id).attr("xuan");
+	$("[name=touxiang]").attr("xuan","off");
+	$("[name=touxiang]").css("border-color","#fff");
+	if(fr=="off"){
+		$(id).attr("xuan","on");
+	
+		$(id).css("border-color","#00f");
+		}else{
+			
+		$(id).attr("xuan","off");	
+			
+			
+			}
+	}
+function save_tx(){
+	
+	var d="";
+	var fg=$("[xuan=on]").attr('ic');
+	$.post('/jj/login/login_one.php',{"id":getCookie('id'),"ic":fg});
+	
+	
+	}
+
+
+
+</script>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+<div>
+<div class="kuang tzb" >
+
+<div class="tx_div" ><a href="javascript:massagebox();"><img class="tx"  id="headp" alt="yonghutouxiang" src="../image/tx/1.jpg"/></a>
+<script type="text/javascript">
+
+function massagebox(){
+	
+	var f=$('#tx1').css("visibility");
+	alert(f);
+	if(f=="hidden"){
+		
+		$('#tx1').css("visibility","visible");
+		
+		}
+	
+
+	
+	}
+
+
+
+
+
+
+</script>
+
+
+<a class="txt_name" id="username" pici="011"  id="nicheng">yonghuming</a></div>
+
+<div class="level" >
+<img  style="height:40px; width:1px; visibility:hidden " />
+<img class="level_img"  alt="level"  src="../image/sys_image/level.jpg"   />
+<a class="txt_level" href="other/level.html" id="rank_" >黄金</a>
+</div>
+
+<div class="txt_news"  >
+<a  href="javascript:massagebox_();" style="display:inline-block; width:80px"><img  style="height:40px; width:1px; visibility:hidden "/>
+<img class="image_news" alt="xinxi" src="../image/sys_image/xinxi.gif" />
+(7)</a>
+<div class="txt_massage" id="massage">
+<div ><a id="m1" class="txt_massage_a"  href="javascript:massage_jump('#m1')" target="_blank" n="0"  >已读消息</a></div>
+<div><a id="m2" class="txt_massage_a" href="javascript:massage_jump('#m2')" target="_blank" n="1"  >未读消息</a></div>
+<div><a id="m3" class="txt_massage_a" href="javascript:massage_jump('#m3')" target="_blank" n="2" >新消息</a></div>
+<div><a id="m4" class="txt_massage_a" href="javascript:massage_jump('#m4')" target="_blank" n="3" >删除消息</a></div>
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+function massage_jump(id){
+	
+	
+	window.location=http+"u/massage/xiaoxi.html?ig="+$(id).attr("n");
+	
+	
+	}
+
+
+function massagebox_(){
+	var fd= $('#massage').css("visibility");
+	 if(fd=="hidden")
+	 {
+		 $('#massage').css("visibility","visible");
+		 }else{
+			 
+			  $('#massage').css("visibility","hidden");
+			 
+			 }
+	 
+	 
+	 }
+
+
+
+</script>
+<div  style="clear:both; height:20px; visibility:hidden ">s</div>
+<div class="order" >
+<div class="order_div" ><a><font class="tx_order" >待付款</font><font class="tx_order" >(0)</font></a></div>
+<div class="order_div"><a><font  class="tx_order">未付款</font><font  class="tx_order">(0)</font></a></div>
+<div class="order_div"><a><font  class="tx_order">未评价</font><font  class="tx_order">(0)</font></a></div>
+<div class="order_div"><a><font class="tx_order">待评价</font><font class="tx_order" >(0)</font></a></div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="kuang tx_gx"  >
+<h4>个性签名</h4>
+<p class="tx_p" >
+<a id="gexing">失败是成功之母</a>
+
+</p>
+<hr  />
+</div>
+
+<div class="kuang pay" >
+
+<div class="pay_left" >
+<h4 >我的财富</h4>
+<p  >
+<label > <font class="tx_pay" >余额:</font></label><a id ="yue"><font class="tx_red" id ="yue" >178</font><font class="tx_pay">元</font></a> <label class="tx_pay">积分:</label><a id="jifen "><em class="tx_red"  id="jifen1">178</em><i>杯</i></a><br /><br />
+<label > <font class="tx_pay" >余额:</font></label><a id ="yue"><font class="tx_red" id ="yue" >178</font><font class="tx_pay">元</font></a> <label class="tx_pay">积分:</label><a id="jifen "><em class="tx_red"  id="jifen1">178</em><i>杯</i></a><br />
+
+</p>
+
+</div>
+<div class="pay_reight"  ></div>
+<div class="pay_reight_div"   >
+<ul class="pay_ul" >
+<li class="pay_item"> <a>设置支付密码</a></li>
+<li class="pay_item"> <a>修改支付密码</a></li>
+<li class="pay_item"> <a>转账账单</a></li>
+<li class="pay_item"> <a>兑换账单</a></li>
+</ul>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="kuang link" >
+
+<h4 >我的链接</h4>
+
+<a class="link_more" >&gt;&gt;更多信息</a>
+<table class="link_table" id="mtable" >
+<tr >
+
+<th  class="th_name" >名称</th>
+<th class="th_link"  >链接 </th>
+<th class="th_dian" >点击量 </th>
+<th  class="th_zhexian">折现</th>
+</tr>
+</table>
+<table class="link_table" id="mtable" >
+<tr >
+
+<td class="td_name" style="width:20%; ">ddd</td>
+<td class="td_link" style="width:40%;">ddd </td>
+<td class="td_dian" style="width:20%;">ddd </td>
+<td class="td_zhexian" style="width:20%;">ddd </td>
+</tr>
+
+</table>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>

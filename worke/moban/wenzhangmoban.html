@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)file:///G:/t/r/htdocsj/jj/13.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>林北网</title>
+
+<script type="text/javascript" src="../../js/index_show.js"></script>
+<script type="text/javascript" src="../../js/p.js"></script>
+<script type="text/javascript" src="../../js/jstool.js">
+</script>
+<style type="text/css">
+font.user_conter_font{
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:200;
+	
+	
+	
+	}
+	font.difang{ font-family:"microsoft yahei";
+	font-size:14px;
+	
+		}
+	ul.f{ 
+margin:0 auto;
+padding:0px;
+width:90%;
+
+	 
+	
+	list-style:none;}
+	li.li{ float:left; 
+	margin:0 auto;
+	width:20%;
+		
+		
+		
+		
+		
+		
+		
+		}
+		li.lii{ text-align:center;
+		border-bottom:solid 1px #000;
+		width:80px; 
+		 
+		
+		
+		
+		
+		
+		
+		
+		}
+	
+	input{
+		
+		border:1px solid #00F}
+		
+	ul.d{
+		list-style:none;
+		
+		line-height:20px;}	
+		a.dibu_a{
+			font-family:"Arial Black", Gadget, sans-serif;
+			font-size:12px;
+			}
+a.daohang_a{
+	
+	
+	font-family: SimSun,Arial;
+	font-size:16px;
+	font-weight: 900;
+	}
+	td.child_daohang_table_tr_1{
+		
+		
+		
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:14px;
+		}
+
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+
+
+</style>
+
+<style type="text/css"></style></head>
+
+<body style="padding:0px;margin:0;min-width:800px;background-color: rgba(102, 204, 204, 0.23);" onload="updatedata();">
+
+<div class="userlogin" id="userlogin" style="position:absolute;background-color: #66cccc;border: 1px solid #00F;margin:0;padding:0px;min-width:800px;height:25px;width:99.7%;"> 
+<div class=" difang" id="top_login_p" style=" border:0px solid #000; margin:0; padding:0px; height:20px; float:left; width:50% ">
+  
+  <div class=" kuang  " id="top_login_id" style=" margin-left:20%; float:left; top:2px; padding:0px; width:100px;   ">
+  
+  <font class="user_conter_font"><a style=" padding:3px; width:50px; display:inline; height:40px;" id="login_id_a1">登录</a></font>
+  <font class="user_conter_font"><a id="reg_login" href="javascript:Sign_out(&#39;#reg_login&#39;);">注册</a></font>
+  
+  </div>
+  
+  
+  
+  
+  <div class="kuang" style=" float:left; height:25px; width: 100px; background-color:#CFF">
+  <div onclick="pd_c();" id="weizhi" style="  height:25px; width: 100px; background-color:#CFF">位置：林州</div>
+  
+  <div id="prive" style="clear:both; width:100px; visibility: hidden ;display:list-item; list-style:none; border:solid 1px #FFFFFF; background-color:#fff;  height:auto; text-align:center"> 
+  
+  <div id="henan" name="pro" onclick="province(&#39;#henan&#39;,&#39;#henan_&#39;)" style="  margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+   <div name="pro" id="shandong" onclick="province(&#39;#shandong&#39;,&#39;#shandong_&#39;)" style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">山东</div>
+  <div style="margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+   <div style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+  <script type="text/javascript">
+ function pd_c(){
+	var fd= $('#prive').css("visibility");
+	 if(fd=="hidden")
+	 {
+		 $('#prive').css("visibility","visible");
+		 }else{
+			 
+			  $('#prive').css("visibility","hidden");
+			  $('#city').css("visibility","hidden");
+			  $("[name='city']").css("visibility","hidden");
+			 }
+	 
+	 
+	 }
+  function province(id,id1){
+	
+	 var fd= $(id).css("visibility");//父
+	 var fd1= $(id1).css("visibility");//子
+	 // alert(fd1);
+	 if(fd1=="hidden" ) {
+		//  alert("1");
+		  $(id).css("background-color","#586965");
+		
+		$("[name='city']").css("visibility","hidden");	
+			$(id1).css("visibility","visible");
+			$('#city').css("visibility","visible");
+			
+		 }else{
+			///  alert("2");
+			   $('#city').css("visibility","hidden");
+			$(id1).css("visibility","hidden"); 
+			// $(id).css("background-color","#aaa");
+			 $("[name='pro']").css("background-color","#fff");
+			 }
+	  
+	  
+	  
+	  
+	  
+	  }
+	  function city(id){
+		  
+		  $('#weizhi').text("位置:"+$(id).text());//改变位置
+		  
+		pd_c();
+		 window.location=http+"dump/jump.php?jp="+$(id).attr('num');
+		  
+		  
+		  }
+  
+  
+  
+  </script>
+ 
+  <div class="kuang" style=" float:left; height:25px; width: 100px;"><div style=" height:25px; width: 100px; "></div>
+  
+  <div id="city" style="clear:both; display:list-item; width:100px; border:solid 1px #FFFFFF; list-style:none; height:auto; background-color:rgba(236, 236, 241, 0.36); visibility:hidden"> 
+  <div name="city" id="henan_" style="position:absolute;visibility:hidden;  width:100px;">
+  <div onclick="city(&#39;#anyang&#39;)" num="12" id="anyang" style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  </div>
+  
+  <div name="city" id="shandong_" style="position:absolute; width:100px; visibility:hidden">
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  </div>
+  
+ 
+  
+  
+  
+ 
+  
+  
+<div class="kuang" style="  padding:0px; margin:0 ; border:solid 0px #000000; height:20px; float:right; width:45%">
+<script type="text/javascript">
+//alert("denglu");
+//dologin("fffff",false);
+function dologin( id1,den){
+	
+	if(den){
+	
+	$('#login_id_a1').text(id1);
+	$('#reg_login').text('退出');
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+	}else{
+		$('#login_id_a1').text(id1);
+	$('#reg_login').text('注册');
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+		
+		
+		}
+		
+		}
+
+function Sign_out(id){
+
+	var fd=$(id).attr("login");
+	//alert(fd);
+	if(fd!="false"){
+		socket_send();//退出
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		}
+	
+	else{
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		//alert("zhixing");
+		window.location=http+"lo/reger.html";
+		
+		}
+	
+	
+	//return false;
+	
+	}
+	function socket_send(){
+		
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/login/sign_out.php',{"id": getCookie('id'),"username":getCookie('username')});
+	
+	$('#login_id_a1').text("登录");
+	$('#reg_login').text('注册');
+	$('#login_id_a1').attr("login",false);
+	$('#reg_login').attr("login",false);	
+	$('#user_login_id').css("visibility","visible");	
+		
+		}
+
+
+
+
+</script>
+
+
+<div class=" kuang" id="uer_select" onmouseout="mouseout(&#39;ds&#39;);" style=" display:inline-block; border:solid 0px #FF0000; width:80px">
+
+<div id="ff" class="user_conter" style="height:25px; text-align:center;  " onmouseover="mousein(&#39;ds&#39;);"> 
+<font class="user_conter_font" id="user_conter_font" style="font-size:14px"><a href="javascript:jump_w(&#39;0&#39;)">我的林北</a></font></div>
+<div class="userconter_data" id="ds" onmouseover="mousein(&#39;ds&#39;);" style="margin: 0px; visibility: hidden; padding: 0px;"> 
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font" id="user_conter_font_1"><a href="javascript:jump_w(&#39;sofa&#39;)">我的信息</a></font>
+</div>
+<div style=" margin:0; padding:0px; text-align:center;"><font class="user_conter_font"><a href="javascript:jump_w(&#39;chagemail&#39;)">我的订单</a></font></div>
+<script type="text/javascript">
+
+function jump_w(gh){
+	//alert("sd");
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"u/usercenter.html?jump="+gh;	
+	}else {
+		alert("请先登录！！");
+		return;
+		}
+	}
+
+
+
+</script>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div onmouseout="mouseout(&#39;ds1&#39;); " style="  border:solid 0px #FF0000; text-align:center;padding-top:5px; margin:0; padding:0px; display:inline-block; width:80px">
+<div id="ff1" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein(&#39;ds1&#39;);"> 
+<font class="user_conter_font" id="user_conter_font" style=";"><a href="javascript:jump_c(&#39;&#39;);">我的任务</a></font></div>
+<div class="userconter_data" id="ds1" onmouseover="javascript:mousein(&#39;ds1&#39;);" style="border:0px dotted #03F; visibility:hidden; margin:0; padding:0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font" id="user_conter_font_1"><a href="javascript:jump_c(&#39;&#39;);">我的信息</a></font>
+</div>
+<div style="margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_c(&#39;&#39;);">我的订单</a></font></div>
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+function jump_c(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"u/usercenter.html?jump="+gh;	
+	}else if(fu=="false"){
+		alert("请先登录！！");
+		return;
+		}
+	}
+
+
+
+
+
+
+
+
+</script>
+
+
+<div onmouseout=" javascript:mouseout(&#39;ds2&#39;);" style=" border:solid 0px #FF0000; margin:0; padding:0px;text-align:center; display:inline-block; width:80px">
+<div id="ff" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein(&#39;ds2&#39;);"> 
+<font class="user_conter_font" id="user_conter_font" style=";"><a href="javascript:jump_k(&#39;kehu&#39;);" id="kehu" target="_blank">客户服务</a></font></div>
+<div class="userconter_data" id="ds2" onmouseover="javascript:mousein(&#39;ds2&#39;);" style="visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font" id="user_conter_font_1"><a href="javascript:jump_k(&#39;my&#39;);" id="my">我的信息</a></font>
+</div>
+<div style=" margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_k(&#39;dd&#39;);" id="dd">我的订单</a></font></div>
+
+<script type="text/javascript">
+//客户服务
+function jump_k(gh){
+	
+	
+window.location=http+"client/client.html?jump="+gh;	
+	
+	}
+
+
+
+
+
+
+</script>
+
+
+</div>
+</div>
+
+
+ 
+ 
+ 
+ 
+
+<div onmouseout=" javascript:mouseout(&#39;ds3&#39;);" style="border: solid 0px  #0FF; margin:0; padding:0px; display:inline-block; width:80px">
+<div id="ff" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein(&#39;ds3&#39;);"> 
+<font class="user_conter_font" id="user_conter_font" style=";"><a href="javascript:jump_s(&#39;&#39;);">网站导航</a></font></div>
+<div class="userconter_data" id="ds3" onmouseover="javascript:mousein(&#39;ds3&#39;);" style="border: 0px dotted rgb(0, 51, 255); visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="border:0px dotted #03F;text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font" id="user_conter_font_1"><a href="javascript:jump_s(&#39;&#39;);">我的信息</a></font>
+</div>
+<div style="border:0px dotted #03F; margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_s(&#39;&#39;);">我的订单</a></font></div>
+<script type="text/javascript">
+
+function jump_s(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"daohang/sitedaohang.html?jump="+gh;	
+	}else if(fu=="false"){
+		alert("请先登录！！");
+		return;
+		}
+	}
+
+
+
+</script>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="  padding:0px; margin-bottom:4px; top:0px; z-index:80; width:99%; height:20px">
+
+
+</div>
+
+
+
+
+
+<div class="main" id="main_id" style=" min-width:800px; margin:0; padding:0px">
+<div style=" margin:0 auto; border:1px solid  #03F; width:80% ">
+
+<div class="logo_div" id="logo_id" style="background-color: #6cc;width:100%;height:62px;"> <a target="_blank" href="javascript:h();" style="margin:0; padding:0; ">
+<img style="vertical-align:middle; float:left; border:1px solid #000; margin:0; padding:0px;" id="logo_img_id" class="logo_img" src="../../林北网22_files/logo.gif">
+</a>
+</div>
+<script type="text/javascript">
+
+function h(){
+	
+	window.location=http;
+	}
+</script>
+<div class="daohang" id="dahang_id" style="clear:both background-color:#FFF">
+<table class="daohang_table" id="daohang_table_id" onmousemove="on_show()" onmouseout="on_hide()" style="border-radius:5px;border: 1px solid #03F;padding:0px;background-color: #6cc;margin:0;width:100%;text-align:center;z-index:99;">
+<tbody><tr class="one_select_tr" id="one_select_tr_id">
+<td class="shouye" id="shouye"><a class="daohang_a" href="../../daohang/daohang.html">首页</a></td>
+<td class="shouye" id="user"><a class="daohang_a" href="../../s/shop.html">商城</a></td>
+<td class="shouye" id="serch"><a class="daohang_a" href="../../serch/serch.html">寻找</a></td>
+<td class="shouye" id="login"><a class="daohang_a" href="../../home/home.html">快报</a></td>
+<td class="shouye" id="login"><a class="daohang_a" href="../../client/client.html">客户</a></td>
+</tr>
+
+</tbody></table>
+
+</div>
+<div onmousemove="on_show()" style="height:2px; width:100%"></div>
+<div class="child_daohang" id="fd" onmouseover="on_show1()" onmouseout="on_hide()" style="display: none; position: absolute; margin: 0px auto; z-index: 1000; width: 80%; height: 136px; background-color: rgb(255, 255, 255);">
+<table height="135" class="child_daohang_table" style=" padding:0px; margin:0;width:100%; text-align:center">
+<tbody><tr class="child_daohang_table_tr" id="child_daohang_table_tr">
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_1"><a>新闻</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_2"><a>贷款</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_3"><a>游戏</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_4"><a>体育</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_5"><a>服务</a></td>
+</tr>
+<tr class="child_daohang_table_tr_2" id="child_daohang_table_tr1">
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_1"><a>电子</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_2"><a>生活用品</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_3"><a>图书</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_4"><a>手机</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_5"><a>汽车</a></td>
+</tr>
+<tr class="child_daohang_table_tr_3" id="child_daohang_table_tr2">
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_1"><a>淘宝</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_2"><a>赚钱</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_3"><a>生活</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_4"><a>链接</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_5"><a>网站</a></td>
+</tr>
+<tr class="child_daohang_table_tr_4" id="child_daohang_table_tr3">
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_0"><a>公告</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_1"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_2"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_3"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_4"><a>jjj</a></td>
+</tr>
+<tr class="child_daohang_table_tr_5" id="child_daohang_table_tr4">
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_0"><a>任务中心</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_1"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_2"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_3"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_4"><a>jjj</a></td>
+</tr>
+</tbody></table>
+
+</div>
+
+
+
+
+
+<!--ddd-->
+
+
+<div style="border:1px solid #0F0; height:700px;">
+
+<div style="border:1px solid #0F0; float:left; width:75%;height:700px;">
+
+<div style="border:1px solid #C30; width:100%;">
+
+  <div>文章导航>dsdsd>dsdsd</div>
+  
+ <div style="border:1px solid #C30; padding-bottom:20px; width:90%; margin:0 auto; font-size:24px; text-align:center "><strong id="title">文章题目</strong></div>
+ 
+  <div style="border:1px solid #C30; padding:0px; width:90%; margin:0 auto; height:40px;">
+  
+ 
+  <div id="riqi"><div>日期:</div><div id="zuozhe"></div></div>
+  <div id="fenlei"><div style="float:left" >分类:</div><div id="zuozhe" style="float:left">ff</div> 
+  <div style="float:left; margin-left:60px;" >作者:</div><div style="float:left" id="zuozhe"></div>
+  
+  
+  <div id="liulan" style="float:left; margin-left:160px;" >浏览量:</div><div id="lan" style="float:left"></div></div>
+  
+  </div>
+  
+  
+
+</div>
+<div style="border:1px solid #C30; clear:both; height:550px;">
+
+<h3>网站简介</h3>
+<div id="wendata">
+
+<span id="wen_span"></span>
+
+</div>
+
+</div>
+
+
+
+
+
+<div style="border:1px solid #C30; margin:0 auto; width:70%; clear:both; text-align:center ">
+<div  style="border:1px solid #C90; margin:0 auto; width:40%; height:25px">
+<a style=" float:left " href="../../模板/ll">&lt;上一页&gt;</a>
+<a style=" float:left " href="../../模板/ll">1</a>
+<a style=" float:left " href="../../模板/ll">2</a>
+<a style=" float:left " href="../../模板/ll">&lt;下一页&gt;</a>
+</div>
+</div>
+</div>
+<div style="border:1px solid #0F0; float:right; width:24%;height:700px;">
+<div style="border:1px solid #0F0; width:100%; height:300px;">
+<div>
+
+<div style=" width:100%; padding:0; margin:0; height:25px; border-bottom:solid 1px #000"><div  class="xing"  onclick="javascript:dianji2();" id="xian" style="float:left ; margin:0; background-color:#03F; margin-right:3px; font-family: 微软雅黑; font-size:16px">相关推荐</div><div  class="ben" id="re" onclick="javascript:dianji();" style="float:left; font-family: 微软雅黑; margin:0; font-size:16px;">本周热点</div>
+<div style="float:right; margin:0;font-family: 微软雅黑; font-size:16px">&gt;&gt;更多</div></div>
+<div style="width:100%">
+<div class="benzhou" id="benzhour" style="width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px; font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+
+</div>
+<div class="xiangguan" id="xiangguan" style=" width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年ffffffffffff河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div style="border:1px solid #0F0; width:100%; height:300px;">
+<div style="background-color:#09F; height:25px;">555</div>
+<div style=" width:100%; padding:0; margin:0; height:25px; border-bottom:solid 1px #000"><div  class="xing"  onclick="javascript:dianji2();" id="xian" style="float:left ; margin:0; background-color:#03F; margin-right:3px; font-family: 微软雅黑; font-size:16px">相关推荐</div><div  class="ben" id="re" onclick="javascript:dianji();" style="float:left; font-family: 微软雅黑; margin:0; font-size:16px;">本周热点</div>
+<div style="float:right; margin:0;font-family: 微软雅黑; font-size:16px">&gt;&gt;更多</div></div>
+<div style="width:100%">
+<div class="benzhou" id="benzhour" style="width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px; font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+
+</div>
+<div class="xiangguan" id="xiangguan" style=" width:100%">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年ffffffffffff河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+<div style="border:1px solid #0F0; clear:both; width:100%; height:400px;">
+<div style="border:1px solid #0F3; width:75%; height:250px;" >
+<div>最新评论</div>
+<div style="margin:0 auto; width:95%; height:200px">
+
+<p style=" padding:0;display:block;">yong:3/4</p>
+<p style="display:block; padding:0; margin:0; text-indent:28px; font-family:'黑体'; font-size:15px; line-height:20px;"> 今年一季度，中国经济同比增长6.7%，增速保持在今年三月全国两会期间确立的6.5%到7%的目标区间。一季度的数据在一定程度上缓解了国际社会的悲观预期。
+</p>
+
+<p style="display:block; " ><a style="float:right; display:block; width:40px">推荐</a><a style="float:right; display:block; width:40px">回复</a>  </p>
+<hr style=" clear:right " />
+
+</div>
+
+<div> gengduo</div>
+
+</div>
+<div style="border:1px solid #0F3; width:75%; height:150px;" >
+<div style="margin:0 auto; padding:0px; width:95%; height:100%">
+<div style="width:100%; height:25px;">dd</div>
+<form>
+<input  type="text" style=" width:100%; height:90px;"  />
+
+
+<div style="width:100%; height:25px;" ><input type="submit" style="float:right" value="fabiao"/></div>
+</form>
+
+
+
+</div>
+
+
+<div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div style="border:1px solid #CC6; height:300px;">dd</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--jieshu-->
+
+
+
+
+
+
+
+
+<div class="dibu" style="margin:0 auto;padding-bottom:1px;padding-top:1px;background-color: #138e8e;border-top:solid #03F 1px;width:100%;">
+<div class=" kuang" style=" float:left"><font class="difang"><a id="difang">地方频道:</a></font></div>
+<table class="difang_tabl" style="border-collapse:collapse;">
+<tbody><tr><td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" id="henan" style="  text-align:center"><a href="javascript:jump_p(&#39;henan_10&#39;);" id="henan_10">河南</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" id="henan" style=" text-align:center"><a>河南</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" id="henan" style="  text-align:center"><a>河南</a></font></td>
+</tr></tbody></table>
+
+</div>
+<script type="text/javascript">
+function  jump_p(id){
+	
+var dd=	id.indexOf('_');
+	var str=id.substr(dd+1);
+	
+	window.location=http+"channel/index.html?pd="+str;
+	}
+
+
+
+</script>
+<div style="margin:0 auto;background-color: #6cc;padding:0px;border-top:solid #03F 1px;width:100%;height:150px;">
+<div class="kuang" style="margin:0 auto; padding:0px;  margin-top:2px;width:100%">
+<ul class="f">
+
+
+<li class="li" style="float:left">
+<ul class="d">
+<li class="lii"><a class="dibu_a">新手指引</a></li>
+<li class="lii"><a class="dibu_a">支付问题</a></li>
+<li class="lii"><a class="dibu_a">成为代理</a></li>
+</ul>
+
+
+</li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">地区加盟</a></li>
+<li class="lii"><a class="dibu_a">校园代理</a></li>
+<li class="lii"><a class="dibu_a">免责声明</a></li>
+
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于支付</a></li>
+<li class="lii"><a class="dibu_a">关于商品</a></li>
+<li class="lii"><a class="dibu_a">成为供应商</a></li>
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于链接</a></li>
+<li class="lii"><a class="dibu_a">关于注册</a></li>
+<li class="lii"><a class="dibu_a">手机版APP</a></li>
+</ul>   </li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于链接</a></li>
+<li class="lii"><a class="dibu_a">关于注册</a></li>
+<li class="lii"><a class="dibu_a">手机版APP</a></li>
+</ul>   </li>
+
+</ul>
+</div>
+
+</div>
+<div class="zuidibu" style="margin:0 auto;background-color: #6cc;padding:0px;border-top:1px solid #03F;width:100%;text-align:center;">
+<div class="zuidibu_div" style="margin:0 auto; padding:5px;">豫ICP备案12345</div>
+<table class="zuidibu_table" style="border-collapse:collapse;  margin:0 auto; padding:3px; min-width:400px; width:30%">
+<tbody><tr><td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../j/aboutus.html">公司简介</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../j/AD.html">广告服务</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../j/contactus.html">联系我们</a></font></td>
+<td class=" zuidibu_table_td" style="border-right:solid 0px #000;"><font class="difang"><a href="../../j/career.html">招聘精英</a></font></td>
+</tr></tbody></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body></html>

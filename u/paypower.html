@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>开通支付密码</title>
+<link type="text/css" href="../css/usercenter/paypower.css" rel="stylesheet" />
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+<script  type="text/javascript"  src="../js/usercenter/paypower.js" ></script>
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<style type="text/css">
+input{
+		
+		border:1px solid #d6cfcf;
+		padding:0px; margin:0; width:150px;
+		font-family:"Microsoft YaHei UI";
+		font-size:14px;
+		height:30px;
+		}
+
+button{
+	}
+    
+     .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+    </style>
+</head>
+
+<body style="background-color:#f5f5f5">
+<div >
+<div class="main_input"  >
+<div class="return_back" id="dbody" >jkjk</div>
+<div class="title_font" >设置支付密码</div>
+<div class="input_div" id="input_" >
+
+<form   onsubmit="return false;"  class="denglu_from"  id="login_id"  method="post" action="un.php" >
+<div class="power_div" >
+
+
+<font class="input_username" >输入密码:</font>
+
+<input  class="input_name" name="username" onblur="javascript:check_pwer1('kk','oldpaypower');" maxlength="10" id="oldpaypower" type="password" /> 
+
+<font class="yanzhen_font" id="user_yangzheng" >
+
+<label id="kk" class="lable_username" >ff</label></font>
+
+</div>
+
+<div class="power_div" >
+
+<font  class=" input_username" >重复密码:</font>
+<input onblur="javascript:check_pwer1('kk1','newpaypower');" name="power" maxlength="10" id="newpaypower"  type="password" /> 
+<font class="yanzhen_font" id="user_yangzheng" ><label class="lable_username" id="kk1" >ghg</label></font>
+
+</div>
+
+<div class="yanzhengma1"  >
+
+
+
+
+<font class="yanzheng_title" >验证码:</font>
+<input   class="yanzhengma" maxlength="4" id="check_ma" name="yazhen" type="text"  />  
+<a href="javascript:jpg();"><img  class="yazheng" id="yazhengma" align="top"  /></a>
+
+
+
+
+
+
+</div>
+
+<div class="tijiao" >
+
+<button  class="button_su" checked="checked" id="login_button"   onclick="sure18()"    >保存</button>
+
+</div>
+
+
+
+</form>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

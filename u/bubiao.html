@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图表</title>
+
+<style type="text/css">
+table
+  {
+  border-collapse:collapse;
+  }
+
+table, td, th
+  {
+   border:solid 1px #9a9a9a;
+  font-family: "微软雅黑"
+  }
+  .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+	}
+.aa{ float:left; display:block; margin-left:10px;  padding: 0;  background-color:#CCC;
+	
+	}
+</style>
+
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<script  type="text/javascript"   >
+
+function initdata(){
+		
+	function setw(dt){
+		
+		alert(dt);
+		//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		/*if(obj.bordy1.name=="image"){
+		//$("#yazhengma").attr("src",obj.bordy1.data);
+		
+		}*/
+		
+		//我的基本信息
+		//$('#tiao').val(obj.un1.name);
+		$('#tiao').attr("src",obj.un1.tupian);
+		$('#tiaoti').val(obj.un1.tiaoti);		
+		$('#zhe').attr("src",obj.un1.tupian1);
+		$('#zheti').val(obj.un1.tiaoti1);
+		
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/userconter/tubiao.php",{"id1":f},setw,"text");
+		
+		
+		
+		}
+
+
+
+//initdata();
+
+function cretetabl1e(fd){
+	//alert("s");
+	var div_1=document.createElement('tr');
+	
+	
+	for(var i=0;i<4;i++){
+		
+		var dive=document.createElement('td');
+		
+		dive.innerHTML=fd[i];
+		
+		div_1.appendChild(dive);
+		
+		}
+		//div_1.appendChild()
+	
+	var fh=document.getElementById("mtable");
+	
+	fh.appendChild(div_1);
+	
+	
+	
+	
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function jpg33( fgf){
+		
+	function setw(dt){
+		
+		alert(dt);
+		//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		if(obj.bordy1.name=="image"){
+		$("#tiao").attr("src",obj.bordy1.data);
+		
+		}
+		if(obj.bordy1.name1=="title"){
+			
+			
+			$("#title").text(obj.bordy1.data1);
+			
+			}
+		
+		}	
+		
+		
+		var f=getCookie("id");
+		//alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/serch/tubiao.php",{"id":f,"shuju":fgf},setw,"text");
+		
+		}
+		
+		
+
+//上个月
+function getshuju(f){
+	
+	var shuju=document.getElementById(f).getAttribute("h");
+	
+	
+	jpg33(shuju);
+	
+	
+	}
+function jpg4( fgf){
+		
+	function setw(dt){
+		
+		alert(dt);
+		//document.write(dt);
+		var obj=eval ("(" + dt + ")");
+		
+		if(obj.bordy1.name=="image"){
+		$("#tiao").attr("src",obj.bordy1.data);
+		
+		}
+		if(obj.bordy1.name1=="title"){
+			
+			
+			$("#title").text(obj.bordy1.data1);
+			
+			}
+		
+		}	
+		
+		var f=getCookie("id");
+		//alert(f);
+	//ajax("/php/login/image.php",'id',f,set,"text");	
+		
+		
+		//$.post("j.php",{"id1":"dsd"},setw);ajax("image.php","id1",f,setw,"text");
+		
+		$.post("/jj/serch/tubiao.php",{"id":f[1],"shuju":fgf},setw,"text");
+		
+		}
+		
+	
+
+//上个月
+function getshuju1(f){
+	
+	var shuju=document.getElementById(f).getAttribute("h");
+	
+	
+	jpg4(shuju);
+	
+	
+	}
+
+
+
+
+
+
+
+
+</script>
+
+
+<link href="../css/usercenter/tb.css" type="text/css" rel="stylesheet" />
+
+
+</head>
+
+<body onload="initdata()"  >
+
+<div class="kuang tb" >
+
+
+<div  class="kuang tb_main" >
+
+<div class="kuang tb_tj " >
+
+<a class="aa" id="shang"  onclick="getshuju('shang')" h="1">上周</a>
+<a  class="aa" id="today" onclick="getshuju('today')" h="3">今天</a>
+<a  class="aa" id="benzhou" onclick="getshuju('benzhou')" h="2">本周</a>
+<div class="kuang tb_time"  >
+<select id="year">
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+<option>2021</option>
+<option>2022</option>
+<option>2023</option>
+<option>2024</option>
+<option>2025</option>
+<option>2026</option>
+</select><a>年</a>
+<select onblur="createm('year','mouth','day')" id="mouth">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><a>月</a>
+<select onfocus="createm('year','mouth','day')" id="day" style="width:40px; display:inline-block">
+<option>1</option>
+</select><a>日</a>
+
+</div>
+<div style="float:left; margin-left:20px; ">
+<select id="year2">
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+<option>2021</option>
+<option>2022</option>
+<option>2023</option>
+<option>2024</option>
+<option>2025</option>
+<option>2026</option>
+</select><a>年</a>
+<select onblur="createm('year2','mouth2','day2')" id="mouth2">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><a>月</a>
+<select onfocus="createm('year2','mouth2','day2')" id="day2" style="width:40px; display:inline-block">
+<option>1</option>
+</select><a>日</a>
+<button  style=" float:right;" h="dd" onclick=" getshuju(f)"> 确定</button></div>
+</div>
+
+<img class="tb_img" id="tiao" src="file:///G|/t/r/1786.png" />
+
+<script type="text/javascript">
+function runnian(pYear){
+	
+	if((pYear%4==0 && pYear%100!=0)||(pYear%100==0 && pYear%400==0)){
+		
+		return true;
+		
+		}else{
+			
+			return false;
+			}
+	}
+function crteday(day,s_day){
+	
+	 var f =document.getElementById(s_day);
+	 f.options=new Option();
+	 f.options.length=day;
+	for(var i=0;i<day;i++){
+		
+		f.options[i].text=i+1;
+		}
+	
+	}
+function createm(year,mouth,day){
+	var x=document.getElementById(year);
+var year1=  x.options[x.selectedIndex].text;
+	var a=[31,28,31,30,31,30,31,31,30,31,30,31];
+	var x1=document.getElementById(mouth);
+var mou= x1.selectedIndex;
+//alert(mou);
+	var fg=runnian(year1);
+	if(fg){
+		//alert(fg);
+		a[1]=29;
+		}else a[1]=28;
+		//alert(a[mou]);
+		crteday(a[mou],day);
+	
+	}
+	
+function getdata(year,mouth,day){
+	var x=document.getElementById(year);
+var year1=  x.options[x.selectedIndex].text;
+	var x1=document.getElementById(mouth);
+var mouth=  x1.options[x.selectedIndex].text;
+	var x2=document.getElementById(day);
+var day=  x2.options[x.selectedIndex].text;
+	return year1+"-"+mouth+"-"+day;
+	}
+//alert(getdata('year2','mouth2','day2'));
+</script>
+<p class="tb_title"   id="title">本周财务数据表</p>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="kuang" style="width:100%;margin-top:30px; background-color:#fff; height:300px">
+<p></p>
+<div class="kuang" style="width:100%;   text-align:center">
+
+
+<div class="kuang" style="width:100%; float:left; background-color:#f5f5f5">
+
+<a class="aa" id="shang"  onclick="getshuju('shang')" h="1">上周</a>
+<a  class="aa" id="today" onclick="getshuju('today')" h="3">今天</a>
+<a  class="aa" id="benzhou" onclick="getshuju('benzhou')" h="2">本周</a>
+<div class="kuang"  style="float:left; margin-left:30px; ">
+<select id="year3">
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+<option>2021</option>
+<option>2022</option>
+<option>2023</option>
+<option>2024</option>
+<option>2025</option>
+<option>2026</option>
+</select><a>年</a>
+<select onblur="createm('year3','mouth3','day3')" id="mouth3">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><a>月</a>
+<select onfocus="createm('year3','mouth3','day3')" id="day3" style="width:40px; display:inline-block;">
+<option>1</option>
+</select><a>日</a>
+
+</div>
+<div style="float:left; margin-left:20px; ">
+<select id="year4">
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+<option>2021</option>
+<option>2022</option>
+<option>2023</option>
+<option>2024</option>
+<option>2025</option>
+<option>2026</option>
+</select><a>年</a>
+<select onblur="createm('year4','mouth4','day4')" id="mouth4">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><a>月</a>
+<select onfocus="createm('year4','mouth4','day4')" id="day4" style="width:40px; display:inline-block">
+<option>1</option>
+</select><a>日</a>
+<button  style=" float:right" h="jk" onclick=" getshuju(f)"> 确定</button></div>
+</div>
+<img id="tiao" src="" style="width:90%; margin-top:30px;  height:100px; border: solid 1px #00F" />
+
+
+<p style="text-align:center" id="biaoti" >本周财务数据表</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

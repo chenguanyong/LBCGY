@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color: #f5f5f5}
+	div {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+.mylink_main{margin-bottom:20px; margin-top:20px; width:100%; border:1px solid #FFF; height:150px; background-color:#fff}
+.mylink_option{float:left;  width:250px; border:1px solid #FFF; height:110px;}
+.mylink_txt_title{margin-left:5px; padding:0px; font-size:16px; font-family:'Microsoft YaHei UI'}
+.mylink_han{margin-left:10px;}
+.font_txt{font-family:'微软雅黑'; font-size:14px}
+.mylink_right{padding-left:20px; font-family:'微软雅黑'; font-size:14px }
+.mylink_han_{margin-left:0px; margin-top:5px; padding:0px; font-family:'微软雅黑'; font-size:14px}
+.mylink_list{ clear:both;width:350px; height:25px; margin-top:90px; border-radius:10px; margin-left:10px; background-color:#f5f5f5; text-align:center}
+.mylink_item{display:inline-block ; padding-top:5px; width:60px; margin-left:10px; margin-right:5px;}
+.font_mylink_font{font-family:'微软雅黑'; font-size:12px;}
+.mylink_main_table{width:100%}
+.link_main{background-color:#fff; width:100%; height:85px;}
+.link_list{margin-left:10px; padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+table{width:99%; margin-left:10px; margin-top:10px; background-color:#f5f5f5; height:30px; padding-bottom:0px; border:solid 0px #00C ; text-align:center; border-collapse:collapse}
+.th_xu{width:10%; border:solid 1px #9a9a9a}
+.th_name{width:15%; border:solid 1px #9a9a9a}
+.th_domian{width:20%;  border:solid 1px #9a9a9a}
+.th_zhan{width:20%;  border:solid 1px #9a9a9a}
+.th_date{width:20%;border:solid 1px #9a9a9a}
+.th_rz{width:15%; border:solid 1px #9a9a9a}
+.link_list_table{width:100%; margin-top:10px;  background-color:#fff;  height:auto}
+.td_xu{width:10%; }
+.td_name{width:15%; }
+.td_domian{width:20%;  }
+.td_zhan{width:20%; }
+.td_date{width:20%;}
+.td_rz{width:15%; }
+.font_fmily{ height:20px; font-family:'Microsoft YaHei UI'; font-size:10px; border:solid 1px #9a9a9a}
+.page{border:0px solid #C30; margin:0 auto; padding-top:20px; width:70%; clear:both; text-align:center }
+.page_next{border:0px solid #C90; text-align:center}
+.page_a{border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px}
+.yeshu{border:0px solid #999; display: inline-block}

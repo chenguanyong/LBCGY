@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改密码</title>
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<script  type="text/javascript" src="../js/usercenter/fixpower.js" ></script>
+
+<link href="../css/usercenter/fixpower.css" type="text/css" rel="stylesheet"  />
+
+</head>
+
+<body >
+<div  class="main" >
+<div class="txt_font" >修改登录密码</div>
+
+<div id="dbody" class="result" >jkjk</div>
+
+<div class="main_input" id="input_" >
+
+<form  onsubmit="return false;" class="denglu_from" id="login_id"  method="post" action="k.php" >
+<div class="item" >
+
+
+<font class="input_username" >密码:</font>
+<input  class="input_name" name="username" onblur="javascript:check_pwer1('kk','oldpower');" maxlength="10" id="oldpower" type="password" /> 
+<font class="yanzhen_font" id="user_yangzheng" ><label id="kk" class="lable_username" >ff</label></font>
+
+</div>
+
+<div class="item">
+
+<font  class="input_username">重复密码:</font>
+<input onblur="javascript:check_pwer1('kk1','newpower');" name="power" class="input_power" maxlength="10" id="newpower"  type="password" /> 
+<font class="yanzhen_font" id="user_yangzheng" ><label id="kk1" style=" visibility:hidden">ghg</label></font>
+
+</div>
+
+
+
+
+<div class="item" >
+
+
+
+
+<font  class="input_username">验证码:</font>
+<input  class="yanzhengma" maxlength="4" id="check_ma" name="yazhen" type="text"  />  
+<a href="javascript:jpg();"><img  class="yazheng" id="yazhengma" align="top"  /></a>
+
+
+
+
+
+
+</div>
+
+<div class="item">
+<p>
+<input  class="button_su" checked="checked" id="login_button"   type="button" onclick="submit11()" value="登录" /><a id="sure_error"></a>
+</p>
+</div>
+
+
+
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

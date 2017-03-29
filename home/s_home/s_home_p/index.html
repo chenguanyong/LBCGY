@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)file:///G:/t/r/htdocsj/jj/13.html --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>&#24555;&#35759;</title><script type="text/javascript" src="../../../js/index_show.js"></script><script type="text/javascript" src="../../../js/p.js"></script><script type="text/javascript" src="../../../js/jstool.js">
+</script><style type="text/css">
+font.user_conter_font{
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:200;
+	
+	
+	
+	}
+	ul.f{ 
+margin:0 auto;
+padding:0px;
+width:90%;
+
+	 
+	
+	list-style:none;}
+	li.li{ float:left; 
+	margin:0 auto;
+	width:20%;
+		
+		
+		
+		
+		
+		
+		
+		}
+		li.lii{ text-align:center;
+		border-bottom:solid 1px #000;
+		width:80px; 
+		 
+		
+		
+		
+		
+		
+		
+		
+		}
+	font.difang{ font-family:"microsoft yahei";
+	font-size:14px;
+	
+		}
+	input{
+		
+		border:1px solid #00F}
+		
+	ul.d{
+		list-style:none;
+		
+		line-height:20px;}	
+		a.dibu_a{
+			font-family:"Arial Black", Gadget, sans-serif;
+			font-size:12px;
+			}
+a.daohang_a{
+	
+	
+	font-family: SimSun,Arial;
+	font-size:16px;
+	font-weight: 900;
+	}
+	td.child_daohang_table_tr_1{
+		
+		
+		
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:14px;
+		}
+
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+
+
+</style><style type="text/css"></style></head><body class="kuang" style="padding:0px;margin:0;min-width:800px;background-color: #f5f5f5;" onload="updatedata();">
+
+<div class="userlogin" id="userlogin" style="position: absolute; background-color: #66cccc; border: 1px solid #00F; margin: 0; padding: 0px; min-width: 800px; height: 25px; width: 99.7%; "> 
+<div class=" difang" id="top_login_p" style=" border:0px solid #000; margin:0; padding:0px; height:20px; float:left; width:50% ">
+  
+  <div class=" kuang  " id="top_login_id" style=" margin-left:20%; float:left; top:2px; padding:0px; width:100px;   ">
+  
+  <font class="user_conter_font"><a style=" padding:3px; width:50px; display:inline; height:40px;" id="login_id_a1">&#30331;&#24405;</a></font>
+  <font class="user_conter_font"><a id="reg_login" href="javascript:Sign_out('#reg_login');">&#27880;&#20876;</a></font>
+  
+  </div>
+  
+  
+  
+  
+  <div class="kuang" style=" float:left; height:25px; width: 100px; background-color:#CFF">
+  <div onclick="pd_c();" id="weizhi" style="  height:25px; width: 100px; background-color:#CFF">&#20301;&#32622;&#65306;&#26519;&#24030;</div>
+  
+  <div id="prive" style="clear:both; width:100px; visibility: hidden ;display:list-item; list-style:none; border:solid 1px #FFFFFF; background-color:#fff;  height:auto; text-align:center"> 
+  
+  <div id="henan" name="pro" onclick="province('#henan','#henan_')" style="  margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">&#27827;&#21335;</div>
+   <div name="pro" id="shandong" onclick="province('#shandong','#shandong_')" style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">&#23665;&#19996;</div>
+  <div style="margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">&#27827;&#21335;</div>
+   <div style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">&#27827;&#21335;</div>
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+  <script type="text/javascript">
+ function pd_c(){
+	var fd= $('#prive').css("visibility");
+	 if(fd=="hidden")
+	 {
+		 $('#prive').css("visibility","visible");
+		 }else{
+			 
+			  $('#prive').css("visibility","hidden");
+			  $('#city').css("visibility","hidden");
+			  $("[name='city']").css("visibility","hidden");
+			 }
+	 
+	 
+	 }
+  function province(id,id1){
+	
+	 var fd= $(id).css("visibility");//&#29238;
+	 var fd1= $(id1).css("visibility");//&#23376;
+	 // alert(fd1);
+	 if(fd1=="hidden" ) {
+		//  alert("1");
+		  $(id).css("background-color","#586965");
+		
+		$("[name='city']").css("visibility","hidden");	
+			$(id1).css("visibility","visible");
+			$('#city').css("visibility","visible");
+			
+		 }else{
+			///  alert("2");
+			   $('#city').css("visibility","hidden");
+			$(id1).css("visibility","hidden"); 
+			// $(id).css("background-color","#aaa");
+			 $("[name='pro']").css("background-color","#fff");
+			 }
+	  
+	  
+	  
+	  
+	  
+	  }
+	  function city(id){
+		  
+		  $('#weizhi').text("&#20301;&#32622;:"+$(id).text());//&#25913;&#21464;&#20301;&#32622;
+		  
+		pd_c();
+		 window.location=http+"dump/jump.php?jp="+$(id).attr('num');
+		  
+		  
+		  }
+  
+  
+  
+  </script><div class="kuang" style=" float:left; height:25px; width: 100px;"><div style=" height:25px; width: 100px; "></div>
+  
+  <div id="city" style="clear:both; display:list-item; width:100px; border:solid 1px #FFFFFF; list-style:none; height:auto; background-color:rgba(236, 236, 241, 0.36); visibility:hidden"> 
+  <div name="city" id="henan_" style="position:absolute;visibility:hidden;  width:100px;">
+  <div onclick="city('#anyang')" num="12" id="anyang" style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#23433;&#38451;</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#23433;&#38451;</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#23433;&#38451;</div>
+  </div>
+  
+  <div name="city" id="shandong_" style="position:absolute; width:100px; visibility:hidden">
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#20020;&#38451;</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#20020;&#38451;</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> &#20020;&#38451;</div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  </div>
+  
+ 
+  
+  
+  
+ 
+  
+  
+<div class="kuang" style="  padding:0px; margin:0 ; border:solid 0px #000000; height:20px; float:right; width:45%">
+<script type="text/javascript">
+//alert("denglu");
+//dologin("fffff",false);
+function dologin( id1,den){
+	
+	if(den){
+	
+	$('#login_id_a1').text(id1);
+	$('#reg_login').text('&#36864;&#20986;');
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+	}else{
+		$('#login_id_a1').text(id1);
+	$('#reg_login').text('&#27880;&#20876;');
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+		
+		
+		}
+		
+		}
+
+function Sign_out(id){
+
+	var fd=$(id).attr("login");
+	//alert(fd);
+	if(fd!="false"){
+		socket_send();//&#36864;&#20986;
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		}
+	
+	else{
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		//alert("zhixing");
+		window.location=http+"lo/reger.html";
+		
+		}
+	
+	
+	//return false;
+	
+	}
+	function socket_send(){
+		
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/login/sign_out.php',{"id": getCookie('id'),"username":getCookie('username')});
+	
+	$('#login_id_a1').text("&#30331;&#24405;");
+	$('#reg_login').text('&#27880;&#20876;');
+	$('#login_id_a1').attr("login",false);
+	$('#reg_login').attr("login",false);	
+	$('#user_login_id').css("visibility","visible");	
+		
+		}
+
+
+
+
+</script><div class=" kuang" id="uer_select" onmouseout="mouseout('ds');" style=" display:inline-block; border:solid 0px #FF0000; width:80px">
+
+<div id="ff" class="user_conter" style="height:25px; text-align:center;  " onmouseover="mousein('ds');"> 
+<font class="user_conter_font" id="user_conter_font" style="font-size:14px"><a href="javascript:jump_w('0')">&#25105;&#30340;&#26519;&#21271;</a></font></div>
+<div class="userconter_data" id="ds" onmouseover="mousein('ds');" style="margin: 0px; visibility: hidden; padding: 0px;"> 
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font" id="user_conter_font_1"><a href="javascript:jump_w('sofa')">&#25105;&#30340;&#20449;&#24687;</a></font>
+</div>
+<div style=" margin:0; padding:0px; text-align:center;"><font class="user_conter_font"><a href="javascript:jump_w('chagemail')">&#25105;&#30340;&#35746;&#21333;</a></font></div>
+<script type="text/javascript">
+
+function jump_w(gh){
+	//alert("sd");
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"u/usercenter.html?jump="+gh;	
+	}else {
+		alert("&#35831;&#20808;&#30331;&#24405;&#65281;&#65281;");
+		return;
+		}
+	}
+
+
+
+</script></div>
+</div>
+
+
+
+
+
+
+
+<div onmouseout="mouseout('ds1'); " style="  border:solid 0px #FF0000; text-align:center;padding-top:5px; margin:0; padding:0px; display:inline-block; width:80px">
+<div id="ff1" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein('ds1');"> 
+<font class="user_conter_font" style=";"><a href="javascript:jump_c('');">&#25105;&#30340;&#20219;&#21153;</a></font></div>
+<div class="userconter_data" id="ds1" onmouseover="javascript:mousein('ds1');" style="border:0px dotted #03F; visibility:hidden; margin:0; padding:0px;">
+
+<div class=" userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font"><a href="javascript:jump_c('');">&#25105;&#30340;&#20449;&#24687;</a></font>
+</div>
+<div style="margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_c('');">&#25105;&#30340;&#35746;&#21333;</a></font></div>
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+function jump_c(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"u/usercenter.html?jump="+gh;	
+	}else if(fu=="false"){
+		alert("&#35831;&#20808;&#30331;&#24405;&#65281;&#65281;");
+		return;
+		}
+	}
+
+
+
+
+
+
+
+
+</script><div onmouseout=" javascript:mouseout('ds2');" style=" border:solid 0px #FF0000; margin:0; padding:0px;text-align:center; display:inline-block; width:80px">
+<div id="fff" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein('ds2');"> 
+<font class="user_conter_font" style=";"><a href="javascript:jump_k('kehu');" id="kehu" target="_blank">&#23458;&#25143;&#26381;&#21153;</a></font></div>
+<div class="userconter_data" id="ds2" onmouseover="javascript:mousein('ds2');" style="visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font"><a href="javascript:jump_k('my');" id="my">&#25105;&#30340;&#20449;&#24687;</a></font>
+</div>
+<div style=" margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_k('dd');" id="dd">&#25105;&#30340;&#35746;&#21333;</a></font></div>
+
+<script type="text/javascript">
+//&#23458;&#25143;&#26381;&#21153;
+function jump_k(gh){
+	
+	
+window.location=http+"client/client.html?jump="+gh;	
+	
+	}
+
+
+
+
+
+
+</script></div>
+</div>
+
+
+ 
+ 
+ 
+ 
+
+<div onmouseout=" javascript:mouseout('ds3');" style="border: solid 0px  #0FF; margin:0; padding:0px; display:inline-block; width:80px">
+<div class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein('ds3');"> 
+<font class="user_conter_font" style=";"><a href="javascript:jump_s('');">&#32593;&#31449;&#23548;&#33322;</a></font></div>
+<div class="userconter_data" id="ds3" onmouseover="javascript:mousein('ds3');" style="border: 0px dotted rgb(0, 51, 255); visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" style="border:0px dotted #03F;text-align:center; margin:0; padding:0px;">
+<font class="user_conter_font"><a href="javascript:jump_s('');">&#25105;&#30340;&#20449;&#24687;</a></font>
+</div>
+<div style="border:0px dotted #03F; margin:0; padding:0px;text-align:center;"><font class="user_conter_font"><a href="javascript:jump_s('');">&#25105;&#30340;&#35746;&#21333;</a></font></div>
+<script type="text/javascript">
+
+function jump_s(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"daohang/sitedaohang.html?jump="+gh;	
+	}else if(fu=="false"){
+		alert("&#35831;&#20808;&#30331;&#24405;&#65281;&#65281;");
+		return;
+		}
+	}
+
+
+
+</script></div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div style="  padding:0px; margin-bottom:4px; top:0px; z-index:80; width:99%; height:20px">
+
+
+</div>
+
+
+
+
+
+<div class="main" id="main_id" style=" min-width:800px; margin:0; padding:0px">
+<div style=" margin:0 auto; border:1px solid  #03F; width:80% ">
+
+<div class="logo_div" id="logo_id" style="background-color: #6cc;width:100%;height:62px;"> <a target="_blank" href="javascript:h();" style="margin:0; padding:0; ">
+<img style="vertical-align:middle; float:left; border:1px solid #000; margin:0; padding:0px;" id="logo_img_id" class="logo_img" src="../../../%E6%9E%97%E5%8C%97%E7%BD%9122_files/logo.gif"></a>
+</div>
+<script type="text/javascript">
+
+function h(){
+	
+	window.location=http;
+	}
+</script><div class="daohang" id="dahang_id" style="clear:both background-color:#FFF">
+<table class="daohang_table" id="daohang_table_id" onmousemove="on_show()" onmouseout="on_hide()" style="border-radius:5px;border: 1px solid #03F;padding:0px;background-color: #6cc;margin:0;width:100%;text-align:center;z-index:99;"><tbody><tr class="one_select_tr" id="one_select_tr_id"><td class="shouye"><a class="daohang_a" href="../../../daohang/daohang.html">&#39318;&#39029;</a></td>
+<td class="shouye"><a class="daohang_a" href="../../../s/shop.html">&#21830;&#22478;</a></td>
+<td class="shouye"><a class="daohang_a" href="../../../serch/serch.html">&#23547;&#25214;</a></td>
+<td class="shouye"><a class="daohang_a" href="../../home.html">&#24555;&#25253;</a></td>
+<td class="shouye"><a class="daohang_a" href="../../../client/client.html">&#23458;&#25143;</a></td>
+</tr></tbody></table></div>
+<div onmousemove="on_show()" style="height:2px; width:100%"></div>
+<div class="child_daohang" id="fd" onmouseover="on_show1()" onmouseout="on_hide()" style="display: none; position: absolute; margin: 0px auto; z-index: 1000; width: 80%; height: 136px; background-color: rgb(255, 255, 255);">
+<table height="135" class="child_daohang_table" style=" padding:0px; margin:0;width:100%; text-align:center"><tbody><tr class="child_daohang_table_tr" id="child_daohang_table_tr"><td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_1"><a>&#26032;&#38395;</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_2"><a>&#36151;&#27454;</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_3"><a>&#28216;&#25103;</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_4"><a>&#20307;&#32946;</a></td>
+<td width="20%" class="child_daohang_table_tr_1" id="child_daohang_table_tr_5"><a>&#26381;&#21153;</a></td>
+</tr><tr class="child_daohang_table_tr_2" id="child_daohang_table_tr1"><td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_1"><a>&#30005;&#23376;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_2"><a>&#29983;&#27963;&#29992;&#21697;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_3"><a>&#22270;&#20070;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_4"><a>&#25163;&#26426;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr1_5"><a>&#27773;&#36710;</a></td>
+</tr><tr class="child_daohang_table_tr_3" id="child_daohang_table_tr2"><td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_1"><a>&#28120;&#23453;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_2"><a>&#36186;&#38065;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_3"><a>&#29983;&#27963;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_4"><a>&#38142;&#25509;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr2_5"><a>&#32593;&#31449;</a></td>
+</tr><tr class="child_daohang_table_tr_4" id="child_daohang_table_tr3"><td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_0"><a>&#20844;&#21578;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_1"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_2"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_3"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr3_4"><a>jjj</a></td>
+</tr><tr class="child_daohang_table_tr_5" id="child_daohang_table_tr4"><td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_0"><a>&#20219;&#21153;&#20013;&#24515;</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_1"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_2"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_3"><a>jjj</a></td>
+<td class="child_daohang_table_tr_1" id="child_daohang_table_tr4_4"><a>jjj</a></td>
+</tr></tbody></table></div>
+
+
+
+
+
+<!--ddd-->
+
+
+
+<div class="kuang" style=" width:100%; height:250px;">
+
+
+
+
+<div class="kuang" style=" width:20%; float:left;  border:solid 1px #000000;  height:250px;">
+<div style="width:100%; background-color:rgba(102, 204, 204, 0.38); text-align:center; font-size:16px; font-family:'Microsoft YaHei UI'">&#33756;&#21333;</div>
+<div>
+<ul class="kuang" style="margin:0; padding:0px; list-style:none; line-height:28px;"><li style="float:left;  display:block; border:solid 0px #000000; text-align:center; width:50%; font-size:14px; font-family:'Microsoft YaHei UI'"><a>&#25163;&#26426;</a></li>
+<li style="float:left;  display:block; border:solid 0px #000000; text-align:center; width:50%; font-size:14px; font-family:'Microsoft YaHei UI' "><a>&#25163;&#26426;</a></li>
+<li style="float:left;  display:block; border:solid 0px #000000; text-align:center; width:50%; font-size:14px; font-family:'Microsoft YaHei UI'"><a>&#25163;&#26426;</a></li>
+<li style="float:left;  display:block; border:solid 0px #000000; text-align:center; width:50%; font-size:14px; font-family:'Microsoft YaHei UI' "><a>&#25163;&#26426;</a></li>
+
+
+
+
+</ul></div>
+
+
+
+
+
+
+</div>
+
+<div class="kuang" style=" width:54%; margin-left:0.5%; float:left;  border:solid 1px #000000;  height:250px;">
+<img d="tou" id="img1" style="width:100%; height:250px; display:block" src="../../../image/tx/1.jpg"><img d="tou" id="img2" style="width:100%; height:250px; display:none" src="../../../image/tx/7.jpg"><img d="tou" id="img3" style="width:100%; height:250px; display:none" src="../../../image/tx/3.jpg"><img d="tou" id="img4" style="width:100%; height:250px; display:none;" src="../../../image/tx/6.jpg"></div>
+<script type="text/javascript">
+
+var i=0;
+	var da=new Array("img1","img2","img3","img4");
+
+function img_select(){
+
+		$("[d=tou]").css("display","none");
+		$("#"+da[i]).fadeIn("slow");
+		setTimeout("img_select()",2000);
+		
+	i++;
+	if(i==4){
+		
+		i=0;
+		}
+	
+	}
+
+img_select();
+
+
+
+</script><div class="kuang" style=" width:25%; float:right;  border:solid 1px #000000; height:250px;">
+<div style="width:100%; background-color:rgba(102, 204, 204, 0.38); font-size:16px; font-family:'Microsoft YaHei UI'">&#20844;&#31034;</div>
+<div>
+
+<div class=" kuang" id="benzhour" style="width:100%; line-height:24px; ">
+
+<div onclick="xuanze(this)" link="33" style="width:100%; margin:0"><a style="width:60%;  text-align:left; display:inline-block">2016&#24180;&#27827;&#21335;</a><a style="width:39%; display:inline-block; text-align:right">03/04</a></div>
+
+<div onclick="xuanze(this)" link="33" style="width:100%;  margin:0"><a style="width:60%;  text-align:left; display:inline-block">2016&#24180;&#27827;&#21335;</a><a style="width:39%; display:inline-block; text-align:right">03/04</a></div>
+
+<div onclick="xuanze(this)" link="33" style="width:100%; margin:0"><a style="width:60%;  text-align:left; display:inline-block">2016&#24180;&#27827;&#21335;</a><a style="width:39%; display:inline-block; text-align:right">03/04</a></div>
+</div>
+
+<div class=" kuang" id="benzhour2" style="width:100%; visibility:hidden; line-height:28px; ">
+
+<div onclick="xuanze(this)" link="33" style="width:100%;"><a style="width:60%;  text-align:left; display:inline-block">2016&#24180;&#27827;&#21335;</a><a style="width:39%; display:inline-block; text-align:right">03/04</a></div>
+</div>
+<script type="text/javascript">
+function benzhou(gg){
+	function callback(d){
+	alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+						
+						
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/userconter/finance/recharge.php',{"xml":d},callback,"text");
+	
+	
+	
+	
+	
+	}
+
+
+function crateitem(f,gg){
+	var ta=document.getElementById(gg);
+	var tr=document.createElement('div');
+	tr.setAttribute("onclick","xuanze(this)");
+	tr.setAttribute("link",f[0]);
+	tr.setAttribute("style","width:100%;");
+		var a1=document.createElement("a");
+		a1.setAttribute("style","width:60%;  text-align:left; display:inline-block");
+		a1.innerHTML=f[1];
+		var a2=document.createElement("a");
+		a2.setAttribute("style","width:40%;  text-align:right; display:inline-block");
+		a2.innerHTML=f[2];
+		
+		
+		tr.appendChild(a1);
+		tr.appendChild(a2);
+		ta.appendChild(tr);
+	
+	}
+
+ //crateitem(["sdfs","9/10"],"benzhour");
+function fg(f){
+	$(f).slideToggle();
+	
+	
+	}
+</script></div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="kuang" style=" width:100%; height:250px; margin-top:10px;">
+
+
+
+
+<div class="kuang" style=" width:33%; float:left;  border:solid 1px #000000;  height:250px;">
+<div style="width:100%; height:20px;">&#28216;&#25103;</div>
+<div id="game" style="width:100%; height:229px; display:list-item; list-style:none; line-height:28px;">
+<div style="width:100%; height:20px;"><a style=" display:inline-block; width:88%; margin-left:2px; text-align:left">&#27827;&#21335;&#32463;&#36152;&#32844;&#19994;&#23398;&#38498;</a><a style=" display:inline-block; text-align:right;  margin-right:5px;  width:10%">03/04</a></div>
+
+<div style="width:100%; height:20px;"><a style=" display:inline-block; width:88%; margin-left:2px; text-align:left">&#27827;&#21335;&#32463;&#36152;&#32844;&#19994;&#23398;&#38498;</a><a style=" display:inline-block; text-align:right;  margin-right:5px;  width:10%">03/04</a></div>
+
+
+<div num="000011" style="width:100%; height:20px;" onclick="wen_click(this)"><a style=" display:inline-block; width:88%; margin-left:2px; text-align:left">henanjinmaozheyexueyuan</a><a style=" display:inline-block; text-align:right;  margin-right:5px;  width:10%">03/04</a></div></div>
+
+
+
+</div>
+
+<div class="kuang" style=" width:33%; margin-left:0.5%; float:left;  border:solid 1px #000000;  height:250px;">
+dssds
+</div>
+
+<div class="kuang" style=" width:33%; float:right;  border:solid 1px #000000; height:250px;">
+<div>&#20844;&#31034;</div>
+<div>
+
+
+
+dddd
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--jieshu-->
+
+
+
+
+
+
+
+
+<div class="dibu" style=" clear:both; margin:0 auto; display:block; padding-bottom:1px;padding-top:1px;background-color: #138e8e;border-top:solid #03F 1px;width:100%;">
+<div class=" kuang" style=" float:left"><font class="difang"><a id="difang">&#22320;&#26041;&#39057;&#36947;:</a></font></div>
+<table class="difang_tabl" style="border-collapse:collapse;"><tbody><tr><td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" style="  text-align:center"><a href="javascript:jump_p('henan_10');" id="henan_10">&#27827;&#21335;</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" style=" text-align:center"><a>&#27827;&#21335;</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang" style="  text-align:center"><a>&#27827;&#21335;</a></font></td>
+</tr></tbody></table></div>
+<script type="text/javascript">
+function  jump_p(id){
+	
+var dd=	id.indexOf('_');
+	var str=id.substr(dd+1);
+	
+	window.location=http+"channel/index.html?pd="+str;
+	}
+
+
+
+</script><div style="margin:0 auto;background-color: #6cc;padding:0px;border-top:solid #03F 1px;width:100%;height:150px;">
+<div class="kuang" style="margin:0 auto; padding:0px;  margin-top:2px;width:100%">
+<ul class="f"><li class="li" style="float:left">
+<ul class="d"><li class="lii"><a class="dibu_a">&#26032;&#25163;&#25351;&#24341;</a></li>
+<li class="lii"><a class="dibu_a">&#25903;&#20184;&#38382;&#39064;</a></li>
+<li class="lii"><a class="dibu_a">&#25104;&#20026;&#20195;&#29702;</a></li>
+</ul></li>
+
+<li class="li" style="float:left"> <ul class="d"><li class="lii"><a class="dibu_a">&#22320;&#21306;&#21152;&#30431;</a></li>
+<li class="lii"><a class="dibu_a">&#26657;&#22253;&#20195;&#29702;</a></li>
+<li class="lii"><a class="dibu_a">&#20813;&#36131;&#22768;&#26126;</a></li>
+
+</ul></li>
+
+
+<li class="li" style="float:left"> <ul class="d"><li class="lii"><a class="dibu_a">&#20851;&#20110;&#25903;&#20184;</a></li>
+<li class="lii"><a class="dibu_a">&#20851;&#20110;&#21830;&#21697;</a></li>
+<li class="lii"><a class="dibu_a">&#25104;&#20026;&#20379;&#24212;&#21830;</a></li>
+</ul></li>
+
+
+<li class="li" style="float:left"> <ul class="d"><li class="lii"><a class="dibu_a">&#20851;&#20110;&#38142;&#25509;</a></li>
+<li class="lii"><a class="dibu_a">&#20851;&#20110;&#27880;&#20876;</a></li>
+<li class="lii"><a class="dibu_a">&#25163;&#26426;&#29256;APP</a></li>
+</ul></li>
+
+<li class="li" style="float:left"> <ul class="d"><li class="lii"><a class="dibu_a">&#20851;&#20110;&#38142;&#25509;</a></li>
+<li class="lii"><a class="dibu_a">&#20851;&#20110;&#27880;&#20876;</a></li>
+<li class="lii"><a class="dibu_a">&#25163;&#26426;&#29256;APP</a></li>
+</ul></li>
+
+</ul></div>
+
+</div>
+<div class="zuidibu" style="margin:0 auto;background-color: #6cc;padding:0px;border-top:1px solid #03F;width:100%;text-align:center;">
+<div class="zuidibu_div" style="margin:0 auto; padding:5px;">&#35947;ICP&#22791;&#26696;12345</div>
+<table class="zuidibu_table" style="border-collapse:collapse;  margin:0 auto; padding:3px; min-width:400px; width:30%"><tbody><tr><td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../../j/aboutus.html">&#20844;&#21496;&#31616;&#20171;</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../../j/AD.html">&#24191;&#21578;&#26381;&#21153;</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="../../../j/contactus.html">&#32852;&#31995;&#25105;&#20204;</a></font></td>
+<td class=" zuidibu_table_td" style="border-right:solid 0px #000;"><font class="difang"><a href="../../../j/career.html">&#25307;&#32856;&#31934;&#33521;</a></font></td>
+</tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body></html>

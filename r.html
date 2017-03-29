@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<form  action="df.php" method="post">
+<input id="fd" type="text" value="dsd" name="fds" />
+<input type="submit" value="queding" />
+
+</form>
+
+<div >
+
+<select id="year"  onfocus="crteyeay(1970,46,'year')" >
+<option>1970</option>
+
+</select><a>年</a>
+<select onblur="createm('year','mouth','day')" id="mouth">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select><a>月</a>
+<select onfocus="createm('year','mouth','day')" id="day">
+<option>1</option>
+</select><a>日</a>
+
+</div>
+
+
+<script type="text/javascript">
+function runnian(pYear){
+	
+	if((pYear%4==0 && pYear%100!=0)||(pYear%100==0 && pYear%400==0)){
+		
+		return true;
+		
+		}else{
+			
+			return false;
+			}
+	}
+function crteday(r,day,s_day){
+	var i=r;
+	 var f =document.getElementById(s_day);
+	 f.options=new Option();
+	 f.options.length=day;
+	 
+	for(i;i<day+r;i++){
+		
+		f.options[i].text=i+1;
+		}
+	
+	}
+	
+	function crteyeay(r,day,s_day){
+	var i=r;
+	 var f =document.getElementById(s_day);
+	 f.options=new Option();
+	 f.options.length=day;
+	 var dp=0;
+	for(i;i<day+r;i++){
+		
+		f.options[dp].text=i+1;
+		dp++;
+		}
+	
+	}
+
+function createm(year,mouth,day){
+	var x=document.getElementById(year);
+var year1=  x.options[x.selectedIndex].text;
+	var a=[31,28,31,30,31,30,31,31,30,31,30,31];
+	var x1=document.getElementById(mouth);
+var mou= x1.selectedIndex;
+//alert(mou);
+	var fg=runnian(year1);
+	if(fg){
+		//alert(fg);
+		a[1]=29;
+		}else a[1]=28;
+		//alert(a[mou]);
+		crteday(0,a[mou],day);
+	
+	}
+	
+function getdata(year,mouth,day){
+	var x=document.getElementById(year);
+var year1=  x.options[x.selectedIndex].text;
+	var x1=document.getElementById(mouth);
+var mouth=  x1.options[x.selectedIndex].text;
+	var x2=document.getElementById(day);
+var day=  x2.options[x.selectedIndex].text;
+	return year1+"-"+mouth+"-"+day;
+	}
+//alert(getdata('year2','mouth2','day2'));
+</script>
+
+
+</div>
+
+</body>
+</html>

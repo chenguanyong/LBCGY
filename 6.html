@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/index_show.js"></script>
+<script type="text/javascript" src="js/p.js"></script>
+<script type="text/javascript" src="js/jstool.js">
+</script>
+</head>
+
+<body>
+<div style=" width:100%; height:auto" id="child_pl"></div>
+<div style=" width:100%; height:auto" id="dwen"></div>
+</div>
+<script type="text/javascript">
+
+//createyeshu([2,"f.html","j.html"]);
+
+creatdaohang();
+function creatdaohang(){
+	var path=getdata(window.location.search);
+	var arr=[];
+	for(var i=0;i<path.length;i++){
+		
+		if(path[i]=="category"){
+			arr=[path[i+1].split("_")[0],path[i+1].split("_")[1]];
+			
+			}
+		
+		
+		}
+	
+	var	 g=document.getElementById('dwen');
+	
+	var a_1=document .createElement('a');
+	
+	a_1.setAttribute('style'," float:left;");
+	a_1.setAttribute('href',arr[1]);
+	a_1.innerHTML=arr[0];
+	var a_2=document .createElement('a');
+	a_2.setAttribute('style'," float:left;");
+	a_2.setAttribute('href',c[i+1]);
+	a_2.innerHTML="> 正文";
+	
+	g.appendChild(a_1);
+	g.appendChild(a_2);
+	}
+	
+	
+	
+</script>
+
+
+<div style="clear:both; width:95%; margin:0 auto">
+	<a style=" font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI'; color:#00F">1</a>
+	<font style="font-size:14px ; font-family:'Microsoft YaHei UI'">回复</font>
+	
+	<font style="display:inline-block; margin:2px 2px; ">33</font>
+    <a style=" font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI';">sdsdsdsds</a>
+	<div style="width:100%; clear:both">
+		<a style="display:inline-block; float:right ; padding:3px 3px; font-size:12px; font-family:Arial, Helvetica, sans-serif" onclick="show_send(this)">回复</a>
+		<a style="display:inline-block; padding:3px 3px; float:right; font-size:12px; font-family:Arial, Helvetica, sans-serif" onclick="tuijian(this)">推荐&nbsp;/&nbsp;</a>
+	</div>
+	<div xh="CH" style="height:50px; clear:both; border:solid 0px #000000; width: 98%;  ">
+		<textarea style="width:98%; margin:0 auto; clear:both; display:block;  height:40px; border:solid 1px #000000"></textarea>
+		<button style="float:right; margin-right:20px; margin-top:10px;" onclick="fa(this)">发表</button>
+	</div>
+</div>
+
+
+<div id="ll"></div>
+<script type="text/javascript">
+function f(f){
+	var fd=document.createElement("a");
+	fd.innerHTML="sssssssssss";
+	f.appendChild(fd);
+	}
+	 childnode_(["1q","3uuu","33w"]);
+	childnode_(["1","3ddd","3FGDFGDFGDF3"]);
+	 childnode_(["1","3","33"]);
+	 childnode_(["1","3","33"]);
+function  childnode_(g){
+var r=document.getElementById("child_pl")
+var div_c=document.createElement("div");
+var div_a=document.createElement("div");
+var a_c1=document.createElement("a");
+var a_c2=document.createElement("a");
+var a_c3=document.createElement("a");
+var font_c2=document.createElement("font");
+var font_c3=document.createElement("font");
+
+div_c.setAttribute("style","clear:both; width:95%; margin:0 auto");
+	
+a_c1.setAttribute("style"," font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI'; color:#00F");	
+a_c1.innerHTML=g[0];
+font_c2.setAttribute("style","font-size:14px ; font-family:'Microsoft YaHei UI'");
+font_c2.innerHTML="回复";
+	
+	a_c3.setAttribute("style","font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI';");
+	a_c3.innerHTML=g[1];
+	
+	
+font_c3.setAttribute("style","display:inline-block; margin:2px 2px; color:#00F ");	
+font_c3.innerHTML=g[2];
+	div_a.setAttribute("style","width:100%; clear:both; ");
+var a_c31=document.createElement("a");	
+var a_c32=document.createElement("a");	
+ a_c31.setAttribute("style","display:inline-block; padding:3px 3px; float:right; font-size:12px; font-family:Arial, Helvetica, sans-serif");
+ a_c31.innerHTML="回复";
+ a_c31.setAttribute("onclick","show_child(this)");
+a_c32.setAttribute("style","display:inline-block; padding:3px 3px; float:right; font-size:12px; font-family:Arial, Helvetica, sans-serif");
+a_c32.innerHTML="推荐&nbsp;/&nbsp;";
+ a_c32.setAttribute("onclick","tuijian(this)");	
+	
+div_c.appendChild(a_c1);
+div_c.appendChild(font_c2);
+div_c.appendChild(a_c2);
+div_c.appendChild(font_c3);	
+div_c.appendChild(a_c3);	
+div_a.appendChild(a_c31);	
+div_a.appendChild(a_c32);
+div_c.appendChild(div_a);
+var ds=document.createElement("div");
+		var da1=document.createElement("textarea");
+		var da2=document.createElement("button");
+		da1.setAttribute("style","width:98%; margin:0 auto; clear:both; display:block;  height:40px; border:solid 1px #000000");
+		da2.setAttribute("style","float:right; margin-right:20px; margin-top:10px;");
+		da2.setAttribute("onclick","fa(this)");
+		da2.innerHTML="发表";
+		ds.appendChild(da1);
+		ds.appendChild(da2);
+		ds.setAttribute("XH","CH");	
+		ds.setAttribute("style","height:50px; clear:both; border:solid 0px #000000; width: 98%;  display:none ");
+		div_c.appendChild(ds);
+r.appendChild(div_c);
+	}
+	
+	function show_child(c1){
+	
+var f= $(c1).parent().parent().children("[XH]");
+if(f.css("display")=="none"){
+	$("[XH=CH]").css("display","none");
+	f.css("display","block");
+	
+	}else{
+		
+		f.css("display","none");
+		}
+	
+	}
+//alert(window.location.search);
+var d=getdata(window.location.search);
+alert(d[0]+"--"+d[1]+"--"+d[2]+"---"+d[3]);
+</script>
+
+
+</body>
+</html>

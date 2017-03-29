@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>更换邮箱</title>
+<script type="text/javascript"  src="../js/index_show.js"></script>
+
+<script  type="text/javascript"  src="../js/jstool.js" ></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<style type="text/css">
+input.power{
+		
+		border:1px solid #9a9a9a;
+		padding:0px; margin:0; width:150px; height:30px;
+		}
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+button{
+	border:1px solid #9a9a9a
+	; background-color:#f1f1f1;
+	width:60px; height:30px;}
+</style>
+
+<script type="text/javascript">
+
+
+	
+
+function sure(){
+	
+	var old=document.getElementById("oldmail");
+	var newmail =document.getElementById("newmail");
+	if(old.value==""){
+		//alert("sds");
+		$('#sure_error').text("不能为空");
+		return false;
+		
+		}
+		if(newmail.value==""){
+		$('#sure_error').text("不能为空");
+		return false;
+		
+		}
+		
+    if($("#kk5").attr("visibility")=="visible"){
+			alert($("#kk5").attr("visibility"));
+			$('#sure_error').text("旧邮箱有误");
+			
+			}
+			 if($("#kk51").attr("visibility")=="visible"){
+			$("#sure_error").text("新邮箱有误");
+			
+			}else{
+				$('#sure_error').text(" ");
+				tijiao();}
+		
+	}
+function tijiao(){
+	
+	
+	var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("bordy");
+	
+	xml.startelement("un1")
+	xml.element("name","oldmail");
+	xml.element("data",document.getElementById('oldmail').value);
+	xml.element("type","3");
+	xml.endelement("un1");
+	
+	xml.startelement("un2")
+	xml.element("name","newmail");
+	xml.element("data",document.getElementById('newmail').value);
+	xml.element("type","3");
+	xml.endelement("un2");
+	
+	/*xml.startelement("un3")
+	xml.element("name3","yazhen");
+	xml.element("data3",document.getElementById('check_ma').value);
+	xml.element("type3","3");
+	xml.endelement("un3");*/
+	
+	xml.endelement("bordy");
+	xml.endelement("root");
+	var d=xml.savexml();//
+	alert(d);
+	
+	function callback(d){
+		//alert(d);
+		document.write(d);
+		var obj = eval ("(" + d + ")");
+		if(obj.root.data=='success'){
+					
+				alert("chen");
+					$('#dbody').css("visibility","visible");
+					$('#dbody').text("修改成功！！");
+					$('#input_').css("visibility","hidden");
+					
+					
+					
+					}
+				
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/userconter/fixmail.php',{"xml":d},callback,"text");
+	
+	//return false
+	}
+	
+	
+	
+	
+
+
+
+</script>
+<link href="../css/usercenter/chagemail.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body  >
+<div class="kuang">
+
+
+<div class="bindmail" >
+
+<h4 >您还没绑定邮箱?</h4>
+
+</div>
+
+
+
+
+<div class="fixmaill"  >
+
+<h4 >您还没绑定邮箱?</h4>
+
+<div id="dbody" class="back" >jkjk</div>
+<div id="input_" class="mail_input"  >
+
+<label>旧邮箱:</label><input id="oldmail" class="power" onblur="javascript:check_mail1('kk5','oldmail');" type="text" name="old_phone_num" /> <a id="kk5" style="visibility:hidden">dd</a><br />
+<br />
+<label>新邮箱:</label><input id="newmail"  class="power" onblur="javascript:check_mail1('kk51','newmail');"   type="text" name="old_phone_num" />
+<a id="kk51" style="visibility:hidden">dd</a>
+<div class="sure" >
+<a id ="sure_error" class="error" ></a><button id="sure" onclick="return sure()" style="width:100px; " > 确定</button>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<div class="mail_tx"  >
+
+
+<div style=" padding:10px; font-family:Microsoft YaHei UI; font-size:14px">绑定邮箱的重要性</div>
+<div style=" margin-left:10px; width:80%; height:100px; background-color:#f5f5f5" >
+
+
+<ul style="margin:0; line-height:28px; list-style:none">
+<li>sd</li>
+<li>dd</li>
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

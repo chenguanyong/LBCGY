@@ -1,0 +1,17 @@
+.main_input{ border:solid 0px #FF0;width:100%; background-color:#fff; height:250px}
+.return_back{width:200px; position:absolute; margin:0 auto; visibility:hidden;  height:100px; border:solid 1px #0FF}
+.title_font{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+.input_div{ border:solid 0px #FF0; padding-top:20px; margin:0 auto; width:400px }
+.denglu_from{ padding:0px; margin:0 }
+.power_div{ width:100%; padding:2px; text-align:left}
+.input_username{padding:0px; border:0px solid #03F; width:80px; text-align:right; display:inline-block; margin:0; font-size:15px; font-family:'Microsoft YaHei UI'; font-size:15px}
+.input_name{padding:0px; margin:0; width:150px}
+.yanzhen_font{ visibility:hidden}
+
+. miam_font{padding:0px; text-align:right;  width:80px; display:inline-block; font-family:'Microsoft YaHei UI'; font-size:14px  margin:0; font-size:15px;}
+.yanzhengma1{ width:100%; padding:2px; text-align:left}
+.yanzheng_title{padding:0px; text-align:right;font-family:'Microsoft YaHei UI'; font-size:14px;  width:80px; display:inline-block;  margin:0; font-size:15px; }
+.yanzhengma{width:80px ; margin:0px 0px}
+.yazheng{width:70px; height:30px ; margin:0 0}
+.tijiao{border:solid #9F3 0px; padding:2px; text-align:left}
+.button_su{margin-left:80px; width:90px}

@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人资料</title>
+<link href="../css/usercenter/ziliao.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+
+<script  type="text/javascript"  src="../js/p.js" ></script>
+<script  type="text/javascript"  src="../js/usercenter/ziliao.js" ></script>
+
+
+
+
+
+<style type="text/css">
+ul.f{ 
+margin:0 auto;
+padding:0px;
+width:90%;
+
+	list-style:none;}
+	li.li{ float:left; 
+	margin:0 auto;
+	width:20%;
+	
+		}
+		
+		
+		li.lii{ text-align:center;
+		
+		width:140px;
+		float:left;
+		 
+		
+		}
+	
+	
+		
+	ul.d{
+		list-style:none;
+		
+		line-height:28px;}	
+
+
+
+
+input{
+		
+		border:0px solid #00F;
+		padding:0px; margin:0; 
+		}
+
+button{
+	}
+    .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+    
+    </style>
+
+
+</head>
+
+<body style="background-color:#f5f5f5">
+
+<div  class="orman" >
+
+<div class="manorwoman" >您是先生OR女士?</div>
+<div class="input_man"  ><input id="nan_sex" onclick="huchi('nan_sex','nv_sex')"  type="checkbox" /> <label>先生</label><input  onclick="huchi('nv_sex','nan_sex')" id="nv_sex" type="checkbox" /> <label>女士</label></div>
+
+</div>
+
+
+
+<div class="work"  >
+
+<div class="work_title" >您的工作是？</div>
+
+
+<ul class="f" >
+
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:vocation= check_click('ms',vocation);" id="ms" type="checkbox"  value="Marketing_sales" />
+  市场&amp;销售
+</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('fm',vocation)" id="fm" type="checkbox"  value="Financial_management"/>
+财务&amp;管理</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('ii',vocation)"  id="ii" type="checkbox" value="IT_Internet" />
+IT&amp;互联网
+</li>
+</ul></li>
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:vocation=  check_click('fs',vocation)" id="fs" type="checkbox" value="Financial_scientific_research" />
+金融&amp;科研
+</li>
+<li class="lii"><input onclick=" javascript:vocation= check_click('rc',vocation)" id="rc" type="checkbox"  value="Real_estate_construction"/>
+  房产&amp;建筑</li>
+<li class="lii"><input onclick=" javascript:vocation= check_click('te',vocation)" id ="te" type="checkbox" value="Trade_economy" />
+  贸易&amp;经济
+</li>
+</ul></li>
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:vocation=  check_click('pm',vocation)" id="pm" type="checkbox" value="Production_manufacturing" />
+生产&amp;制造
+</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('ma',vocation)"  id="ma"type="checkbox" value="Media_art" />
+传媒&amp;艺术
+</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('el',vocation)" id="el" type="checkbox" value="Education_law" />
+教育&amp;法律
+</li>
+</ul></li>
+
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:vocation=  check_click('ser',vocation)" id="ser" type="checkbox" value="services" />
+服务业
+</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('ele',vocation)" id="ele" type="checkbox" value="electricity" />
+  电商
+</li>
+<li class="lii"><input onclick="javascript:vocation=  check_click('ot',vocation)" id="ot" type="checkbox" value="other" />
+  其他
+</li>
+</ul></li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="oooo" ></div>
+
+
+<div class="qianming" >
+
+<div class="qianming_title" >个性签名</div>
+
+<div class="input_qianming" ><textarea id="gx"    
+class="txtarea"  ></textarea></div>
+
+
+</div>
+
+
+
+
+<div class="xingqu" >
+
+<div class="xingqu_title" >兴趣爱好</div>
+<div class="input_qianming" ><textarea class="txtarea" id="xq" ></textarea></div>
+
+</div>
+
+
+
+
+
+<div class="guanzhu"  >
+<div class="guanzhu_title" >特别关注</div>
+
+<ul class="f" >
+
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:focuss= check_click('sp',focuss)" id="sp" type="checkbox" value="sports" />
+<label>体育</label>
+</li>
+<li class="lii">
+<input onclick=" javascript:focuss= check_click('sci',focuss)" id="sci" type="checkbox" value="science" />
+<label>科技</label>
+</li>
+
+
+
+<li class="lii"><input onclick=" javascript:focuss= check_click('fun',focuss)" id="fun" type="checkbox" value="funny" />
+<label>搞笑</label>
+</li>
+
+
+</ul></li>
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input  onclick="javascript:focuss=  check_click('en',focuss)" id="en" type="checkbox"  value="entertainment"/>
+娱乐
+</li>
+<li class="lii"><input onclick="javascript:focuss=  check_click('hi',focuss)"  id="hi" type="checkbox" value="history" />
+历史
+</li>
+<li class="lii"><input onclick=" javascript:focuss= check_click('peo',focuss)" id="peo" type="checkbox" value="people" />
+  男女
+</li>
+</ul></li>
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:focuss=  check_click('mil',focuss)" id="mil" type="checkbox" value="military" />
+军事
+</li>
+<li class="lii"><input onclick=" javascript:focuss= check_click('car',focuss)" id="car" type="checkbox" value="car" />
+  汽车
+</li>
+<li class="lii"><input onclick="javascript:focuss=  check_click('fin',focuss)"  id="fin" type="checkbox" value="Finance" />
+  财经
+</li>
+</ul></li>
+
+
+<li  class="li"  >
+<ul class="d" >
+<li class="lii"><input onclick="javascript:focuss=  check_click('so',focuss)" id="so" type="checkbox" value="social" />
+社会
+</li>
+<li class="lii"><input onclick="javascript:focuss=  check_click('tou',focuss)" id="tou" type="checkbox"  value="tourism"/>
+旅游
+</li>
+<li class="lii">
+<input onclick="javascript:focuss=  check_click('nba',focuss)" id="nba" type="checkbox" value="nba" />
+NBA
+</li>
+</ul></li>
+</ul>
+</div>
+<div ></div>
+
+
+
+<div class="sure_button" align="center" ><button id="save" onclick="tijiao()">保存</button> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+    
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.orman{  background-color:#fff; width:100%; height:auto}
+.manorwoman{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+.input_man{margin-left:5px;padding:10px;  width:100%; height:30px;  margin-right:5px;}
+.work{ margin-top:20px;  background-color:#fff; width:100%; height:150px;}
+.work_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+
+.qianming{margin-top:20px; margin-bottom:20px; width:100%; background-color:#FFF; height:100px;}
+.qianming_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+.input_qianming{ margin-left:10px;}
+.txtarea{border:solid 1px #00F ; height:40px; width:80%;}
+.xingqu{margin-top:20px; margin-bottom:20px; width:100%; background-color:#FFF; height:100px;}
+.xingqu_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+.guanzhu{ margin-top:20px;  background-color:#fff; width:100%; height:150px;}
+.guanzhu_title{ padding:10px; font-family:Microsoft YaHei UI; font-size:14px}
+
+.sure_button{ clear:both; padding-top:30px;width:100%}
+

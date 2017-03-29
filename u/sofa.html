@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>更换手机</title>
+<link type="text/css" href="../css/usercenter/sofa.css" rel="stylesheet" />
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+<script  type="text/javascript"  src="../js/usercenter/sofa.js"></script>
+<script  type="text/javascript"  src="../js/p.js" ></script>
+
+
+<style type="text/css">
+input{
+		
+		border:1px solid #9a9a9a;
+		padding:0px; margin:0; width:150px;
+		height:30px;
+		}
+
+button{
+	}
+    
+    .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}</style>
+</head>
+
+<body style="background-color:#f5f5f5">
+<div>
+
+
+
+<div class="title_div" style=" width:100%; height:50px; background-color:#FFF">
+
+
+<div class="title_font" style=" padding:10px; font-family:Microsoft YaHei UI; font-size:14px">您还没绑定手机?</div>
+
+</div>
+
+<div class="main_option"  style=" width:100%; height:220px; margin-top:20px; background-color:#FFF" >
+<div class="title_option" style=" padding:10px; font-family:Microsoft YaHei UI; font-size:14px">您要更换手机号</div>
+<div class="return_data" id="dbody" style="width:200px; position:absolute; margin:0 auto; display:none;  height:100px; border:solid 1px #0FF">jkjk</div>
+<div class="main_input" id="input_" style=" margin:0 auto; width:50%;" >
+
+<label class="font_mobel" style="width:120px; font-size:14px; text-align:right; display:inline-block;  font-family:'Microsoft YaHei UI'">旧手机号:</label><input type="text" id="old" onblur="javascript:check_phone('kk4','old');"  name="old_phone_num" /> <a id="kk4" ></a><br />
+<br />
+<label class="font_new" style="width:120px; font-size:14px;text-align:right; display:inline-block; font-family:'Microsoft YaHei UI'">新手机号:</label><input type="text" id="newphone" onblur="javascript:check_phone('kk41','newphone');" name="old_phone_num" /><a id="kk41"></a>
+<br />
+<br />
+<label class="font_news" style="width:120px;text-align:right; display:inline-block; font-size:14px; font-family:'Microsoft YaHei UI'">重复输入手机号:</label><input type="text" id="newphone1" onblur="javascript:check_phone('kk411','newphone1');" name="old_phone_num" /><a id="kk411"></a>
+<br />
+<br />
+<a  class=" error" id="sure_error" style="visibility:visible;width:170px;text-align:right; display:inline-block; font-size:14px; font-family:'Microsoft YaHei UI'"> </a><button onclick=" sure()"> 确定</button>
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

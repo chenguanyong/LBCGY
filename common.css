@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+	/*a.daohang_a:link {color: #fff}
+	a.daohang_a:visited {color: #fff}
+	a.daohang_a:hover {color: #ffcccc; background-color:#e1e1e1}
+	a.daohang_a:active {color: #0000FF}*/
+	
+	a.myuserfont:link {color: #fff}
+	a.myuserfont:visited {color: #fff}
+	a.myuserfont:hover {color: #66cccc}
+	a.myuserfont:active {color: #0000FF}
+	div,ul,li {
+		box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box ; /* Safari */
+	}
+	font.user_conter_font{
+		font-size:14px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:200;
+	}
+	font.difang{ 
+ 		font-family:"microsoft yahei";
+		font-size:14px;
+	}
+	ul.f{ 
+		margin:0 auto;
+		padding:10px;
+		width:90%;
+		list-style:none;
+	}
+	li.li{ 
+		float:left; 
+		margin:0 auto;
+		width:20%;
+	}
+	li.lii{ 
+		text-align:center;
+		border-bottom:solid 0px #fff;
+		width:80px; 
+	}
+	input{
+		border:1px solid #66cccc
+	}	
+	ul.d{
+		list-style:none;
+		line-height:20px;
+	}	
+	a.dibu_a{
+		font-family:"Microsoft YaHei UI";
+		font-size:0.8em;
+		color:#fff;
+		
+	}
+	a.daohang_a{
+		font-family: SimSun,Arial;
+		font-size:16px;
+		font-weight: 900;
+		color:#000
+
+	}
+	td.child_daohang_table_tr_1{
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:14px;
+	}
+	body{
+		padding:0px;
+		margin:0;
+		min-width:800px;
+		background-color: #f5f5f5;
+	}
+	.userlogin{
+	position: absolute;
+	background-color: #66cccc;
+	border: 1px solid #66cccc;
+	margin: 0;
+	padding: 0px;
+	min-width: 800px;
+	height: 25px;
+	width: 99.7%;
+	}
+	.difang{
+		border:0px solid #000; margin:0; padding:0px; height:20px; float:left; width:50%
+		}
+	.top_login_id{
+		margin-left:20%; float:left; top:2px; padding:0px; width:100px; 
+		}
+.login_id_a1{padding:3px; width:50px; display:inline; cursor:pointer; height:40px;}	
+.loction{float:left; height:25px; width: 100px; background-color:#CFF}
+.weizhi{height:25px; width: 100px; background-color:#CFF}
+#prive{clear:both; width:100px; visibility: hidden ;display:list-item; list-style:none; border:solid 1px #FFFFFF; background-color:#fff;  height:auto; text-align:center}
+.location_list{margin-left:5px; margin-right:5px; line-height:20px; display:inline-block}
+.citylist{clear:both; display:list-item; width:100px; border:solid 1px #FFFFFF; list-style:none; height:auto; background-color:rgba(236, 236, 241); visibility:hidden}
+.cityltems{position:absolute;visibility:hidden; background-color:#fff;  width:100px;}
+.cityitem{display:inline-block;margin-left:5px; margin-right:5px; line-height:20px;}
+.useroption{padding:0px; margin:0 ; border:solid 0px #000000; height:20px; float:right; width:40%}
+.myuser{float:left; border:solid 0px #FF0000; width:80px}
+.user_conter{ padding:3px 3px; text-align:center;  }
+.myuserfont{font-size:14px; font-family:'Microsoft YaHei UI'}
+.userconter_data{margin: 0px; line-height:20px;  visibility: hidden; padding: 0px;}
+.userconter_data_1{text-align:center; margin:0; padding:0px;}
+.main{min-width:800px; margin:0; padding:0px}
+.loginimg{ margin:0 auto; border:0px solid  #6cc; width:80% ; min-width:800px;}
+.logo_div{background-color: #fff; width:100%; height:130px;}
+.logo_img{vertical-align:middle; float:left; border:1px solid #000; margin:0; padding:0px;}
+.serchdiv{padding-top:40px; height:50px; width:58%; border:solid #03F 0px;  float:left; text-align:center}
+.serch_keyword1{padding:0px;  width:250px; margin:0; height:30px}
+.serch_button1{padding:0px; margin:0; width:80px; height:30px}
+.shuru{visibility:hidden; display:none}
+
+.daohang{clear:both; background-color:#FFF}
+.daohang_table{border-radius:5px; height:35px; border: 1px solid #66cccc;padding:0px; background-color: #6cc; margin:0;width:100%;text-align:center;z-index:99;}
+.shouye{width:20%; text-align:center;}
+.daohanglist{display: none; position: absolute; margin: 0 auto; z-index: 1000; width: 80%; height: 136px; min-width:640px; background-color: rgb(255, 255, 255);}
+.daohanglistmain{width:20%; float:left; background-color:#f1f1f1; height:135px;}
+
+.ullist{ margin-top:10px; width:100%;  padding:0; line-height:25px;}
+.lilist{width:50%;   border:solid 0px #000000;  display:block; float:left;}
+.lilista{display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI';}
+
+
+.main_login{margin:0 auto; background-color:#FFF; padding:0px;border:solid #9F3 1px; min-height:300px;  width:100%; height:450px; background-image:url(image/user_image/lb.jpg)}
+.user_login{border-radius:30px;margin-right:30px;min-width:300px;margin-top:30px;padding:0px;float:right;border: solid #33baff 1px;width:28%;background-color: #66cccc;}
+.denglu{margin:0 auto; padding:0px ;border:solid #9F3 0px; color:#000; text-align:center; font-family:'黑体'}
+.denglu_from{padding:0px; margin:0 }
+.userlogin_{width:100%; padding:2px; text-align:left}
+.input_username{padding:0px; width:60px;display:inline-block; text-align:right; margin:0; font-size:15px;}
+.input_name{padding:0px; margin:0; width:150px}
+.yanzhen_font{padding:0px; margin:0; color:#F00; font-size:10px;}
+.miam_font{padding:0px; display:inline-block;  width:60px; text-align:right; font-family:"Microsoft YaHei UI"; margin:0; font-size:1em;}
+.yanzheng{visibility:hidden; vertical-align:middle; width:70px; height:30px}
+
+.shuaxin{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; font-weight:900}
+
+
+.h2{margin:0 auto; padding:0px ;border:solid #9F3 0px;  text-align:center}
+.from_h2_class{padding:0px; margin:0}
+.from_h2_user{padding:2px; margin:0; width:60px;  display:inline-block; font-family:"Microsoft YaHei UI";  text-align:right; font-size:0.9em;}
+
+.zhongxiabu{margin:0 auto; padding:0px; background-color:#FFF;  border:solid  #66cccc  1px ; width:100%; height:200px;}
+
+
+/**footer**/
+
+.dibu{margin:0 auto;padding-bottom:1px;padding-top:1px; background-color: #138e8e;border-top:solid #fff 1px; width:100%;}
+
+
+.difang_tabl{border-collapse:collapse;}
+.difangpingdao_td{border-right:solid 1px #fff; padding:5px 5px }
+.difangfont{text-align:center; font-family:"Microsoft YaHei UI"; font-size:0.8em; color:#fff;}
+
+.footer_list{margin:0 auto;background-color: #66cccc;padding:0px;border-top:solid #fff 1px;width:100%;height:150px;}
+.zuidibu{margin:0 auto;background-color: #66cccc;padding:0px; height:80px; border-top:1px solid #ffF; width:100%; text-align:center;}
+.zuidibu_table{border-collapse:collapse;  margin:0 auto; padding:5px 10px; min-width:400px; width:30%}
+.zuidibu_table_td{border-right:solid 1px #000;}
+.zuidibu_div{margin:0 auto;  padding:10px 10px;}
+.yuicp{}
+

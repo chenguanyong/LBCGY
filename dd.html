@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/p.js"></script>
+<script type="text/javascript" src="js/jstool.js"></script>
+</head>
+
+<body>
+
+<div id="benzhour">
+
+
+</div>
+
+
+<script type="text/javascript">
+function benzhou(gg){
+	
+	var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("bordy");
+	
+	xml.startelement("un1")
+	xml.element("name1","username");
+	xml.element("data1",document.getElementById('username').value);
+	xml.element("type1","3");
+	xml.endelement("un1");
+	
+	xml.startelement("un2")
+	xml.element("name2","power");
+	xml.element("data2",document.getElementById('mima_id').value);
+	xml.element("type2","3");
+	xml.endelement("un2");
+	
+	xml.startelement("un3")
+	xml.element("name3","yazhen");
+	xml.element("data3",document.getElementById('check_ma').value);
+	xml.element("type3","3");
+	xml.endelement("un3");
+	
+	xml.endelement("bordy");
+	xml.endelement("root");
+	var d=xml.savexml();//
+	
+	
+	
+	
+	function callback(d){
+	alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+						
+						
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/mtj_php/morewen/inittj.php',{"xml":d},callback,"text");
+	
+	
+	
+	
+	
+	}
+	
+	xianinit();
+	function xianinit(){
+		
+		function callback(d){
+	alert(d);
+		//document.write(d);
+		$("#benzhour").empty();
+		var obj = eval ("(" + d + ")");
+		
+		for(var i=10;i<obj.hand.size+10;i++){
+			
+			var oj=eval("obj.un"+i);
+			
+			crateitem([oj.ad_num,oj.riqi,oj.ad_link,oj.ad_id,oj.ad_name],"benzhour");
+			
+			
+			
+			}
+		
+						
+						
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/mtj_php/morewen/inittj.php',{"type":2,"pici":0},callback,"text");
+	
+		
+		
+		
+		
+		
+		}
+
+crateitem(["j","j","j","j","j"],"benzhour");
+function crateitem(f,gg){
+	var ta=document.getElementById(gg);
+	var tr=document.createElement('div');
+	tr.setAttribute("onclick","xuanze(this)");
+
+	
+	var	path=f[2]+"/"+f[0]+".html";
+		
+		
+	tr.setAttribute("link",f[0]);
+	tr.setAttribute("id_",f[2]);
+	tr.setAttribute("style","width:100%;");
+		var a1=document.createElement("a");
+		a1.setAttribute("style","width:60%;  text-align:left; display:inline-block");
+		a1.innerHTML=f[4];
+		var a2=document.createElement("a");
+		a2.setAttribute("style","width:40%;  text-align:right; display:inline-block");
+		a2.innerHTML=f[1];
+		
+		
+		tr.appendChild(a1);
+		tr.appendChild(a2);
+		ta.appendChild(tr);
+	
+	}
+
+ //crateitem(["sdfs","9/10"],"benzhour");
+
+</script>
+
+</body>
+</html>

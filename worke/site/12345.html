@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>任务</title>
+
+<script type="text/javascript" src="../../js/index_show.js"></script>
+<script type="text/javascript" src="../../js/p.js"></script>
+<script type="text/javascript" src="../../js/jstool.js">
+</script>
+
+
+<style type="text/css">
+font.user_conter_font{
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:200;
+	
+	}
+	.f{ 
+margin:0 auto;
+padding:0px;
+width:90%;
+
+	 
+	
+	list-style:none;}
+	.li{ float:left; 
+	margin:0 auto;
+	width:20%;
+	
+		}
+		.lii{ text-align:center;
+		border-bottom:solid 1px #000;
+		width:80px; 
+		
+		}
+	font.difang{ font-family:"microsoft yahei";
+	font-size:14px;
+	
+		}
+	input{
+		
+		border:1px solid #00F}
+		
+	.d{
+		list-style:none;
+		
+		line-height:20px;}	
+		.dibu_a{
+			font-family:"Arial Black", Gadget, sans-serif;
+			font-size:12px;
+			}
+.daohang_a{
+	
+	
+	font-family: SimSun,Arial;
+	font-size:16px;
+	font-weight: 900;
+	}
+	.child_daohang_table_tr_1{
+		
+		
+		
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:14px;
+		}
+
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+
+
+
+function dd(d){
+	//alert("123");
+	//if()
+var ds=	document.getElementById(d);
+
+	if(ds.style.display=="inline"){
+		ds.style.display="none";
+		
+		}else{
+			ds.style.display="inline";
+			
+			
+			}
+	}
+function dump_other(j){
+	var iframe=document.getElementById('iframe1');
+	
+	iframe.src=j+".html"+"?"+"id="+quanjuxinxi.id+"&"+"name"+"="+quanjuxinxi.name;
+	
+	
+	
+	}
+	//quanjuguanjian全局关键信息
+	var quanjuxinxi={
+		id:"ee",//关键值
+		name:"ee",//用户名
+		time:"ee",//时间
+		
+		
+		}
+//var xinxi=new quanjuxinxi();
+		
+
+</script>
+
+<script type="text/jscript">
+
+function submit_shop(){
+	
+	
+var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("bordy");
+	
+	xml.startelement("un1")
+	xml.element("name","serch_keyword");
+	xml.element("data",document.getElementById('serch_keyword').value);
+	xml.element("type","3");
+	xml.endelement("un1");
+	
+	xml.startelement("un2")
+	xml.element("name","hiden");
+	xml.element("data",document.getElementById('hiden').value);//ID值
+	xml.element("type","3");
+	xml.endelement("un2");
+	
+	xml.endelement("bordy");
+	xml.endelement("root");
+	var d=xml.savexml();//	
+alert(d);
+	function callback(d){
+		//alert(d);
+		//document.write(d);obj.hand.size
+		var obj = eval ("(" + d + ")");
+		
+		if(oj.classify!=""){
+			var d0=oj.classify.condition;
+			for(var i=0;i<d0.length;i++){
+				
+				tijian[i]="a";
+				
+				}
+			$("#data").attr("num",oj.classify.id[0]);
+			
+			create([0,oj.classify.condition[0]],oj.classify.brand);//
+			create([1,oj.classify.condition[1]],oj.classify.prices);
+			
+			
+			}
+		
+		
+		
+		for(var i=0;i<8;i++){
+		var oj=eval("obj.un"+0);
+		if(oj.shop_link!="kong"){
+			//cretetabl1e([oj.soure,oj.ip,oj.city,oj.link_,oj.clicks]);
+		//create_serch([oj.name,oj.link1,oj.data,oj.time]);
+			createshop([oj.follow,oj.name,oj.username,oj.price,oj.shop_link]);
+			}
+			
+			else
+			{
+		//	create_serch(['b','b','暂时没有相关信息',' b']);	
+				//alert(d);
+				}
+		
+		
+		}
+		
+		
+		
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/s/s_shop.php',{"xml":d},callback,"text");
+	
+	}
+
+
+function serch(){
+	
+	
+	var g=document.getElementById("serch_keyword");
+	if(g.value==""){
+		alert('dssf');
+		return false;
+	
+		}else {
+			
+			submit_shop();
+			
+			}
+	
+	}
+
+
+
+
+</script>
+
+
+
+</head>
+
+<body  class="kuang" style="padding:0px; margin:0; min-width:800px; background-color: #f5f5f5;"  onLoad="initpl()">
+<div id="show_zh" style="position:absolute; display:none;  width:99.7%; height:800px; border:0px solid #ff0; background-color:rgba(21, 19, 19, 0.33);">
+
+<div class="kuang"  style="width:60%; position:relative; height:300px; top:200px; background-color:#fff; margin:0 auto">
+<div style=" width:97%; padding:5px 5px;"><a style=" float:left;padding:5px 5px ; font-size:14px; font-family:'Microsoft YaHei UI'">输入注册的账号</a> <a onClick="zz_close()" style="float:right; border:solid 1px #f1f1f1; display:block; text-align:center;font-size:14px; font-family:'Microsoft YaHei UI'; padding:5px 5px" >关闭</a></div>
+<div class="kuang" style="width:100%; height:60px; text-align:center; clear:both">
+<a style="font-size:14px; top:20px; position:relative; font-family:'Microsoft YaHei UI'; " >输入账号:</a><input onblur="javascript:check_text('error','zhanghao');" id="zhanghao" type="text" style="width:200px; top:20px; position:relative; height:30px; " />
+<a style="width:60px; top:20px; position:relative; display:inline-block; font-size:12px; font-family:'Microsoft YaHei UI'; color:#F00; text-align:center; clear:both" id="error" ></a>
+</div>
+<div class="from_h2_div_ya" style=" padding:0px; text-align:center; margin-top:2px;">
+
+
+
+<font style="padding:0px; margin:0; font-size:15px; text-align:right; display:inline-block; width:60px;">验证码:</font>
+<input class="yazhengma_in" maxlength="4" id="re_yan" name="yazhen" type="text" style="width:50px;">
+<a style="padding:0px; margin:0px;"><img align="top" class="yazhengma1" id="yazhen2" style=" visibility:hidden; vertical-align:middle; width:70px; height:30px"></a>
+
+
+<a onclick="javascript:jpg2();" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#009688; font-weight:900">刷新一下</a>
+
+
+
+
+
+</div>
+<div style="width:100%; text-align:center">
+<button id="tijiao" onClick="tijiao()">提交</button>
+
+</div>
+<script type="text/javascript">
+//提交数据
+function tijiao(){
+	
+	function callback(d){
+		//alert(d);
+		document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('jj/worke/link/lk/Add_zh.php',{"id":id,"site_id":$("data").attr("num"),"hf":$("data").attr("hf")},callback,"text");
+	
+	
+	
+	
+	
+	}
+function zz_close(){
+	//alert("dd");
+	$("#show_zh").css("display","none");
+	
+	
+	}
+function zz_open(){
+	//alert("dd");
+	$("#show_zh").css("display","block");
+	
+	
+	}
+</script>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="userlogin" id="userlogin" style="position: absolute; background-color: #66cccc; border: 1px solid #00F; margin: 0; padding: 0px; min-width: 800px; height: 25px; width: 99.7%; "> 
+<div class=" difang" id="top_login_p" style=" border:0px solid #000; margin:0; padding:0px; height:20px; float:left; width:50% ">
+  
+  <div class=" kuang  " id="top_login_id" style=" margin-left:20%; float:left; top:2px; padding:0px; width:100px;   ">
+  
+  <font class="user_conter_font"><a style=" padding:3px; width:50px; display:inline; cursor:pointer; height:40px;" href="../../lo/Login.html" id="login_id_a1">登录</a></font>
+  <font class="user_conter_font"><a id="reg_login" href="javascript:Sign_out(&#39;#reg_login&#39;);">注册</a></font>
+  
+  </div>
+  
+  
+  
+  
+  <div class="kuang" style=" float:left; height:25px; width: 100px; background-color:#CFF">
+  <div onclick="pd_c();" id="weizhi" style="  height:25px; width: 100px; background-color:#CFF">位置：林州</div>
+  
+  <div id="prive" style="clear:both; width:100px; visibility: hidden ;display:list-item; list-style:none; border:solid 1px #FFFFFF; background-color:#fff;  height:auto; text-align:center"> 
+  
+  <div id="henan" name="pro" onclick="province(&#39;#henan&#39;,&#39;#henan_&#39;)" style="  margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+   <div name="pro" id="shandong" onclick="province(&#39;#shandong&#39;,&#39;#shandong_&#39;)" style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">山东</div>
+  <div style="margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+   <div style=" margin-left:5px; margin-right:5px; line-height:20px; display:inline-block">河南</div>
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+  <script type="text/javascript">
+ function pd_c(){
+	var fd= $('#prive').css("visibility");
+	 if(fd=="hidden")
+	 {
+		 $('#prive').css("visibility","visible");
+		 }else{
+			 
+			  $('#prive').css("visibility","hidden");
+			  $('#city').css("visibility","hidden");
+			  $("[name='city']").css("visibility","hidden");
+			 }
+	 
+	 
+	 }
+  function province(id,id1){
+	
+	 var fd= $(id).css("visibility");//父
+	 var fd1= $(id1).css("visibility");//子
+	 // alert(fd1);
+	 if(fd1=="hidden" ) {
+		//  alert("1");
+		  $(id).css("background-color","#586965");
+		
+		$("[name='city']").css("visibility","hidden");	
+			$(id1).css("visibility","visible");
+			$('#city').css("visibility","visible");
+			
+		 }else{
+			///  alert("2");
+			   $('#city').css("visibility","hidden");
+			$(id1).css("visibility","hidden"); 
+			// $(id).css("background-color","#aaa");
+			 $("[name='pro']").css("background-color","#fff");
+			 }
+	  
+	  
+	  
+	  
+	  
+	  }
+	  function city(id){
+		  
+		  $('#weizhi').text("位置:"+$(id).text());//改变位置
+		  
+		pd_c();
+		 window.location=http+"dump/jump.php?jp="+$(id).attr('num');
+		  
+		  
+		  }
+  
+  
+  
+  </script>
+ 
+  <div class="kuang" style=" float:left; height:25px; width: 100px;"><div style=" height:25px; width: 100px; "></div>
+  
+  <div id="city" style="clear:both; display:list-item; width:100px; border:solid 1px #FFFFFF; list-style:none; height:auto; background-color:rgba(236, 236, 241); visibility:hidden"> 
+  <div name="city" id="henan_" style="position:absolute;visibility:hidden; background-color:#fff;  width:100px;">
+  <div onclick="city(&#39;#anyang&#39;)" num="12" id="anyang" style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 安阳</div>
+  </div>
+  
+  <div name="city" id="shandong_" style="position:absolute; width:100px; background-color:#fff; visibility:hidden">
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  <div style="display:inline-block;margin-left:5px; margin-right:5px; line-height:20px; "> 临阳</div>
+  </div>
+  
+  
+  
+  
+  
+  </div>
+ 
+  
+  
+  
+  </div>
+
+  </div>
+
+<div class="kuang" style="  padding:0px; margin:0 ; border:solid 0px #000000; height:20px; float:right; width:40%">
+<script type="text/javascript">
+//alert("denglu");
+//dologin("fffff",false);
+
+function dologin( id1,den){
+	
+	if(den){
+	var user=http+"u/";
+	
+	$('#login_id_a1').text(id1);
+	$('#login_id_a1').attr("href",user);
+	$('#reg_login').text('退出');
+	$('#reg_login').attr("href",reg);
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+	}else{
+		var user=http+"lo/Login.html";
+		var reg=http+"lo/reger.html";
+		$('#login_id_a1').text(id1);
+		$('#login_id_a1').attr("href",user);
+	$('#reg_login').text('注册');
+	$('#reg_login').attr("href","javascript:Sign_out(&#39;#reg_login&#39;);");
+	$('#login_id_a1').attr("login",den);
+	$('#reg_login').attr("login",den);
+	
+		
+		
+		}
+		
+		}
+	checkonline();	
+	function checkonline(){
+	
+var user=getCookie("username");
+
+if(user=="you"){
+	
+	dologin( "登陆",false);
+	
+	
+	}else {
+		
+		dologin( "user",true);
+		}
+	
+	
+	
+	}
+
+function Sign_out(id){
+
+	var fd=$("#login_id_a1").attr("login");
+	//alert(fd);
+	if(fd!="false"){
+		socket_send();//退出
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		}
+	
+	else{
+		//$(id).attr("href",http+"dump/jump.php?jp=11");
+		//alert("zhixing");
+		window.location=http+"lo/reger.html";
+		
+		}
+	
+	
+	//return false;
+	
+	}
+	function socket_send(){
+		
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/login/sign_out.php',{"id": getCookie('id'),"username":getCookie('username')});
+	
+	$('#login_id_a1').text("登录");
+	$('#reg_login').text('注册');
+	$('#login_id_a1').attr("login",false);
+	$('#reg_login').attr("login",false);	
+	$('#user_login_id').css("visibility","visible");	
+		
+		}
+
+
+function init(){
+	//alert("d1");
+	var href=getdata(location.href);
+	if(href==null){
+		//alert("d");
+		return false;
+		}
+		var d=href.length/2;
+	for(var i=0; i<d;i++){
+		
+		if(href[i]=="jump"){
+			//alert(href[i+1]);
+			
+			switch(href[i+1]){
+				case "0":{dump_other('base_user');}break;
+				case "1":{dump_other('chagemail');}break;
+				case "2":{dump_other('fixpower1');}break;
+				case "3":{dump_other('sofa');}break;
+				case "4":{dump_other('user_ziliao');}break;
+				case "5":{dump_other('work');}break;
+				case "6":{dump_other('shishi');}break;
+				case "7":{dump_other('bubiao');}break;
+				case "8":{dump_other('mylink');}break;
+				case "9":{dump_other('myspread');}break;
+				case "10":{dump_other('mypay');}break;
+				case "11":{dump_other('paypower');}break;
+				case "12":{dump_other('fixpaypower');}break;
+				case "13":{dump_other('trander');}break;
+				case "14":{dump_other('shopcenter');}break;
+				case "15":{dump_other('myorder');}break;
+				case "16":{dump_other('clict');}break;
+				
+				}
+			}
+	
+		}
+	}
+
+
+</script>
+
+
+<div class=" kuang" id="uer_select1" onmouseout="mouseout('ds','#uer_select1');" style=" float:left; border:solid 0px #FF0000; width:80px">
+
+<div id="ff" class="user_conter" style=" padding:3px 3px; text-align:center;  " onmouseover="mousein('ds','#uer_select1');"> 
+<a href="javascript:jump_w(&#39;0&#39;)" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的林北</a></div>
+<div class="userconter_data" id="ds" onmouseover="mousein('ds','#uer_select1');" style="margin: 0px; line-height:20px;  visibility: hidden; padding: 0px;"> 
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<a href="javascript:jump_w(15)" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的订单</a>
+</div>
+<div style=" margin:0; padding:0px; text-align:center;"><a href="javascript:jump_w(9)" style="font-size:14px; font-family:'Microsoft YaHei UI'; display:block">我的推广</a></div>
+<div style=" margin:0; padding:0px; text-align:center;"><a href="javascript:jump_w(10)" style="font-size:14px; font-family:'Microsoft YaHei UI'; display:block">我的财富</a></div>
+
+
+
+<script type="text/javascript">
+
+function jump_w(gh){
+	window.location=http+"u/?jump="+gh;
+	//alert("sd");
+	/*//var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"u/?jump="+gh;	
+	}else {
+		alert("请先登录！！");
+		return;
+		}*/
+	}
+
+
+
+</script>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="mytesk" onmouseout="mouseout('ds1','#mytesk'); " style="  border:solid 0px #FF0000; text-align:center;padding-top:5px; margin:0; padding:0px; float:left; width:80px">
+<div id="ff1" class="user_conter" style="text-align:center; padding:3px 3px;" onmouseover="javascript:mousein('ds1','#mytesk');"> 
+<a href="../../../task/index.html" style="font-size:14px; font-family:'Microsoft YaHei UI';">任务中心</a></div>
+<div class="userconter_data" id="ds1" onmouseover="javascript:mousein('ds1','#mytesk');" style="border:0px dotted #03F; line-height:20px; visibility:hidden; margin:0; padding:0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<a href="javascript:jump_c(1);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的任务</a>
+</div>
+<div style="margin:0; padding:0px;text-align:center;"><a href="javascript:jump_c(2);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的订单</a></div>
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+function jump_c(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"/task/?jump="+gh;	
+	}else if(fu=="false"){
+		alert("请先登录！！");
+		return;
+		}
+	}
+
+
+
+
+
+
+
+
+</script>
+
+
+<div id="clictserver" onmouseout=" javascript:mouseout('ds2','#clictserver');" style=" border:solid 0px #FF0000; margin:0; padding:0px;text-align:center; float:left; width:80px">
+<div id="ff" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein('ds2','#clictserver');"> 
+<a href="javascript:jump_k(&#39;kehu&#39;);" id="kehu" target="_blank" style="font-size:14px; font-family:'Microsoft YaHei UI';">客户服务</a></div>
+<div class="userconter_data" id="ds2" onmouseover="javascript:mousein('ds2','#clictserver');" style="visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="text-align:center; margin:0; padding:0px;">
+<a href="javascript:jump_k(&#39;my&#39;);" id="my" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的信息</a>
+</div>
+<div style=" margin:0; padding:0px;text-align:center;"><a href="javascript:jump_k(&#39;dd&#39;);" id="dd" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的订单</a></div>
+
+<script type="text/javascript">
+//客户服务
+function jump_k(gh){
+	
+	
+window.location=http+"client/client.html?jump="+gh;	
+	
+	}
+
+
+
+
+
+
+</script>
+
+
+</div>
+</div>
+
+
+ 
+ 
+ 
+ 
+
+<div id="sitedh" onmouseout=" javascript:mouseout('ds3','#sitedh');" style="border: solid 0px  #0FF; margin:0; padding:0px; float:left; width:80px">
+<div id="ff" class="user_conter" style="height:25px;text-align:center; padding-top:2px" onmouseover="javascript:mousein('ds3','#sitedh');"> 
+<a href="javascript:jump_s(&#39;&#39;);" style="font-size:14px; font-family:'Microsoft YaHei UI';">网站导航</a></div>
+<div class="userconter_data" id="ds3" onmouseover="javascript:mousein('ds3','#sitedh');" style="border: 0px dotted rgb(0, 51, 255); visibility: hidden; margin: 0px; padding: 0px;">
+
+<div class=" userconter_data_1" id="userconter_data_1" style="border:0px dotted #03F;text-align:center; margin:0; padding:0px;">
+<a href="javascript:jump_s(&#39;&#39;);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的信息</a>
+</div>
+<div style="border:0px dotted #03F; margin:0; padding:0px;text-align:center;"><a href="javascript:jump_s(&#39;&#39;);" style="font-size:14px; font-family:'Microsoft YaHei UI';">我的订单</a></div>
+<script type="text/javascript">
+
+function jump_s(gh){
+	var fu= $('#reg_login').attr("login");
+	//alert("dfsf"+fu);
+	if(fu=="true"){
+window.location=http+"daohang/sitedaohang.html?jump="+gh;	
+	}else if(fu=="false"){
+		alert("请先登录！！");
+		return;
+		}
+	}
+
+
+
+</script>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div style="  padding:0px; margin-bottom:4px; top:0px; z-index:80; width:99%; height:20px">
+
+
+</div>
+
+
+
+
+
+<div class="main" id="main_id" style=" min-width:800px; margin:0; padding:0px">
+<div style=" margin:0 auto; border:1px solid  #6cc; width:80% ; min-width:800px;">
+
+<div class="logo_div" id="logo_id" style="background-color: #6cc; width:100%; height:65px;"> <a target="_blank" href="javascript:h();" style="margin:0; padding:0; ">
+<img style="vertical-align:middle; float:left; border:1px solid #000; margin:0; padding:0px;" id="logo_img_id" class="logo_img" src="../../image/user_image/logo.gif">
+</a>
+
+<div style=" padding-top:15px; height:50px; width:58%; border:solid #03F 0px;  float:left; text-align:center ">
+
+  <input class="serch_keyword1" id="serch_keyword" name="keyword" style="padding:0px; border:solid 1px #03F; width:250px; margin:0; height:30px" type="text"    />
+  <button class="serch_button1" id="serch_button_in" style="padding:0px; margin:0; width:80px; height:30px"  onclick="serch();">搜索</button>
+<input type="button"  class="shuru" name="ww" id="hiden"  value="ff" style="visibility:hidden; display:none" />
+</form></div>
+
+
+</div>
+<script type="text/javascript">
+
+function h(){
+	
+	window.location=http;
+	}
+</script>
+
+
+<div class="daohang" id="dahang_id" style="clear:both; background-color:#FFF">
+<table class="daohang_table" id="daohang_table_id" onmousemove="on_show()" onmouseout="on_hide()" style="border-radius:5px;border: 1px solid #03F;padding:0px; background-color: #6cc; margin:0;width:100%;text-align:center;z-index:99;">
+<tr class="one_select_tr" id="one_select_tr_id">
+<td class="shouye" style="width:20%;  text-align:center;" nu="0" onMouseOver="on_over(this)" id="home"><a class="daohang_a" href="../../../daohang/index.html">首页</a></td>
+<td class="shouye" style="width:20%;  text-align:center; " onMouseOver="on_over(this)"  nu="1" id="shoping"><a class="daohang_a" href="../../../home/s_shop/index.html">商城</a></td>
+<td class="shouye" style="width:20%; text-align:center;" onMouseOver="on_over(this)" nu="2" id="serch"><a class="daohang_a" href="../../../serch/index.html">寻找</a></td>
+<td class="shouye" style="width:20%; text-align:center;" onMouseOver="on_over(this)" nu="3" id="news"><a class="daohang_a" href="../../../home/s_home/index.html">快报</a></td>
+<td class="shouye" style="width:20%; text-align:center;" onMouseOver="on_over(this)" nu="4" id="client"><a class="daohang_a" href="../../../client/client.html">客户</a></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="kuang" onmousemove="on_show()" style="height:2px; clear:both; width:100%"></div>
+<div class="kuang"  id="fd" onmouseover="on_show1()" onmouseout="on_hide()" style="display: none; position: absolute; margin: 0 auto; z-index: 1000; width: 80%; height: 136px; min-width:640px; background-color: rgb(255, 255, 255);">
+
+<div class="kuang" num="0" onMouseOver="on_over(this)" style="width:20%; float:left; background-color:#f1f1f1; height:135px;">
+
+<ul class="kuang"  style=" margin-top:10px; width:100%;  padding:0; line-height:25px;">
+
+
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI'; ">游戏</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">邮箱</a></li>
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  font-size:14px; font-family:'Microsoft YaHei UI';  text-align:right; ">网站</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">网络</a></li>
+</ul>
+
+
+</div>
+
+<div class="kuang" num="1" onMouseOver="on_over(this)"  style="width:20%; float:left; border:solid 0px #0000FF; height:135px;">
+<ul class="kuang"  style=" margin-top:10px; width:100%;  padding:0; line-height:25px;">
+
+
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI'; ">游戏</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">邮箱</a></li>
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  font-size:14px; font-family:'Microsoft YaHei UI';  text-align:right; ">网站</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">网络</a></li>
+</ul>
+
+
+</div>
+
+<div class="kuang" num="2"  onMouseOver="on_over(this)" style="width:20%; float:left; border:solid 0px #0000FF; height:135px;">
+
+<ul class="kuang"  style=" margin-top:10px; width:100%;  padding:0; line-height:25px;">
+
+
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI'; ">游戏</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">邮箱</a></li>
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  font-size:14px; font-family:'Microsoft YaHei UI';  text-align:right; ">网站</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">网络</a></li>
+</ul>
+
+</div>
+<div class="kuang" num="3"  onMouseOver="on_over(this)" style="width:20%; float:left; border:solid 0px #0000FF; height:135px;">
+
+<ul class="kuang"  style=" margin-top:10px; width:100%;  padding:0; line-height:25px;">
+
+
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI'; ">游戏</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">邮箱</a></li>
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  font-size:14px; font-family:'Microsoft YaHei UI';  text-align:right; ">网站</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">网络</a></li>
+</ul>
+
+</div>
+<div class="kuang"  num="4" onMouseOver="on_over(this)" style="width:20%; float:left; border:solid 0px #0000FF; height:135px;">
+
+<ul class="kuang"  style=" margin-top:10px; width:100%;  padding:0; line-height:25px;">
+
+
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  text-align:right; font-size:14px; font-family:'Microsoft YaHei UI'; ">游戏</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">邮箱</a></li>
+<li class="kuang" style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block; float:right; margin-right:15px;  font-size:14px; font-family:'Microsoft YaHei UI';  text-align:right; ">网站</a></li>
+<li class="kuang"  style="width:50%;   border:solid 0px #000000;  display:block; float:left;"><a style="display:block;  font-size:14px; font-family:'Microsoft YaHei UI'; margin-left:15px;">网络</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<!--ddd-->
+
+
+
+<div style="border:0px solid #6cc; height:700px; background-color:#fff">
+
+<div class="kuang" style="border:0px solid #0F0; float:left; width:74%;height:700px;">
+
+<div id="wen" style="border:0px solid #f1f1f1; width:100%;">
+
+  <div id="dsss">
+  <a href="../../daohang/index.html" style="display:inline-block; font-size:14px; padding:4px 4px;">首页</a><a>></a>
+  
+  
+  </div>
+  
+ <div style="border:0px solid #C30; padding:4px; width:90%; margin:0 auto; font-size:24px; text-align:center "><strong id="title_"  s_id="0" >文章题目</strong></div>
+ 
+ <div id="shuxing"  style="border-bottom:solid 1px #f1f1f1;  width:80%; margin:0 auto; height:200px;">
+ 
+ <ul id="ul_data" style="width:100%; line-height:32px; list-style:none; padding:0; margin:0; ">
+<li  class="kuang" style="float:left; display:block; width:50%; text-align:center; margin:0px; border: solid 0px #000000 "><a style="font-family:'Microsoft YaHei UI'; font-size:14px; display:inline-block; width:30%; text-align:center " >原产地:</a><a style="font-family:'Microsoft YaHei UI'; font-size:12px; display:inline-block; width:60%; text-align:left; ">中国大陆</a></li>
+<li class="kuang"  style="float:left; display:block; width:50%; text-align:center;  margin:0px; border:solid 0px #000000 "><a style="font-family:'Microsoft YaHei UI'; font-size:14px" >原产地:</a><a style="font-family:'Microsoft YaHei UI'; font-size:12px">中国大陆</a></li>
+
+
+</ul>
+ 
+ 
+ 
+ </div>
+  
+ 
+
+</div>
+<div id="wen_data" style=" border-bottom:1px solid #f1f1f1; clear:both; height:380px;">
+
+
+
+
+<h3>网站简介</h3>
+<p style=" text-indent:20px;     font-size: 14px;
+    margin-bottom: 25px;"> 本周三，李克强总理主持召开国务院常务会议决定，今年五月下旬，国务院派出督查组对18个省(市、区)围绕国务院2014年出台的39项关于创新重点领域投融资机制鼓励社会投资的相关文件落实情况进行督查。</p>
+
+
+<p style=" text-indent:20px;    font-size: 14px;
+    margin-bottom: 25px;"> 今年一季度，中国经济同比增长6.7%，增速保持在今年三月全国两会期间确立的6.5%到7%的目标区间。一季度的数据在一定程度上缓解了国际社会的悲观预期。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div style="border:0px solid #C30; margin:0 auto; padding-top:10px; width:70%; clear:both; text-align:center ">
+
+
+<div  style="border:0px solid #C90; text-align:center  ">
+<a  dss="f"id="syy" style="border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px" num="1" onclick="y_click(this)">上一页</a>
+<div id="yeshu" style="border:0px solid #999; display: inline-block " >
+</div>
+<a  dss="f" max="0" id="xyy" style="border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px" num="0" onclick="y_click(this)">下一页</a>
+</div>
+
+
+
+<script type="text/javascript">
+
+
+
+
+	function createys(c){
+	var	 g=document.getElementById('yeshu');
+	
+	var a_1=document .createElement('a');
+	//a_1.setAttribute('id',"dd"+i);
+	a_1.setAttribute('style',"border:1px solid #999; display: inline-block; width:20px; padding-top:3px; padding-bottom:2px; font-family:Arial; ");
+	a_1.setAttribute('onclick',"y_click(this)");
+	a_1.setAttribute('y',c[0]);
+	//a_1.setAttribute('ww',"0");
+	a_1.innerHTML=c[1];
+	g.appendChild(a_1);
+	
+	
+	
+	
+	}
+	
+	
+	function page_tj(){
+
+	function callback(d){
+		alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		if(obj.hand.size=="0"){
+			
+			create_serch(['b','b','暂时没有相关信息',' b']);
+			return false;
+			}
+		
+		
+		for(var i=0;i<obj.hand.size;i++){
+		var oj=eval("obj.un"+i);
+		if(oj.data!="kong"){
+			//cretetabl1e([oj.soure,oj.ip,oj.city,oj.link_,oj.clicks]);
+		create_serch([oj.name,oj.link1,oj.data,oj.time]);
+			}
+		}
+	
+	}
+	var f=getCookie("id");
+		alert(f);
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/userconter/mywork/link/option/page.php',{"id":f,"pici":$("#main_data").attr("pici"),"page":$("#xyy").attr("num")},callback,"text");
+	}
+
+	
+function y_click(g){
+	//alert($(g).text());
+	var df=$(g).text();
+	//alert($(g).attr("id"));
+	if($(g).attr("id")=="xyy"){
+		//alert("11");
+		var fd=$(g).attr("num");
+		var fd1=parseInt(fd)+1;
+		if($(g).att("max")<fd1){return false;}
+		
+		$(g).attr("num",fd1);
+		$("[dss=f]").css("background-color","#fff");
+		var fv="[y="+fd1+"]";
+		$(fv).css("background-color","#aaa");
+		
+		
+		}else if($(g).attr("id")=="syy")
+		{
+			var fd=$(g).attr("num");
+			//alert(fd);
+			if(fd=="0"){return false;}
+		var fd1=parseInt(fd)-1;
+		
+		$(g).attr("num",fd1);
+		$("[dss=f]").css("background-color","#fff");
+		$("[y="+fd1+"]").css("background-color","#aaa");
+			
+			
+			
+			}
+		
+		
+		else {
+			
+		var fe=	$(g).attr("y");
+			
+			//alert(fe);
+		$(g).parent().parent().children("a").attr("num",fe);	
+		
+		$("[dss=f]").css("background-color","#fff");
+		$(g).css("background-color","#aaa");	
+			}
+	
+	
+	//tj($("#syy").attr("num"));
+	page_tj();
+	}
+
+
+</script>
+
+
+</div>
+
+</div>
+
+
+
+
+<div class="kuang" style="border-left:1px solid #f1f1f1;  float:right; width:25%;height:700px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+<div style="width:100%; height:50px; clear:both;  background-color: #FFF ; margin-bottom:5px; margin-top:5px;">
+<div style="width:75%; height:50px; text-align:center ; background-color: #FFF ; ">
+<a href="http://www.baidu.com" onClick="reg(this)" target="_blank" style="display:inline-block; margin:5px 5px; padding:5px 5px; background-color:#6cc; width:100px;">
+直接注册</a>
+<font style=" font-size:16px; color:#F00; padding:5px 5px;  margin:5px 5px; font-family:'Microsoft YaHei UI'">注册可以加200积分</font>
+
+<script type="text/javascript">
+
+function reg(f){
+	//alert("ddddd");
+	var fr=getCookie("username");
+		if(fr!="you"){
+	$("#rr").submit();
+	$("#input_account").css("display","block");}else{
+		alert("请先登录！");
+		return false;
+		}
+	zz_open()
+	return false;
+	
+	}
+
+
+</script>
+
+</div>
+</div>
+
+	
+
+
+
+
+
+<div style="border:0px solid #9a9a9a; float:left; clear:both; width:75%; height:450px; background-color:#FFF">
+
+<div style="border:1px solid #9a9a9a; width:100%; height:150px;" >
+<div style="margin:0 auto; padding-top:20px; width:95%; height:100%">
+
+<form>
+
+<textarea style="width:100%; height:50px;" id="input_area"> </textarea>
+
+<div style="width:100%; padding-top:5px; height:25px;" ><input type="button" onClick="publish_item('d')" style="float:right; width:50px; height:30px; font-family:'Microsoft YaHei UI'" value="发表"/></div>
+</form>
+
+
+
+</div>
+
+
+<div>
+</div>
+
+<div style="border:1px solid #9a9a9a; width:100%; height:auto" >
+<div style="width:100%; "><a style="float:right; display:block; width:50px; cursor:pointer" onClick="more()">更多</a></div>
+<script type="text/javascript">
+function more(){
+	
+	window.location=http+"/mtj_php/morepl.html?site_id="+$("data").attr("num");
+	}
+
+</script>
+<div  id="pl_main1">
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+<script type="text/javascript">
+//回复
+function uphf(){
+	
+	function callback(d){
+		//alert(d);
+		document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_hf.php',{"id":id,"site_id":$("data").att("num"),"hf":$("data").attr("hf")},callback,"text");
+	
+	}
+//推荐
+function uptj(f){
+	
+	var ff=$(f).attr("tj");
+	var gi=parseInt(ff)+1;
+	$(f).attr("tj",gi);
+	$(f).text("推荐"+"("+gi+")");
+	
+	function callback(d){
+		//alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_uptj.php',{"id":id,"site_id":$("title_").att("s_id"),"tj":$(f).attr("tj")},callback,"text");
+	
+	}
+function createnode(f){
+	//alert(d+"n"+f);
+	var div_1=document.createElement('div');
+	var div_2=document .createElement('div');
+	var div_6=document .createElement('div');
+	
+	var div_3=document .createElement('div');
+	var div_4=document .createElement('div');
+	var div_5=document .createElement('div');
+	
+	var a_1=document .createElement('a');
+	var a_2=document .createElement('a');
+	
+	var text=document .createElement('textarea');
+	var input=document .createElement('input');
+	
+	var font_1=document.createElement("font");
+	var font_2=document.createElement("font");
+	var div_9=document.createElement("div");
+	
+	div_5.setAttribute("style","height:auto; border:solid 1px #000000; width: 98%; display:none ");
+	//div_5.setAttribute("fa1",);
+	div_5.setAttribute("XH","CH");
+	
+	div_6.setAttribute("style","width:80%;");
+//	a_1.setAttribute("id","f");
+	a_1.setAttribute("style","float:right; margin:5px");
+	a_1.setAttribute("onclick","show_send(this)");
+	a_1.innerHTML="回复";
+	a_2.setAttribute("onclick","uptj()");
+	//a_2.setAttribute("id","f");
+	a_2.setAttribute("style","float:right; margin:5px; ");
+	a_2.innerHTML="推荐"+"("+f[3]+")";
+	a_2.setAttribute("onclick","uptj(this)");
+	
+	//text.setAttribute("id","f");
+	text.setAttribute("style"," height:95px; width: 98%; overflow:auto");
+	text.setAttribute("rows","3");
+	
+	//input.setAttribute("id","f");
+	input.setAttribute("style","float:right");
+	input.setAttribute("type","button");
+	input.setAttribute("value","发表");
+	input.setAttribute("onclick","publish(this)");
+	input.setAttribute("pl_id",f[2]);
+	//input.setAttribute("");
+	//div_1.setAttribute("id","div_1");
+	div_1.setAttribute("style","width:80%; clear:both; margin-top:4px; padding:2px; border:0px; border-style:solid ; text-align:left");
+		//a_1.setAttribute("src","a");
+	
+	//div_2.setAttribute("id","div_21");
+	div_2.setAttribute("style","width:80%; margin:2px; clear:both; padding:2px; border:0px; border-style:solid ; text-align:left");
+	
+	//div_3.setAttribute('id',"dd");
+	div_3.setAttribute('style'," width:100%;");
+	
+	//div_4.setAttribute('id',"dd");
+	div_4.setAttribute('style',"border:0px solid #C30;");
+	
+	
+	//font_1.setAttribute("id","font_11");
+	font_1.setAttribute("style","font-size:14px");
+	font_1.innerHTML=f[0]+" "+f[4];
+	
+	//font_2.setAttribute("id","font_21");
+	font_2.setAttribute("style","font-size:14px;");
+	font_2.innerHTML=f[1];
+	
+	div_1.appendChild(font_1);
+	var	 g=document.getElementById('pl_main1');
+	var hr=document.createElement("hr");
+	hr.setAttribute("style","clear:both; margin-bottom:20px;");
+	var div_10=document.createElement("div");
+
+	div_10.setAttribute("style","width:100%; height:auto; clear:both");
+	div_10.setAttribute("id","child_pl");
+	div_10.innerHTML="dfsf111";
+
+
+
+
+	//g.appendChild(div_1);
+	div_2.appendChild(font_2);
+	//g.appendChild(div_2);
+	div_6.appendChild(div_1);
+	div_6.appendChild(div_2);
+	//alert("sdddddddddddd");
+	
+	div_4.appendChild(a_1);
+	div_4.appendChild(a_2);
+	div_4.appendChild(hr);
+	div_4.appendChild(div_5);
+	div_5.appendChild(text);
+	div_5.appendChild(input);
+	div_5.appendChild(div_10);	
+	div_3.appendChild(div_4);
+	
+	
+	g.appendChild(div_6);
+	g.appendChild(div_3);
+	//g.appendChild(hr);
+		
+		}
+		//显示评论
+	function show_send(c1){
+	
+	var f= $(c1).parent().children("div");
+	if(f.css("display")=="none"){
+	$("[XH=CH]").css("display","none");
+	f.css("display","block");
+	
+	}else{
+		
+		f.css("display","none");
+		}
+
+	inithf();//显示子评论
+	}
+
+	
+
+	//初始化评论数据
+	function initpl(){
+	
+	
+	//document.write(d);
+	function callback(d){
+		//alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		for(var i=10;i< obj.hand.size+10; i++){
+			
+			var f=eval("obj.un"+i);
+			//alert(f.owe);
+			createnode(f.owe,f.data,f.pl_id,f.tj,f.riqi);	
+			}
+	
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_init_.php',{"id":id,"site_id":$("#title_").attr("s_id")},callback,"text");
+	
+
+	}
+createnode('fgfd','fdgd','dsd','dssd','sdsdf');
+	//初始化回复
+	function inithf(){
+	
+	
+	//document.write(d);
+	function callback(d){
+		//alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		for(var i=10;i< obj.hand.size+10; i++){
+			
+			var f=eval("obj.un"+i);
+			
+			//alert(f.data);
+			 childnode_(f.parnt,f.owe,f.data,f.pl_id,f.tj,f.riqi);	
+			}
+		
+		
+		}
+		
+		
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_init1.php',{"id":id,"site_id":$("#title_").attr("s_id")},callback,"text");
+	//$.post('/jj/pl_php/site_pl_php/site_pl_init1.php',{"id":id,"site_id":$("#title_").att("s_id"),"pl_id":$(f).attr("pl_id")},callback,"text");
+	
+
+	}
+
+	//发表评论
+	function publish(g){
+	var d=	$(g).parent().children('textarea').val();
+	
+	
+		var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("body");
+	
+	
+	xml.element("site_id",100);
+	//xml.element("site_id",$("#wen_data").attr("num"));
+	xml.element("owe",getCookie("username"));
+	xml.element("pant","wen");
+	//xml.element("super_id",$("#sup").attr("num"));
+	xml.element("super_id",11);
+	xml.element("data",d);
+	
+	xml.endelement("body");
+	xml.endelement("root");
+	var d=xml.savexml();
+	alert(d);
+	function callback(d){
+		//alert(d);
+		document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_fa.php',{"id":id,"xml":d},callback,"text");	
+		
+		
+		
+		}
+	
+	//回复某用户
+	function publish_item(s){
+		var xml=new writexml();
+	xml.startelement('root');
+	xml.startelement("handle");
+	xml.element("name","1");
+	xml.element("error","2");
+	xml.element("handle_type","3");
+	xml.endelement("handle");
+	xml.startelement("body");
+	
+	
+	xml.element("site_id",'100');
+	//xml.element("site_id",$("#wen_data").attr("num"));
+	xml.element("owe",getCookie("username"));
+	xml.element("pant","wen");
+	//xml.element("super_id",$("#sup").attr("num"));
+	//xml.element("data_id",$("#input_area").val());
+	xml.element("data","zvzfdzfzd");
+	xml.element("pant_id",110);
+	xml.element("super_id",110);
+	xml.endelement("body");
+	xml.endelement("root");
+	var d=xml.savexml();
+	alert(d);
+	function callback(d){
+		//alert(d);
+		document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+		}
+	
+	var id=getCookie("id");
+	
+	
+	$.post('/jj/pl_php/site_pl_php/site_pl_fa1.php',{"id":id,"xml":d},callback,"text");	
+		
+		
+		
+		}
+	//子评论
+	function  childnode_(g){
+		
+	var r=g.parentNode.childNodes.item(3).childNodes.item(2);
+//var r=document.getElementById("child_pl");
+var div_c=document.createElement("div");
+var div_a=document.createElement("div");
+var a_c1=document.createElement("a");
+var a_c2=document.createElement("a");
+var a_c3=document.createElement("a");
+var font_c2=document.createElement("font");
+var font_c3=document.createElement("font");
+
+div_c.setAttribute("style","clear:both; width:95%; margin:0 auto");
+	
+a_c1.setAttribute("style"," font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI'; color:#00F");	
+a_c1.innerHTML=g[0];
+font_c2.setAttribute("style","font-size:14px ; font-family:'Microsoft YaHei UI'");
+font_c2.innerHTML="回复";
+	
+	a_c3.setAttribute("style","font-size:12px; display:inline-block; padding: 2px 2px; font-family:'Microsoft YaHei UI';");
+	a_c3.innerHTML=g[1]+" "+g[6];
+	
+	
+font_c3.setAttribute("style","display:inline-block; margin:2px 2px; color:#00F ");	
+font_c3.innerHTML=g[2];
+	div_a.setAttribute("style","width:100%; clear:both; ");
+var a_c31=document.createElement("a");	
+var a_c32=document.createElement("a");	
+ a_c31.setAttribute("style","display:inline-block; padding:3px 3px; float:right; font-size:12px; font-family:Arial, Helvetica, sans-serif");
+ a_c31.innerHTML="回复";
+ a_c31.setAttribute("onclick","show_child(this)");
+a_c32.setAttribute("style","display:inline-block; padding:3px 3px; float:right; font-size:12px; font-family:Arial, Helvetica, sans-serif");
+a_c32.innerHTML="推荐("+g[5]+")&nbsp;/&nbsp;";
+ a_c32.setAttribute("onclick","uptj(this)");	
+	
+div_c.appendChild(a_c1);
+div_c.appendChild(font_c2);
+div_c.appendChild(a_c2);
+div_c.appendChild(font_c3);	
+div_c.appendChild(a_c3);	
+div_a.appendChild(a_c31);	
+div_a.appendChild(a_c32);
+div_c.appendChild(div_a);
+var ds=document.createElement("div");
+		var da1=document.createElement("textarea");
+		var da2=document.createElement("button");
+		da1.setAttribute("style","width:98%; margin:0 auto; clear:both; display:block;  height:40px; border:solid 1px #000000");
+		da2.setAttribute("style","float:right; margin-right:20px; margin-top:10px;");
+		da2.setAttribute("onclick","publish_item(this)");
+		da2.innerHTML="发表";
+		da2.setAttribute("pl_id",g[4]);
+		ds.appendChild(da1);
+		ds.appendChild(da2);
+		ds.setAttribute("XH","CH");	
+		ds.setAttribute("style","height:50px; clear:both; border:solid 0px #000000; width: 98%;  display:none ");
+		div_c.appendChild(ds);
+r.appendChild(div_c);
+	}
+	//子评论
+	function show_child(c1){
+	
+var f= $(c1).parent().parent().children("[XH]");
+if(f.css("display")=="none"){
+	$("[XH=CH]").css("display","none");
+	f.css("display","block");
+	
+	}else{
+		
+		f.css("display","none");
+		}
+	
+	}
+
+	
+	
+	
+
+</script>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+<div style="border:0px solid #9a9a9a; float:right;  width:25%; height:auto; background-color:#FFF">dd</div>
+
+
+
+
+
+
+
+
+
+<div style="border:1px solid #CC6; height:300px; clear:both; background-color:#FFF">dd</div>
+
+
+
+
+<!--jieshu-->
+
+
+
+<div class="dibu" style=" clear:both; margin:0 auto; display:block; padding-bottom:1px;padding-top:1px;background-color: #138e8e;border-top:solid #03F 1px;width:100%;">
+<div class=" kuang" style=" float:left"><font class="difang"><a id="difang">地方频道:</a></font></div>
+<table class="difang_tabl" style="border-collapse:collapse;">
+<tbody>
+<tr>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang"  style="  text-align:center"><a href="javascript:jump_p(&#39;henan_10&#39;);" id="henan_100">河南</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang"  style=" text-align:center"><a>河南</a></font></td>
+<td class="difangpingdao_td" style="border-right:solid 1px #000; "><font class="difang"  style="  text-align:center"><a>河南</a></font></td>
+</tr></tbody></table>
+
+</div>
+<script type="text/javascript">
+//createnode( ["陈官勇","adsvdsfas233432"]);
+function  jump_p(id){
+	
+var dd=	id.indexOf('_');
+	var str=id.substr(dd+1);
+	
+	window.location=http+"channel/index.html?pd="+str;
+	}
+
+
+
+</script>
+<div style="margin:0 auto;background-color: #6cc;padding:0px;border-top:solid #03F 1px;width:100%;height:150px;">
+<div class="kuang" style="margin:0 auto; padding:0px;  margin-top:2px;width:100%">
+<ul class="f">
+
+
+<li class="li" style="float:left">
+<ul class="d">
+<li class="lii"><a class="dibu_a">新手指引</a></li>
+<li class="lii"><a class="dibu_a">支付问题</a></li>
+<li class="lii"><a class="dibu_a">成为代理</a></li>
+</ul>
+
+
+</li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">地区加盟</a></li>
+<li class="lii"><a class="dibu_a">校园代理</a></li>
+<li class="lii"><a class="dibu_a">免责声明</a></li>
+
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于支付</a></li>
+<li class="lii"><a class="dibu_a">关于商品</a></li>
+<li class="lii"><a class="dibu_a">成为供应商</a></li>
+</ul>   </li>
+
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于链接</a></li>
+<li class="lii"><a class="dibu_a">关于注册</a></li>
+<li class="lii"><a class="dibu_a">手机版APP</a></li>
+</ul>   </li>
+
+<li class="li" style="float:left"> <ul class="d">
+<li class="lii"><a class="dibu_a">关于链接</a></li>
+<li class="lii"><a class="dibu_a">关于注册</a></li>
+<li class="lii"><a class="dibu_a">手机版APP</a></li>
+</ul>   </li>
+
+</ul>
+</div>
+
+</div>
+<div class="zuidibu" style="margin:0 auto;background-color: #6cc;padding:0px;border-top:1px solid #03F;width:100%;text-align:center;">
+<div class="zuidibu_div" style="margin:0 auto; padding:5px;">豫ICP备案12345</div>
+<table class="zuidibu_table" style="border-collapse:collapse;  margin:0 auto; padding:3px; min-width:400px; width:30%">
+<tbody><tr><td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="file:///G|/t/j/aboutus.html">公司简介</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="file:///G|/t/j/AD.html">广告服务</a></font></td>
+<td class="zuidibu_table_td" style="border-right:solid 1px #000; "> <font class="difang"><a href="file:///G|/t/j/contactus.html">联系我们</a></font></td>
+<td class=" zuidibu_table_td" style="border-right:solid 0px #000;"><font class="difang"><a href="file:///G|/t/j/career.html">招聘精英</a></font></td>
+</tr></tbody></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+</body></html>

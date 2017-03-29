@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户中心</title>
+<style type="text/css">
+<!--
+
+ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+	padding: 0;
+	margin: 0;
+}
+
+/* ~~ 此固定宽度容器包含所有其它 div ~~ */
+
+
+/* ~~ 以下是此布局的列。 ~~ 
+
+1) 填充只会放置于 div 的顶部和/或底部。此 div 中的元素侧边会有填充。这样，您可以避免使用任何"方框模型数学"。请注意，如果向 div 自身添加任何侧边填充或边框，这些侧边填充或边框将与您定义的宽度相加，得出 *总计* 宽度。您也可以选择删除 div 中的元素的填充，并在该元素中另外放置一个没有任何宽度但具有设计所需填充的 div。
+
+2) 由于这些列均为浮动列，因此未对其指定边距。如果必须添加边距，请避免在浮动方向一侧放置边距（例如：div 中的右边距设置为向右浮动）。在很多情况下，都可以改用填充。对于必须打破此规则的 div，应向该 div 的规则中添加"display:inline"声明，以控制某些版本的 Internet Explorer 会使边距翻倍的错误。
+
+3) 由于可以在一个文档中多次使用类（并且一个元素可以应用多个类），因此已向这些列分配类名，而不是 ID。例如，必要时可堆叠两个侧栏 div。您可以根据个人偏好将这些名称轻松地改为 ID，前提是仅对每个文档使用一次。
+
+4) 如果您更喜欢在右侧（而不是左侧）进行导航，只需使这些列向相反方向浮动（全部向右，而非全部向左），它们将按相反顺序显示。您无需在 HTML 源文件中移动 div。
+
+*/
+
+
+/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+}
+
+/* ~~ 导航列表样式（如果选择使用预先创建的 Spry 等弹出菜单，则可以删除此样式） ~~ */
+.nav {
+	list-style: none; /* 这将删除列表标记 */
+	border-top: 1px solid #666; /* 这将为链接创建上边框 – 使用下边框将所有其它项放置在 LI 中 */
+	margin-bottom: 15px; /* 这将在下面内容的导航之间创建间距 */
+}
+.nav .l {
+	border-bottom: 1px solid #666; /* 这将创建按钮间隔 */
+}
+.f a, .f a:visited { /* 对这些选择器进行分组可确保链接即使在访问之后也能保持其按钮外观 */
+	padding: 5px 5px 5px 15px;
+	display: block; /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+	  /*此宽度使整个按钮在 IE6 中可单击。如果您不需要支持 IE6，可以删除它。请用侧栏容器的宽度减去此链接的填充来计算正确的宽度。 */
+	text-decoration: none;
+	background: #fff;
+}
+.f1 a, .f1 a:visited { /* 对这些选择器进行分组可确保链接即使在访问之后也能保持其按钮外观 */
+	padding: 5px 5px 5px 15px;
+	display: block; /* 这将为链接赋予块属性，使其填满包含它的整个 LI。这样，整个区域都可以响应鼠标单击操作。 */
+	  /*此宽度使整个按钮在 IE6 中可单击。如果您不需要支持 IE6，可以删除它。请用侧栏容器的宽度减去此链接的填充来计算正确的宽度。 */
+	text-decoration: none;
+	background: #009;
+}
+.f1 a:hover, .f1 a:active, .f1 a:focus { /* 这将更改鼠标和键盘导航的背景和文本颜色 */
+	background: #3FF;
+	color: #FFF;
+}
+.f a:active, .f a:focus, .f a:hover {
+	 
+	background: #aaa;
+	color: #FFF;
+	
+	}
+ul.fd{
+	
+	list-style: none; 
+	text-decoration: none;}
+
+/* ~~ 其它浮动/清除类 ~~ */
+
+
+
+-->
+.kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+</style>
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/p.js"></script>
+<script  type="text/javascript" src="../js/jstool.js" >
+</script>
+<script type="text/javascript">
+
+
+function mousein(sd){
+	var d=document.getElementById(sd);
+	d.style.visibility="visible";
+	document.getElementById('ddd').innerHTML="ds1236123d";
+	}
+	function mouseout(dsa){
+		var d=document.getElementById(dsa);
+	d.style.visibility="hidden";
+	document.getElementById('ddd').innerHTML="dsd123"+fr;
+		//document.getElementById(dsa).style.visibility="hidden";
+		//alert("ds");
+		}
+function dd(d){
+	//alert("123");
+	//if()
+var ds=	document.getElementById(d);
+
+	if(ds.style.display=="inline"){
+		ds.style.display="none";
+		
+		}else{
+			ds.style.display="inline";
+			
+			
+			}
+	}
+function dump_other(j){
+	var iframe=document.getElementById('iframe1');
+	
+	iframe.src=j+".html"+"?"+"id="+quanjuxinxi.id+"&"+"name"+"="+quanjuxinxi.name;
+	
+	
+	
+	}
+	//quanjuguanjian全局关键信息
+	var quanjuxinxi={
+		id:"ee",//关键值
+		name:"ee",//用户名
+		time:"ee",//时间
+		
+		
+		}
+//var xinxi=new quanjuxinxi();
+		
+
+</script>
+</head>
+
+<body style="padding:0px; margin:0 ; display:block" onload="updataconter()">
+<script type="text/javascript">
+function updataconter(){
+	var fd=new Array();
+ fd=	getdata(location.href);
+if(fd!=null){
+	for (var i=0;i<fd.length;i++){
+	if(fd[i]=="jump"){
+		
+		//alert(fd[i+1]);
+		dump_other(fd[i+1]);
+		break;
+		}
+	}
+	}
+	
+var kl="";
+k1=	getCookie('username');
+
+//alert(k1);
+if(k1!=""){
+	if(k1!="you"){
+//document.getElementById("login_id_a").innerHTML=k1;
+$('#user_login_id').css("visibility","hidden");}
+
+	}
+	
+else {
+	ajax('sesi.php',"d","data",in_data_do,"json");
+	
+	}	
+	//jpg3();
+	
+	}
+
+
+
+
+</script>
+
+<div style="border:0px dotted #000;  margin:0; padding:0px; height:20px; width:99%; position:absolute"> 
+<div style="border:1px dotted #060; margin:0; padding:0px; height:20px; float:left; width:49% ">
+  <div style="border:1px dotted #090; margin:0 auto; top:5px; padding:0px; position:relative;   width:49% ; font-size:10px; text-align:left">你还未登陆</div></div>
+<div style="border:1px dotted #03F;  padding:0px; margin:0 ; height:20px; float:right; width:40%">
+<div onmouseout=" javascript:mouseout('ds');" style="border:1px dotted #03F; margin:0; padding:0px;  float:left; width:15%">
+
+<div  id="ff" style="height:25px; text-align:right; padding-top:5px;"  onmouseover="javascript:mousein('ds');">用户中心</div>
+<div  id="ds" onmouseover="javascript:mousein('ds');" style="border:1px dotted #03F; margin:0; padding:0px;" ><ul style="margin:0; padding:0px;  text-align:center">
+
+<div style="border:1px dotted #03F; margin:0; padding:0px;">d</div>
+<div style="border:1px dotted #03F; margin:0; padding:0px;">dd</div>
+
+
+</ul></div>
+</div>
+<div style="border:1px dotted #03F; text-align:right; margin:0; padding:0px; height:auto; float:left; width:15%">
+
+88
+</div>
+<div style="border:1px dotted #03F; margin:0; padding:0px; height:30px; text-align:right; float:left; width:15%">
+
+88
+</div>
+<div style="border:1px dotted #03F; margin:0; padding:0px; text-align:right; height:30px; float:left; width:15%">
+
+88
+</div>
+
+</div>
+
+
+
+</div>
+<div   style="border: solid #06C;  padding:0px;margin:0; top:0px; z-index:100; width:99%; height:20px">
+
+
+</div>
+
+
+
+
+<div style="border:1px solid #000; margin:0; padding:0px">
+<div  style=" margin:0 auto; border: solid #0CC; width:90% ">
+
+<div> 
+<img src="网站文件/logo.gif" />
+
+</div>
+<div >
+<table  onmousemove="javascript:on_show();" onmouseout="javascript:on_hide();" style="border: solid #06C; padding:0px; margin:0;width:100%; text-align:center">
+<tr>
+<td>首页</td>
+<td>用户中心</td>
+<td>搜索中心</td>
+<td>登录中心</td>
+<td>登录中心</td>
+</tr>
+
+</table>
+
+</div>
+<div id="fd" style="display:none; background-color:#FFF; position:absolute" >
+<table onmousemove="javascript:on_show();" onmouseout="javascript:on_hide();" style="border: solid #06C; padding:0px; margin:0;width:100%; text-align:center">
+<tr>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+</tr>
+<tr>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+</tr>
+<tr>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+</tr>
+<tr>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+</tr>
+<tr>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+<td>jjj</td>
+</tr>
+</table>
+
+</div>
+<!--次以下为内容编辑区-->
+
+
+
+
+
+
+<div class="kuang" style="width:100%; height:500px; border:solid #C39 1px">
+<div class="kuang" style=" width:15%; padding:0; margin:0; height:500px; border:dotted #000 1px; float:left">
+ <ul style=" margin:0; padding:0;"  class="fd">
+      <li class="f1" style="margin:0; padding-bottom:0px" onclick="dd('fd1')"><a href="javascript:dump_other('base_user');">个人资料</a></li>
+      <div  id="fd1" style=" margin:0; padding:0;display:none">
+      <li class="f"><a href="javascript:dump_other('chagemail');">更换邮箱</a></li>
+      <li  class="f"><a href="javascript:dump_other('fixpower1');">修改密码</a></li>
+      <li  class="f"><a href="javascript:dump_other('sofa');">安全设置</a></li>
+      <li  class="f"><a href="javascript:dump_other('user_ziliao'); ">编辑信息</a></li>
+      </div>
+    </ul>
+<ul  style=" margin:0; padding:0;" class="fd">
+      <li class="f1" style="margin:0; padding-bottom:0px" onclick="dd('fd2')"><a href="javascript:dump_other('work');">工作信息</a></li>
+      <div id="fd2" style=" margin:0; padding:0;display:none">
+      <li  class="f"><a href="javascript:dump_other('shishi');">实时信息</a></li>
+      <li  class="f"><a href="javascript:dump_other('bubiao');">折线图</a></li>
+     <li  class="f"><a href="javascript:dump_other('mylink');">我的链接</a></li>
+     <li  class="f"><a href="javascript:dump_other('myspread');">我的推广</a></li>
+    
+      </div>
+    </ul>
+<ul  style=" margin:0; padding:0;" class="fd">
+      <li class="f1" style="margin:0; padding-bottom:0px" onclick="dd('fd3')"><a href="javascript:dump_other('mypay');">资产中心</a></li>
+      <div id="fd3" style=" margin:0; padding:0;display:none">
+      <li class="f"><a href="javascript:dump_other('paypower');">设置支付密码</a></li>
+      <li class="f"><a href="javascript:dump_other('fixpaypower');">修改支付密码</a></li>
+      <li class="f"><a href="javascript:dump_other('trander');">转账记录</a></li></div>
+    </ul>
+<ul  style=" margin:0; padding:0;" class="fd">
+      <li class="f1" style="margin:0; padding-bottom:0px" onclick="dd('fd4')"><a href="javascript:dump_other('shopcenter');">订单中心</a></li>
+      <div id="fd4" style=" margin:0; padding:0;display:none">
+      <li class="f"><a href="#">我的订单</a></li>
+      <li class="f"><a href="#">兑换记录</a></li></div>
+      
+    </ul>
+  <ul  style=" margin:0; padding:0;" class="fd">
+      <li class="f1" style="margin:0; padding-bottom:0px" onclick="dd('fd4')"><a href="javascript:dump_other('clict');">客户服务</a></li>
+  <!--    <div id="fd4" style=" margin:0; padding:0;display:none">
+      <li class="f"><a href="#">机器人</a></li>
+      <li class="f"><a href="#">人工</a></li></div>
+      -->
+    </ul>  
+</div>
+
+
+<div class="kuang" style=" width:65%; padding:0; margin:0; height:500px; border:dotted #000 1px; float:left"><iframe class="kuang" id="iframe1" src="base_user.html" width="100%" height="100%" frameborder="0" >
+ 
+</iframe></div>
+
+
+<div class="kuang" style=" width:20%; padding:0; margin:0; height:500px; border:dotted #000 1px; float:left">
+
+<!---->
+
+
+<div class="kuang" style=" width:100%; padding:0; margin:0; margin-top:5px; height:25px; border-bottom:solid 1px #000">
+<div  class="xing"  onclick="javascript:dianji2();" id="xian" style="float:left ; margin:0; display:block; margin-right:3px; font-family: 微软雅黑; font-size:16px">相关推荐</div>
+<div  class="ben" id="re" onclick="javascript:dianji();" style="float:left; font-family: 微软雅黑; margin:0; display:block; font-size:16px;">本周热点</div>
+<div style="float:right; margin:0;font-family: 微软雅黑; font-size:16px">&gt;&gt;更多</div>
+
+
+<div class="kuang" style="width:100%; height:250px; border:1px solid #000">
+<div class=" kuang" id="benzhour" style="width:100%; line-height:28px; ">
+
+<div onclick="xuanze(this)" link="33" style="width:100%;"><a  style="width:60%;  text-align:left; display:inline-block">2016年河南</a><a style="width:39%; display:inline-block; text-align:right">03/04</a></div>
+
+
+
+<script type="text/javascript">
+function benzhou(gg){
+	function callback(d){
+	alert(d);
+		//document.write(d);
+		var obj = eval ("(" + d + ")");
+		
+		
+		
+						
+						
+		
+		
+		}
+	
+	
+	//ajax('login/login_one.php',"xml",d,callback,"text");
+	$.post('/jj/userconter/finance/recharge.php',{"xml":d},callback,"text");
+	
+	
+	
+	
+	
+	}
+
+
+function crateitem(f,gg){
+	var ta=document.getElementById(gg);
+	var tr=document.createElement('div');
+	tr.setAttribute("onclick","xuanze(this)");
+	tr.setAttribute("link",f[0]);
+	tr.setAttribute("style","width:100%;");
+		var a1=document.createElement("a");
+		a1.setAttribute("style","width:60%;  text-align:left; display:inline-block");
+		a1.innerHTML=f[1];
+		var a2=document.createElement("a");
+		a2.setAttribute("style","width:40%;  text-align:right; display:inline-block");
+		a2.innerHTML=f[2];
+		
+		
+		tr.appendChild(a1);
+		tr.appendChild(a2);
+		ta.appendChild(tr);
+	
+	}
+
+ //crateitem(["sdfs","9/10"],"benzhour");
+
+</script>
+
+
+</div>
+<div class="xiangguan" id="xiangguan" style=" width:100%; display:none">
+<table width="100%" cellpadding="0" cellspacing="0" style="display: table">
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年ffffffffffff河南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河dddddddddddddddd南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+<tr>
+<td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont51030">·</span></td>
+<td valign="middle" align="left " ><a class="c51030" target="_blank" title="gfg" href="/info/1045/1974.htm" style="font-size:14px">2016年河ddddddddddddddddd南 ...</a></td>
+<td valign="middle" align="right" width="1%" nowrap="" class="timestyle51030">03/04<span width="1%"><span></span></span></td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!---->
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 次以上为内容编辑区-->
+
+<!--下面为各地频道区-->
+<div style="margin:0 auto; padding:0px; border:solid #f33 1px; width:100%;">
+<div style=" float:left">地方频道:</div>
+<table  style="border-collapse:collapse;">
+<td style="border-right:solid 1px #000; ">sfsfd</td>
+<td style="border-right:solid 1px #000; ">sfsfd</td>
+</table>
+
+</div>
+<!-- 下面为页尾各链接编辑区-->
+<div style="margin:0 auto; padding:0px; border:solid #f33 1px; width:100%; height:150px; background-image:url(%E7%BD%91%E7%AB%99%E6%96%87%E4%BB%B6/22.gif)">
+<div style="margin:0 auto; padding:0px;  margin-top:2px;width:80%">
+<table     style=" border-collapse:collapse;padding:0px; margin:0;width:100%; text-align:center">
+<tr    >
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td>d</td>
+<td style=" border-bottom:solid">jjj</td>
+</tr>
+
+<tr>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td>d</td>
+<td style=" border-bottom:solid">jjj</td>
+</tr>
+
+<tr>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td>d</td>
+<td style=" border-bottom:solid">jjj</td>
+</tr>
+
+<tr>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td>d</td>
+<td style=" border-bottom:solid">jjj</td>
+</tr>
+
+<tr>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td >d</td>
+<td style=" border-bottom:solid">jjj</td>
+<td>d</td>
+<td style=" border-bottom:solid">jjj</td>
+</tr>
+</table>
+
+</div>
+
+</div>
+<div style="margin:0 auto; padding:0px; border:solid #f33 1px; width:100%; height:100px; text-align:center">
+<div  style="margin:0 auto; padding:0px;"> fdadf</div>
+<table   style="border-collapse:collapse; margin:0 auto; width:20%">
+<td style="border-right:solid 1px #000; ">sfsfd</td>
+<td style="border-right:solid 1px #000; ">sfsfd</td>
+<td style="border-right:solid 1px #000; ">sfsfd</td>
+<td style="border-right:solid 1px #000;" >sfsfd</td>
+</table>
+
+</div>
+hh
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+</body>
+</html>

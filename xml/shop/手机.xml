@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <handle>
+  <!-- 错误代码 -->
+  <error>0</error>
+  <name>名称</name>
+  <hand_type>120</hand_type>
+  <date>2016-7-8</date>
+  <creater>chen</creater>
+  </handle>
+  <bordy>
+    <brand>
+   
+   华为,三星,
+    
+    
+    
+    </brand>
+    <!-- 价格区间 -->
+  <prices>0-199</prices>
+  <!-- 网络类型 -->
+  
+  <nettype>4G,5G,3G</nettype>
+  
+  <!-- 屏幕尺寸 -->
+  <pingmu>2.3,4.6,</pingmu>
+  <!-- 系统 -->
+  <sys>android</sys>
+  <!-- 高级 -->
+  <ram>1g,2g</ram>
+  <json>{"hj":{"jiage":["dsd","sds"],
+  
+  
+  }}</json>
+  </bordy>
+
+
+
+</root>

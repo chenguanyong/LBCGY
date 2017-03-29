@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:#f5f5f5}
+.bindmail{width:100%; height:50px; background-color:#FFF}
+h4{ padding:4px;}
+.fixmaill{ width:100%; height:200px; background-color:#FFF}
+.back{width:200px; position:absolute; margin:0 auto; visibility:hidden;  height:150px; border:solid 1px #0FF}
+.mail_input{text-align:center}
+.sure{margin: 0 auto; width:20%; border:solid 0px #000000; margin-top:20px;}
+.error{width:50px; border:solid 0px #000000; height:10px; font-size:10px; color:#F00; display:inline-block; float:left;}
+.mail_tx{width:100%; margin-top:20px; height:150px; background-color:#FFF}
+

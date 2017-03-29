@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.serchdiv{padding:30px 30px;}
+.result_data{border:0px dotted #000; margin:0; height:1000px; background-color:#fff}
+.main_data{border:0px solid #03C;padding:0px; margin:0; width:65%; float:left; height:700px;}
+.main_data_result{height:660px; width:100%; margin-top:10px; border-right:solid 1px #ccccd0}
+.result_data_1{width:80%; margin-left:15px; margin-bottom:20px; border:solid #000 0px;}
+.title_a{display:block; width:80%;  padding: 2px 5px; background-color:#FFF; margin-bottom:5px}
+.descript{width:80%; padding: 5px 5px; margin:0px; font-size:14px; font-family:'Microsoft YaHei UI'; line-height:20px;}
+.dibuye{border:0px solid #C90; text-align:center}
+.next{border:1px solid #999; display: inline-block ; width:60px; padding-top:3px; padding-bottom:2px}
+.cebianlan{border:0px solid #ccccd0; padding:0px; margin:0; width:30%; height:500px; float:right}
+
+.cebiantitle{ width:100%; padding:0; margin:0; height:25px; border-bottom:solid 1px #ccccd0}
+.xing{float:left ; margin:0;  margin-right:3px; font-family: 微软雅黑; font-size:16px}
+.more{float:right; margin:0;font-family: 微软雅黑; font-size:16px}
+.data_cebian{width:100%; display:list-item; list-style:none;}
+.data_cebian_ltem{width:100%; padding-top:5px;}
+.data_cebian_ltem_a{margin-left:30px;  width:70%; border:solid 0px #000000; display:inline-block}
+.dibulan{border:1px solid #66cccc; padding:0px; margin:0; clear:both; width:100%; height:200px;}
+.dibulan_main{ width:70%; border:solid 0px #000000; margin-top:30px; height:150px;}
+.dibulan_ul{ margin:0; padding:0px; margin-left:50px;}
+
+
+.item{float:left; display:block ; width:100px; margin-left:10px; margin-right:20px;}
+.item_a{ font-family:"Microsoft YaHei UI"; font-size:1em;}
+.serch_keyword1{padding:0px; margin-left:1em;  width:300px; float:left; height:29px; border:solid 1px #66cccc}
+.serch_button1{padding:0px; margin:0; width:80px; border:0; height:31px; font-size:14px; font-family:"微软雅黑"; background-image:url(file:///G|/t/r/htdocsj/jj/image/sys_image/bg.png); float:left; text-align:center; color:#fff}
+.more{ text-decoration:none}

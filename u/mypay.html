@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/usercenter/mypay.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript"  src="../js/index_show.js"></script>
+<script type="text/javascript"  src="../js/jstool.js"></script>
+<script type="text/javascript" src="../js/usercenter/mypay.js"></script>
+<script  type="text/javascript"  src="../js/p.js" ></script>
+
+<style type="text/css">
+
+
+  .kuang {
+	box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box ; /* Safari */
+  
+ 
+	}
+ .zhuan{ width:150px;
+ height:30px;
+ border:#CCC 1px solid;
+ margin-top:10px;
+	
+	 } 
+	 input.chong{ 
+width:60px;
+height:30px;
+ border:#CCC 1px solid; 
+
+
+	
+	 } 
+	 select{
+		 width:150px;
+		 height:30px;
+		 border:#CCC 1px solid;
+		 margin-top:15px;
+		  }
+</style>
+</head>
+
+<body  onload="initdata2()">
+<div class="main_zhuanzhang" name="zhuanz" id="zhuan" >
+  
+  <p ></p>
+  <!--第二页-->
+  <div class="main_zhuan_2" id="two" >
+
+<div class="main_zhuan_div" >
+<div class="main_zhuan_font1"  >转账</div>
+<div class="main_close" >
+  <input class="zhuan" type="button"  onclick="zz_close('#zhuan')"  value="关闭" />
+  </div>
+<div class="zhuanhu_data"  >
+  <p></p>
+<div class="zhuanhu_data_main" >
+ <p><a>
+ 对方账户：</a><a id="df_zhan">陈官勇</a>
+ 
+ </p>
+  <p>
+  
+ <a>
+ 金额：</a><a id="jine">50</a>元
+ 
+ 
+ </p>
+  <p>
+ <a>
+ 流水号：</a><a id ="liushuinum">陈官勇</a>
+ 
+ 
+ </p>
+ </div> 
+  
+  </div>
+
+
+
+
+
+
+
+  
+ <div class="input_cash"  >
+
+<div class="input_main_div"  >
+<label class="input_font"  >支付密码：</label><input class="zhuan" type="text" onblur="javascript:check_pwer2('kk3','paypower');"  id ="paypower" /><a class="error" id="kk3" ></a></div>
+
+
+</div> 
+  
+  
+
+<div class="zhuan_two_button"  >
+
+<div class="button_before" ><input class="zhuan" type="button" onclick="before()"  value="上一步"/></div>
+<div class="sure_button_m" ><input class="zhuan" type="button"  onclick="sure()" value="确认"/></div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<!--11-->
+
+<div class="main_zhuan_1" id="one" >
+<div class="main_zhuan_pant"   >
+<div class="main_zhuan_font"  >转账</div>
+<div class="main_zhuan_input" >
+ <input type="button" class="zhuan"  onclick="zz_close('#zhuan')"  value="关闭" />
+  </div>
+  <div class="main_zhuan_input_pant"  >
+  <p></p>
+<div class="main_zhuan_type" >
+ <label class="zhanghu_title"   >选择对方账户：</label>
+  <select id="myselect" >
+  <option>ddd</option>
+ <option>ddd</option> 
+  <option>ddd</option>
+  
+  
+  </select>
+ </div> 
+  
+  </div>
+  
+  
+<div class="input_cash"  >
+
+
+<div class="input_main" >
+
+<label class="cash_font"  >金额：</label><input class="zhuan" id="cash"  onblur="check_num1('error1','cash')" type="text"    /> 
+元<a class="error_" id="error1" ></a></div>
+
+
+
+
+
+
+</div>
+
+ <div class="main_waring"  >
+  <p></p>
+<div >
+余额50元，此次还可以转50元；
+ </div> 
+  
+  </div>
+
+<div class="sur_button_zhuan"  >
+
+
+<div class="zhuan_button" ><input class="zhuan" type="button" onclick="next('#sure_error')"  value="下一步"/><a class="error" id ="sure_error" ></a></div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="main_duihuan" name="zhuanz"  id="jifen" >
+  
+  <p ></p>
+ 
+
+
+<!--11-->
+
+<div class="chong_pant" >
+<div class=""  >
+<div class="duihuan"  >兑换积分</div>
+<div class="main_close" >
+  <input class="zhuan" type="button" onclick="zz_close('#jifen')" value="关闭 " />
+  </div>
+  
+  <div class="duihuan_type"  >
+  <p></p>
+<div class="duihuan_div" >
+ <label  class="duihuan_font"  >选择兑换方式：</label>
+  <select id="my1" >
+  <option>余额转积分</option>
+ <option>积分转余额</option> 
+  
+  
+  
+  </select>
+ </div> 
+  
+  </div>
+  
+  
+<div class="duihuan_pant"  >
+<div class="duihuan_font"  >请输入要兑换的数量</div>
+<div class="duihuan_input" >
+
+<label class="duihuanjifen"  >金额/积分：</label><input class="zhuan" type="text" 
+onblur="check_num1('err1','cash_jifen1')"  id="cash_jifen1" /> 
+<a class="err1" id="err1" ></a></div>
+<div  >
+<label class="duihuanpower"  >支付密码：</label><input class="zhuan" type="text" onblur="javascript:check_pwer2('err_','pay1');"  id="pay1" /><a class="err1" id="err_" ></a></div>
+
+
+
+
+</div>
+
+ 
+
+<div class="sure_button_"  >
+
+
+<div class="sure_div" ><input class="zhuan" type="button"  onclick="sure2()" value="确认"/></div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--充值-->
+<div class="main_chon" name="zhuanz"  id="recharge" >
+  
+  <p ></p>
+ 
+
+
+<!--11-->
+
+<div class="chong_pant" >
+<div   >
+<div class="chong_font"  >充值</div>
+<div class="main_close" >
+  <input class="zhuan" type="button" onclick="zz_close('#jifen')" value="关闭" />
+  </div>
+  <div class="chong_main_type"  >
+  <p></p>
+<div class="chong_type_" >
+ <label class="chong_type"   >选择充值方式：</label>
+  <select id="my2" >
+  <option>充值卡</option>
+  <option>支付宝</option>
+ <option>微信</option> 
+  
+  
+  
+  </select>
+ </div> 
+  
+  </div>
+  
+  
+<div class="chong_power"  >
+<div class="cp_title"  >请输入要兑换的数量</div>
+<div >
+<label class="power_title"  >密码：</label>
+<div class="power1" >
+<input class="chong" type="text" 
+onblur="check_num1('chogzhi_err','chongzhi')"   maxlength="4" id="chongzhi" /> 
+</div>
+<div class="power1"  >
+<input class="chong" type="text" onblur="javascript:check_num1('chogzhi_err','chongzhi1');"  maxlength="4" id="chongzhi1" /></div>
+<div class="power1"   >
+<input class="chong" type="text" onblur="javascript:check_num1('chogzhi_err','chongzhi2');"  maxlength="4"  id="chongzhi2" /></div>
+<div class="power1"  >
+<input class="chong" type="text" onblur="javascript:check_num1('chogzhi_err','chongzhi3');"  maxlength="4"  id="chongzhi3" /></div>
+
+<a id="chogzhi_err" ></a>
+</div>
+</div>
+ 
+
+<div class="sure_button"  >
+
+
+<div class="small" ><input type="button" onclick="sure_chong()"  class="zhuan" value="确认"/><a id="sure_error12" ></a></div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div >
+
+<div  class="main_option"  >
+
+<div class="main_option_left" >
+<h4 class="main_title" >我的财富</h4>
+<p class="main_option_list"  >
+<label > <font class="font_yu" >余额:</font></label><a id ="yue"><em  class="font_cash" id ="yue" >178</em><i class="font_dw" >元</i></a> <label class="label_ji" >积分:</label><a id="jifen "><em id="jifen1">178</em><i>杯</i></a><br />
+<div class="main_option_2" >
+<a id ="zhuanzhang" href="javascript:zz('#zhuan')" >转账</a> <a class="font_dh" href="javascript:zz('#jifen')"  id="jifenduihuan">积分兑换</a>
+</div>
+
+
+
+</p>
+
+</div>
+
+<div  style=" float:left; margin-top:20px;  margin-right:30px; width:1px; height:130px;  height:100px; background-color:#9a9696"  ></div>
+
+<div class="main_reight"   >
+<ul class="mypay_option" >
+<li class="main_option_item" > <a>设置支付密码</a></li>
+<li class="main_option_item" > <a href="javascript:zz('#recharge')">充值</a></li>
+<li class="main_option_item" > <a>转账账单</a></li>
+<li class="main_option_item" > <a>兑换账单</a></li>
+</ul>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="main_table"  >
+
+<div class="model_title" >账单</div>
+
+<a class="more" >>>更多</a>
+<table class="table_main" id="mtable2" >
+<tr >
+
+<th class="th_time" >时间</th>
+<th class="th_zhichu" >支出 </th>
+<th class="th_shouru" >收入 </th>
+<th class="th_yue" >余额</th>
+</tr>
+</table>
+
+<table class="table_body" id="mtable" >
+
+<tr >
+
+<td class="td_time" >ddd</td>
+<td class="td_zhichu" >ddd </td>
+<td class="td_shouru" >ddd </td>
+<td class="td_yue" >ddd </td>
+</tr>
+</table>
+
+
+
+
+</div>
+
+<button onclick="initdata2();">刷新</button>
+
+<h4>tyr</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
